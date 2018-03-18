@@ -9,7 +9,7 @@ PROCEDURE InitLCG(randSeed : INTEGER);
 
 IMPLEMENTATION
 CONST
-    a = 6523;
+    a = 48721;
     c = 1;
     m = 32768; (*2 ^ 16*)
 VAR
