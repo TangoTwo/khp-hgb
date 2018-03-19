@@ -1,4 +1,5 @@
 program montecarlo;
+uses ModLCGReal;
 
 type
     point = array[0..2] of real;
@@ -41,15 +42,18 @@ var
     boundingBoxYLength : real;
     boundingBoxZLength : real;
     boundingBoxVol : real;
+    initialSeed : integer;
 begin
-	countInEllipse := 0;
+    countInEllipse := 0;
+    initialSeed := 5433;
     centerEllipse(f1, f2);
     boundingBoxCalc(f1, f2, distSum, boundingBoxXLength, boundingBoxYLength, boundingBoxZLength, boundingBoxVol);
-	(* Using Monte Carlo Method *)
+    (* Using Monte Carlo Method *)
+    initLCG(initialSeed);
 	for i := 1 to n do begin
-		x := random()*boundingBoxXLength-boundingBoxXLength/2;
-		y := random()*boundingBoxYLength-boundingBoxYLength/2;
-		z := random()*boundingBoxZLength-boundingBoxZLength/2;
+		x := randReal*boundingBoxXLength-boundingBoxXLength/2;
+		y := randReal*boundingBoxYLength-boundingBoxYLength/2;
+		z := randReal*boundingBoxZLength-boundingBoxZLength/2;
 		if((sqrt(sqr(f1[0]-x)+sqr(f1[1]-y)+sqr(f1[2]-z))+sqrt(sqr(f2[0]-x)+sqr(f2[1]-y)+sqr(f2[2]-z)))<=distSum) then
             inc(countInEllipse);
 	end;
