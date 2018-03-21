@@ -44,7 +44,7 @@ begin
                     maxDesc := -curRun;
                 end;
                 inc(desc[-curRun]);
-                curRun := 1;
+                curRun := 0;
             end;
         end
         else if h < hOld then(*means run is now descending*)
@@ -61,7 +61,7 @@ begin
                     maxAsc := curRun;
                 end;
                 inc(asc[curRun]);
-                curRun := -1;
+                curRun := 0;
             end;
         end
         else (*current number is same as the one before*)
