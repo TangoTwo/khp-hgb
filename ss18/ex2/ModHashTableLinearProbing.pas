@@ -48,7 +48,7 @@ begin
     while(tablePtr^[h].key <> w) and 
             (tablePtr^[h].key <> '') and
             (col < M) do begin
-        h:= (h + 1) mod m;
+        h:= (h + 1) mod m; (* Instead of 1 multiply by 2 every while run --> quadratic*)
         Inc(col);
     end;
     if tablePtr^[h].key = w then
