@@ -14,6 +14,7 @@ VAR
     n: LONGINT;
 
 BEGIN (*WordCounter*)
+    init();
     WriteLn('WordCounter:');
     OpenFile('Kafka.txt', toLower);
   StartTimer;
