@@ -23,7 +23,7 @@ var
 procedure init;
 var i : integer;
 begin
-    m := 3;
+    m := 200;
     getMem(tablePtr, m * (SIZEOF(keyValuePair)));
     for i := 0 to m-1 do begin
         tablePtr^[i].key := '';
