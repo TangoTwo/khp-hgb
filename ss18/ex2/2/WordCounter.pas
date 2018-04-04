@@ -4,18 +4,27 @@
 (*===============================================================*)
 PROGRAM WordCounter;
 
-  USES WordReader, md5;
-
+  USES WordReader, ModStringHash, ModHash2, ModHash3, graph;
+const
+    M = 2000;
 VAR
-    c, maxC : integer;
-    mostFreqWord : string;
+    i : integer;
     w: Word;
-    n: LONGINT;
+    hash1Table : array[0..M] of integer;
+    hash2Table : array[0..M] of integer;
+    hash3Table : array[0..M] of integer;
 
 BEGIN (*WordCounter*)
-  ReadWord(w);
-  WHILE w <> '' DO BEGIN
+    OpenFile('Kafka.txt', toLower);
     ReadWord(w);
+  WHILE w <> '' DO BEGIN
+      ReadWord(w);
+      (* Create 3 hashes *)
+      inc(hash1Table[stringHash1(w)mod M]);
+      inc(hash2Table[stringHash2(w)mod M]);
+      inc(hash3Table[stringHash3(w)mod M]);
   END; (*WHILE*)
+  (*INSERT GRAPHICAL REPRESENTATION HERE *)
+  
 
 END. (*WordCounter*)
