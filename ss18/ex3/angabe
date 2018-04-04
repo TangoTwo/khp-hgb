@@ -1,0 +1,15 @@
+Suche in Zeichenketten
+geg: Text : String
+    Muster (Pattern) : String
+ges:
+    1 Vorkommen des Musters im Text
+
+Lösungsformen:
+    BruteForce      O(|T| |P|)
+    KnuthMorrisPratt O(|T|)
+    BoyerMoore          O(|T|)
+        grep    
+    RobinKiorp      O(|T|)
+        Hashing
+    
+    
