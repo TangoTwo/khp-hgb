@@ -1,5 +1,5 @@
 program TestModStack;
-uses ModStack_ADT2;
+uses S_ADT;
 
 var i : integer;
     s0, s1 : stackPtr;
@@ -13,8 +13,9 @@ begin
             push(s1, i);
     end;
     
-    writeln('IsEmpty?', IsEmpty(s0));
-    writeln('IsEmpty?', IsEmpty(s1));
+    writeln('IsEmpty(s0) = ', IsEmpty(s0));
+    writeln('IsEmpty(s1) = ', IsEmpty(s1));
+    writeln('Popping s0 (all odd numbers) reversed (49 - 1)');
     writeln('Elements:');
     while not IsEmpty(s0) do begin
         pop(s0, i);
