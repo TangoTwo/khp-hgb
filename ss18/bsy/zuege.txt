@@ -1,0 +1,20 @@
+Station	Datum	ab/an	Zeit	Dauer	Zugnummer
+Linz/Donau Hbf	11.05.2015	ab	09:30	01:34	IC 547
+Wien Hbf		an	11:04
+Linz/Donau Hbf	11.05.2015	ab	09:45	01:27	ICE 323
+Wien Hbf		an	11:12
+Linz/Donau Hbf	11.05.2015	ab	10:02	01:20	WB 911
+Wien Westbahnhof		an	11:22
+Linz/Donau Hbf	12.05.2015	ab	10:15	01:15	RJ 861
+Wien Westbahnhof		an	11:30
+Linz/Donau Hbf	12.05.2015	ab	10:30	01:34	IC 549
+Wien Westbahnhof		an	12:04
+Linz/Donau Hbf	12.05.2015	ab	11:02	01:20	WB 913
+Wien Westbahnhof		an	12:22
+Linz/Donau Hbf	13.05.2015	ab	11:15	01:15	RJ 765
+Wien Westbahnhof		an	12:30
+Linz/Donau Hbf	13.05.2015	ab	11:30	01:34	IC 693
+Wien Westbahnhof		an	13:04
+Linz/Donau Hbf	13.05.2015	ab	11:45	01:27	ICE 21
+Wien Hbf		an	13:12
+
