@@ -25,7 +25,7 @@ VAR
 procedure init;
 begin
     if(arrPtr <> NIL) then begin
-        writeln('Call disposeStack first you maniac!');
+        writeln('Can''t initialize non-empty stack!');
         halt;
     end;
     top := 0;
@@ -102,10 +102,10 @@ end;
 procedure disposeStack;
 begin
     if arrPtr = NIL then begin
-        writeln('Stack is not initialized you moron!');
+        writeln('Can''t dispose a uninitialized stack!');
         halt;
     end;
-    FreeMem(arrPtr, SIZEOF(integer) * capacityCount);
+    freeMem(arrPtr, SIZEOF(integer) * capacityCount);
     arrPtr := NIL;
 end;
 
@@ -114,13 +114,13 @@ var
     newArray : ^intArray;
     i : integer;
 begin
-    GetMem(newArray, SIZEOF(INTEGER) * 2 * capacityCount);
+    getMem(newArray, SIZEOF(INTEGER) * 2 * capacityCount);
     for i := 1 to top do begin
         (*$R-*)
         newArray^[i] := arrPtr^[i];
         (*$R+*)
     end;
-    FreeMem(arrPtr, SIZEOF(integer) * capacityCount);
+    freeMem(arrPtr, SIZEOF(integer) * capacityCount);
     capacityCount := 2 * capacityCount;
     arrPtr := newArray;
 end;

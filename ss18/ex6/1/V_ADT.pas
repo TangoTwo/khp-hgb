@@ -31,7 +31,7 @@ var isPtr : internalStackPtr;
 begin
     isPtr := internalStackPtr(s);
     if(s <> NIL) then begin
-        writeln('Call disposeStack first you maniac!');
+        writeln('Can''t initialize non-empty stack!');
         halt;
     end;
     new(isPtr);
@@ -129,11 +129,11 @@ procedure disposeStack(var s : stackPtr);
 var isPtr : internalStackPtr;
 begin
     if s = NIL then begin
-        writeln('Stack is not initialized you moron!');
+        writeln('Can''t dispose a uninitialized stack!');
         halt;
     end;
     isPtr := internalStackPtr(s);
-    FreeMem(isPtr^.arrPtr, SIZEOF(integer) * isPtr^.capacityCount);
+    freeMem(isPtr^.arrPtr, SIZEOF(integer) * isPtr^.capacityCount);
     isPtr^.arrPtr := NIL;
     dispose(isPtr);
     s := NIL;
@@ -145,13 +145,13 @@ var isPtr : internalStackPtr;
     i : integer;
 begin
     isPtr := internalStackPtr(s);
-    GetMem(newArray, SIZEOF(INTEGER) * 2 * isPtr^.capacityCount);
+    getMem(newArray, SIZEOF(INTEGER) * 2 * isPtr^.capacityCount);
     for i := 1 to isPtr^.top do begin
         (*$R-*)
         newArray^[i] := isPtr^.arrPtr^[i];
         (*$R+*)
     end;
-    FreeMem(isPtr^.arrPtr, SIZEOF(integer) * isPtr^.capacityCount);
+    freeMem(isPtr^.arrPtr, SIZEOF(integer) * isPtr^.capacityCount);
     isPtr^.capacityCount := 2 * isPtr^.capacityCount;
     isPtr^.arrPtr := newArray;
 end;

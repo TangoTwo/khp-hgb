@@ -13,5 +13,6 @@ begin
     while not IsEmpty do begin
         writeln(dequeue);
     end;
-    disposeStack;
+    writeln('IsEmpty? ', IsEmpty);
+    disposeQueue;
 end.

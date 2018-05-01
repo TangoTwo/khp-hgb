@@ -5,8 +5,9 @@ procedure enqueue(e : integer);
 function dequeue : integer;
 function isEmpty : boolean;
 procedure init;
-procedure disposeStack;
-procedure reallocStack;
+procedure disposeQueue;
+procedure reallocQueue;
+procedure removeElementAt(pos : integer);
 
 implementation
 type 
@@ -20,7 +21,7 @@ VAR
 procedure init;
 begin
     if(arrPtr <> NIL) then begin
-        writeln('Call disposeStack first you maniac!');
+        writeln('Can''t initialize non-empty queue!');
         halt;
     end;
     top := 0;
@@ -31,7 +32,7 @@ end;
 procedure enqueue(e : integer);
 begin
     if top >= capacity then
-        reallocStack;
+        reallocQueue;
     inc(top);
     (*$R-*)
     arrPtr^[top] := e;
@@ -41,13 +42,13 @@ end;
 function dequeue : integer;
 begin
     if isEmpty then begin
-        writeln('Stack is empty');
+        writeln('Queue is empty');
         halt;
     end;
-    dec(top);
     (*$R-*)
-    dequeue := arrPtr^[top+1];
+    dequeue := arrPtr^[1];
     (*$R+*)
+    removeElementAt(1);
 end;
 
 function isEmpty : boolean;
@@ -55,17 +56,17 @@ begin
     isEmpty := top = 0;
 end;
 
-procedure disposeStack;
+procedure disposeQueue;
 begin
     if arrPtr = NIL then begin
-        writeln('Stack is not initialized you moron!');
+        writeln('Can''t dispose a uninitialized queue!');
         halt;
     end;
     FreeMem(arrPtr, SIZEOF(integer) * capacity);
     arrPtr := NIL;
 end;
 
-procedure reallocStack;
+procedure reallocQueue;
 var
     newArray : ^intArray;
     i : integer;
@@ -79,6 +80,23 @@ begin
     FreeMem(arrPtr, SIZEOF(integer) * capacity);
     capacity := 2 * capacity;
     arrPtr := newArray;
+end;
+
+procedure removeElementAt(pos : integer);
+var
+    element : integer;
+begin
+    element := pos + 1;
+    while element <= top do begin
+        (*$R-*)
+        arrPtr^[element - 1] := arrPtr^[element];
+        (*$R+*)
+        inc(element);
+    end;
+    (*$R-*)
+    arrPtr^[top] := 0;
+    (*$R+*)
+    dec(top);
 end;
 
 begin
