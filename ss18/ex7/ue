@@ -1,29 +1,59 @@
-Compilerbau
-
-Zeichen (in Datei) --> Lexer --Symbole-->Syntaxanalysator --Symboltabelle AST (Abstrakter Syntaxbaum--> Codegenerator --> *.exe
-
-Calc
-(1+3)*3 --> 12
-
-Symbol = (plusSy, numbSy)
-
-Implementierung Lexer
-VAR
-    curSy:Symbol
-    curCh:CHAR
-    
-PROC NewSy()
-liest nächstes Symbol & setzt curSy
-
-PROC NewCh()
-liest nächstes Zeichen aus Eingabedatei und setzt curCh
-
-Methode rekursiver Abstieg
-für die Syntaxanalyse for
-LL(1) - Grammatiken
-
-Attributierte Grammatik mit semantische Aktionen (Für Kommissionelle wichtig!)
-
-Expr = Term {('+'|'-') Term}.
-Term = Fact {('*'|'/') Fact}.
-Fact = number | '(' Expr ')'.
+Expr ^t:treePtr=   SEM 
+                        termNode, lastNode : NodePtr; 
+                        termNode2 : NodePtr; 
+                    ENDSEM
+                    SEM
+                        t := NewNode('Expr');
+                    ENDSEM
+                Term
+                    SEM
+                        t^.firstChild:=termNode;
+                        lastNode := termNode;
+                    ENDSEM;
+            {('+'   SEM
+                        lastNode^.sibling:=NewNode('+');
+                        lastNode:=lastNode^.sibling;
+                    ENDSEM;
+            |'-'    SEM
+                        lastNode^.sibling:=NewNode('-');
+                        lastNode:=lastNode^.sibling;
+                    ENDSEM;
+            )
+            Term    SEM
+                        lastNode^.sibling:=termNode2;
+                        lastNode:=lastNode^.sibling;
+                    ENDSEM
+            }.
+            
+            Term =  SEM
+                        factNode, lastNode: NodePtr;
+                    ENDSEM
+                    SEM
+                        t:=NewNode('Term');
+                    ENDSEM
+            Fact    SEM
+                        t^.firstChild:=factNode;
+                        lastNode:=factNode;
+                    ENDSEM;
+            {('*'   SEM
+                        lastNode^.sibling:=NewNode('*');
+                        lastNode:=lastNode.sibling;
+                    ENDSEM
+            |'/'    SEM
+                        lastNode^.sibling:=NewNode('/');
+                        lastNode:=lastNode^.sibling;
+                    ENDSEM
+            ) Fact  SEM
+                        lastNode^.sibling:=factNode;
+                        lastNode:=lastNode^.sibling;
+                    ENDSEM
+            }.
+            Fact =  SEM t:=NewNode('Fact');
+                    ENDSEM
+            number  SEM
+                        t^.firstChild:=NewNode(str(numVal));
+                    ENDSEM
+            |'('Expr')' SEM
+                            t^.firstChild:=e;
+                        ENDSEM
+            ')'.
