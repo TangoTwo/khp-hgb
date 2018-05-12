@@ -3,15 +3,18 @@ unit MP_Lex;
 interface
 type
     symbol = (noSy,
-              numSy, idSy,
-              plusSy, minusSy, mulSy, divSy,
+              termSy, nonTermSy
+              equalSy, identSy
+              leftCurlSy, rightCurlSy,
+              plusSy, mulSy, divSy, minusSy,
               leftParSy, rightParSy,
-              assignSy, 
-              commaSy, semicolonSy, dotSy,
-              colonSy,
-              programSy, varSy, beginSy, endSy,
-              readSy, writeSy, integerSy, 
-              eofSy);
+              dotSy,
+              arrowLeftSy, arrowRightSy,
+              leftOptSy, rightOptSy,
+              leftIterSy, rightIterSy,
+              barSy, orSy,
+              ltSy, gtSy
+             );
 var
     sy : symbol;
     numberVal : integer;
@@ -45,23 +48,13 @@ begin
     while (ch = ' ') or (ch = TAB_CH) do newCh;
     case ch of
         
-        '+': begin sy := plusSy; newCh; end;
-        '-': begin sy := minusSy; newCh; end;
-        '*': begin sy := mulSy; newCh; end;
-        '/': begin sy := divSy; newCh; end;
-        ':': begin 
-                newCH;
-                if ch = '=' then begin
-                    sy := assignSy;
-                    NewCh;
-                end else
-                    sy := colonSy;
-            end;
-        ';': begin sy := semicolonSy; newCh; end;
+        '=': begin sy := equalSy; newCh; end;
         '.': begin sy := dotSy; newCh; end;
-        ',': begin sy := commaSy; newCh; end;
-        '(': begin sy := leftParSy; newCh; end;
-        ')': begin sy := rightParSy; newCh; end;
+        '{': begin sy := leftCurlSy; newCh; end;
+        '}': begin sy := rightCurlSy; newCh; end;
+        '<': begin sy := arrowLeftSy; newCh; end;
+        '>': begin sy := arrowRightSy;newCh; end;
+        '|': begin sy := orSy; newCh; end;
         EOF_CH: begin sy := eofSy; newCh; end;
         '_','a'..'z','A'..'Z':
             begin
@@ -72,32 +65,31 @@ begin
                     newCh;
                 end;
                 identStr := upCase(identStr);
-                if identStr = 'PROGRAM' then
-                    sy := programSy
-                else if identStr = 'BEGIN' then
-                    sy := beginSy
-                else if identStr = 'END' then
-                    sy := endSy
-                else if identStr = 'VAR' then
-                    sy := varSy
-                else if identStr = 'INTEGER' then
-                    sy := integerSy
-                else if identStr = 'READ' then
-                    sy := readSy
-                else if identStr = 'WRITE' then
-                    sy := writeSy
+                if identStr = 'IDENT' then
+                    sy := identSy
+                else if identStr = 'EQUAL' then
+                    sy := equalSy
+                else if identStr = 'LT' then
+                    sy := ltSy
+                else if identStr = 'GT' then
+                    sy := gtSy
+                else if identStr = 'LEFTPAR' then
+                    sy := leftParSy
+                else if identStr = 'RIGHTPAR' then
+                    sy := rightParSy
+                else if identStr = 'BAR' then
+                    sy := barSy
+                else if identStr = 'LEFTOPT' then
+                    sy := leftOptSy
+                else if identStr = 'RIGHTOPT' then
+                    sy := rightOptSy
+                else if identStr = 'LEFTITER' then
+                    sy := leftIterSy
+                else if identStr = 'RIGHTITER' then
+                    sy := rightIterSy
                 else
-                    sy := idSy;
+                    sy := identSy;
             end;
-        '0'..'9':
-        begin
-            numberVal := ord(ch) - ord('0');
-            newCh;
-            while ch in ['0'..'9'] do begin
-                numberVal := numberVal * 10 + ord(ch) - ord('0');
-                newCh;
-            end;
-        end;
         else begin
             sy := noSy;
         end;
