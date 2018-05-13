@@ -1,4 +1,4 @@
-program TestModStackADT;
+program TestModVectorADT;
 uses V_ADT;
 
 var i : integer;

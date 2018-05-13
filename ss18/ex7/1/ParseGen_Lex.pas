@@ -1,10 +1,11 @@
-unit MP_Lex;
+unit ParseGen_Lex;
 
 interface
 type
     symbol = (noSy,
-              termSy, nonTermSy
-              equalSy, identSy
+              termSy, nonTermSy,
+              isSy, identSy,
+              equalSy,
               leftCurlSy, rightCurlSy,
               plusSy, mulSy, divSy, minusSy,
               leftParSy, rightParSy,
@@ -13,10 +14,13 @@ type
               leftOptSy, rightOptSy,
               leftIterSy, rightIterSy,
               barSy, orSy,
-              ltSy, gtSy
+              ltSy, gtSy,
+              numberSy,
+              eofSy
              );
 var
     sy : symbol;
+    stringVal : string;
     numberVal : integer;
     identStr: string;
 
@@ -44,23 +48,28 @@ begin
 end;
 
 procedure newSy;
+var
+    isNonTerminal : boolean;
 begin
     while (ch = ' ') or (ch = TAB_CH) do newCh;
     case ch of
         
-        '=': begin sy := equalSy; newCh; end;
+        '=': begin sy := isSy; newCh; end;
         '.': begin sy := dotSy; newCh; end;
         '{': begin sy := leftCurlSy; newCh; end;
         '}': begin sy := rightCurlSy; newCh; end;
         '<': begin sy := arrowLeftSy; newCh; end;
         '>': begin sy := arrowRightSy;newCh; end;
-        '|': begin sy := orSy; newCh; end;
-        EOF_CH: begin sy := eofSy; newCh; end;
-        '_','a'..'z','A'..'Z':
+        '|': begin sy := orSy; newCh; end; 
+        EOF_CH: begin sy := eofSy; end;         (* don't get a newCh because eof *)
+        'a'..'z','A'..'Z':
             begin
                 identStr := ch;
+                isNonTerminal := TRUE;
+                if(ord(ch) > ord('a')) and (ord(ch) < ord('z')) then (* is lowercase *)
+                    isNonTerminal := FALSE;
                 newCh;
-                while ch in ['_','a'..'z','A'..'Z','0'..'9'] do begin
+                while ch in ['a'..'z','A'..'Z','0'..'9'] do begin
                     identStr := identStr + ch;
                     newCh;
                 end;
@@ -87,8 +96,23 @@ begin
                     sy := leftIterSy
                 else if identStr = 'RIGHTITER' then
                     sy := rightIterSy
-                else
-                    sy := identSy;
+                else if identStr = 'PLUS' then
+                    sy := plusSy
+                else if identStr = 'MINUS' then
+                    sy := minusSy
+                else if identStr = 'TIMES' then
+                    sy := mulSy
+                else if identStr = 'DIV' then
+                    sy := divSy
+                else if identStr = 'NUMBER' then
+                    sy := numberSy
+                else begin
+                    if(isNonTerminal) then
+                        sy := nonTermSy
+                    else
+                        sy := termSy;
+                    stringVal := lowerCase(identStr);
+                end;
             end;
         else begin
             sy := noSy;
@@ -108,6 +132,7 @@ begin
             ch := EOF_CH;
             line := '';
             linePos := 0;
+            close(inFile);
         end;
     end else begin
         ch := line[linePos];
