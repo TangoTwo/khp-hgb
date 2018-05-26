@@ -1,9 +1,0 @@
-Dieser File enthält Beispiele, die zu Problemen bei der Textverarbeitung unter Linux auftreten können
-Fall 1: Der gesamte File enthält Zeilenumbrüche in Windows Format: 
-Fall 2: Leerzeilen müssen nicht wirklich leer sein. Sie können Tabs und Leerzeichen enthalten, die nicht angezeigt werden
-				
-Fall 3: Die Codepages zwischen Windows und Linux müssen nicht zwingend übereinstimmen:
-Der Jäger im grünen Wald klettert über eine mäßig steile Böschung.
-
- 
-	

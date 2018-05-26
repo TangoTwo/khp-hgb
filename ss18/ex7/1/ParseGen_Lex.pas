@@ -13,6 +13,7 @@ type
               arrowLeftSy, arrowRightSy,
               leftOptSy, rightOptSy,
               leftIterSy, rightIterSy,
+              leftSqBrSy, rightSqBrSy,
               barSy, orSy,
               ltSy, gtSy,
               numberSy,
@@ -56,8 +57,8 @@ begin
         
         '=': begin sy := isSy; newCh; end;
         '.': begin sy := dotSy; newCh; end;
-        '{': begin sy := leftCurlSy; newCh; end;
-        '}': begin sy := rightCurlSy; newCh; end;
+        '{': begin sy := leftOptSy; newCh; end;
+        '}': begin sy := rightOptSy; newCh; end;
         '<': begin sy := arrowLeftSy; newCh; end;
         '>': begin sy := arrowRightSy;newCh; end;
         '|': begin sy := orSy; newCh; end; 
@@ -66,7 +67,7 @@ begin
             begin
                 identStr := ch;
                 isNonTerminal := TRUE;
-                if(ord(ch) > ord('a')) and (ord(ch) < ord('z')) then (* is lowercase *)
+                if(ord(ch) >= ord('a')) and (ord(ch) <= ord('z')) then (* is lowercase *)
                     isNonTerminal := FALSE;
                 newCh;
                 while ch in ['a'..'z','A'..'Z','0'..'9'] do begin
@@ -96,6 +97,10 @@ begin
                     sy := leftIterSy
                 else if identStr = 'RIGHTITER' then
                     sy := rightIterSy
+                else if identStr = 'LEFTBRACKET' then
+                    sy := leftSqBrSy
+                else if identStr = 'RIGHTBRACKET' then
+                    sy := rightSqBrSy
                 else if identStr = 'PLUS' then
                     sy := plusSy
                 else if identStr = 'MINUS' then
@@ -108,9 +113,9 @@ begin
                     sy := numberSy
                 else begin
                     if(isNonTerminal) then
-                        sy := nonTermSy
+                        sy := identSy
                     else
-                        sy := termSy;
+                        sy := identSy;
                     stringVal := lowerCase(identStr);
                 end;
             end;
@@ -118,6 +123,7 @@ begin
             sy := noSy;
         end;
     end;
+    writeln(sy);
 end;
 
 procedure newCh;

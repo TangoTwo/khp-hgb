@@ -1,0 +1,5 @@
+Grammer = Rule { Rule }.
+Rule = ident equal Expr '.'.
+Expr = Term | '<' Term { bar Term } '>'.
+Term = Fact { Fact }.
+Fact = ident | leftPar Expr rightPar | '[' Expr ']' | '{' Expr '}'.

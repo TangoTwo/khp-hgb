@@ -1,0 +1,36 @@
+<h1 id="oop-in-pascal">OOP in Pascal</h1>
+<ul>
+<li>Information Hiding</li>
+<li>Vererbung</li>
+<li>Objekt</li>
+<li>Klasse<br />
+A &lt;-- B<br />
+Bedeutet zwei Sachen:<br />
+* A vererbt an B<br />
+* B ist ein A<br />
+</li>
+<li>Polymorphismus (Vielgestaltigkeit)<br />
+</li>
+<li><p>Dynamische Bindung<br />
+Uberlegung: Was ist dynamische Bindung? KlausurKlassiker<br />
+Bsp dyn. Bindung<br />
+<sub><sub><sub>~</sub></sub></sub> TYPE A = ^AObj; AObj = OBJECT PROCEDURE Print; END; B = ^BObj; BObj = OBJECT(AObj) PROCEDURE Print; END; PROCEDURE AObj.Print;VIRTUAL; BEGIN WriteLn('A'); END; PROCEDURE BObj.Print;VIRTUAL; BEGIN WriteLn('B'); END;</p>
+<pre><code>    VAR 
+        b0 : B;
+        a0 : A;
+    BEGIN
+        New(b0); // Erzeugt Objekt am Heap
+        New(a0); // -||-
+        b0^.Print;  // Aufruf der Methode Print
+        a0^.Print;
+        a0 := b0;
+        a0^.Print; // ist dyn gebunden --&gt; Ausgabe B!
+~~~~~~~
+vTable  -   Tabelle für &#39;virtuelle&#39; Methoden
+    Klasse | Methodenname | Sprungtabelle
+    A | Print | 0x123
+    B | Print | 0xABC
+    ```haskell
+        qsort [] = []
+    ```</code></pre></li>
+</ul>

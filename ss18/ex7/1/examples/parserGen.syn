@@ -1,0 +1,5 @@
+Grammar = Rule { Rule } .
+Rule = ident '=' Expr '.' .
+Expr = Term | '<' Term { '|' Term } '>' .
+Term = Fact { Fact } .
+Fact = ident | '(' Expr ')' | '[' Expr ']' | '{' Expr '}' .

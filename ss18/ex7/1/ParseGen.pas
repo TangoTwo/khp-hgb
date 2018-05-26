@@ -16,7 +16,9 @@ begin
     tempString := '(* parsing functions generated from file ''' + paramStr(1) + ''' *)';
     writeToFile(tempString, 0);
     writeToFile('', 0);
-    parseArg;
+    newSy;
+    Grammar;
+    writeln(success);
     tempString := '(* generation ended successfully *)';
     writeToFile(tempString, 0);
     closeOutFile;

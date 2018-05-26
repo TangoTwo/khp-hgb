@@ -4,139 +4,139 @@ interface
 var
     success : boolean;
 
-procedure parseArg; (* entry for recursive descent parser *)
+procedure Grammar; (* entry for recursive descent parser *)
 
 implementation
 uses ParseGen_Lex, FileWriter;
 
-procedure writeSyIsNot;
+procedure Rule; FORWARD;
+procedure Expr; FORWARD;
+procedure Term; FORWARD;
+procedure Fact; FORWARD;
+
+FUNCTION SyIsNot(expectedSy: Symbol): BOOLEAN;
+BEGIN
+    IF sy <> expectedSy THEN success := FALSE;
+    SyIsNot := success;
+END; (*SyIsNot*)
+
+procedure Grammar;
 begin
+    (* SEM *)
     writeToFile('FUNCTION SyIsNot(expectedSy: Symbol): BOOLEAN;',0);
     writeToFile('BEGIN',1);
     writeToFile('success := success AND (sy = expectedSy);',0);
     writeToFile('SyIsNot := NOT success;',0);
     writeToFile('END; (*SyIsNot*)',-1);
     writeToFile('',0);
+    (* ENDSEM *)
+    rule; IF NOT success THEN Exit;
+    WHILE sy <> identSy DO BEGIN
+        rule; IF NOT success THEN Exit;
+    END; (*WHILE*)
 end;
 
-procedure writeSINTE(insert : string); (* SINTE = SyIsNot then exit *)
-var tempString : string;
-begin
-    tempString := 'IF SyIsNot(' + insert + ') THEN EXIT;';
-    writeToFile(tempString, 0);
-    writeToFile('newSy;', 0);
-end;
-
-procedure writeINSTE(insert : string); (* INSTE = if not success then exit *)
-var tempString : string;
-begin
-    tempString := insert + '; IF NOT success THEN Exit;';
-    writeToFile(tempString, 0);
-end;
-
-procedure parseArg;
-var tempSy : symbol;
-    tempString : string;
-    curProcedure : string;
-begin
-    success := TRUE;
-    tempString := '';
-
-    writeSyIsNot;
+PROCEDURE rule;
+var tString : string;
+BEGIN
     
-    while(sy <> eofSy) do begin
-        newSy;
-        if(sy = noSy) then begin
-            success := FALSE;
-            exit;
-        end
-        else if(sy = nonTermSy) then begin
-            tempSy := sy;
-            newSy;
-            if(sy = isSy) then begin
-                curProcedure := stringVal;
-                tempString := 'PROCEDURE ' + stringVal + ';';
-                writeToFile(tempString, 0);
-                tempString := 'BEGIN';
-                writeToFile(tempString, 1);
-            end
-            else begin
-                writeINSTE(stringVal);
-            end;
-        end;
-        if(sy = leftCurlSy) then begin
-            writeToFile('WHILE sy = ... DO BEGIN', 1);
-        end 
-        else if(sy = rightCurlSy) then begin
-            writeToFile('END; (*WHILE*)', -1);
-        end
-        else if(sy = arrowLeftSy) then begin
-            writeToFile('IF sy = ... THEN BEGIN', 1);
-        end
-        else if(sy = arrowRightSy) then begin
-            writeToFile('END (*IF*)', -1);
-            writeToFile('ELSE', 1);
-            writeToFile('success := FALSE;', -1);
-        end
-        else if(sy = orSy) then begin
-            writeToFile('END (*IF*)', -1);
-            writeToFile('ELSE IF sy = ... THEN BEGIN', 1);
-        end
-        else if(sy = identSy) then begin
-            writeSINTE('identSy');
-        end
-        else if(sy = equalSy) then begin
-            writeSINTE('equalSy');
-        end
-        else if(sy = barSy) then begin
-            writeSINTE('barSy');
-        end
-        else if(sy = plusSy) then begin
-            writeSINTE('plusSy');
-        end
-        else if(sy = mulSy) then begin
-            writeSINTE('mulSy');
-        end
-        else if(sy = divSy) then begin
-            writeSINTE('divSy');
-        end
-        else if(sy = minusSy) then begin
-            writeSINTE('minusSy');
-        end
-        else if(sy = ltSy) then begin
-            writeSINTE('ltSy');
-        end
-        else if(sy = gtSy) then begin
-            writeSINTE('gtSy');
-        end
-        else if(sy = leftParSy) then begin
-            writeSINTE('leftParSy');
-        end
-        else if(sy = rightParSy) then begin
-            writeSINTE('rightParSy');
-        end
-        else if(sy = leftOptSy) then begin
-            writeSINTE('leftOptSy');
-        end
-        else if(sy = rightOptSy) then begin
-            writeSINTE('rightOptSy');
-        end
-        else if(sy = leftIterSy) then begin
-            writeSINTE('leftIterSy');
-        end
-        else if(sy = rightIterSy) then begin
-            writeSINTE('rightIterSy');
-        end
-        else if(sy = numberSy) then begin
-            writeSINTE('numberSy');
-        end
-        else if(sy = dotSy) then begin
-            tempString := 'END; (*' + curProcedure + '*)';
-            writeToFile(tempString, -1);
-            writeToFile('',0);
-        end;
-    end;
-end;
+   IF SyIsNot(identSy) THEN EXIT;
+   newSy;
+   (* SEM *)
+   writeToFile('',0);
+   tString := 'PROCEDURE ' + identStr + ';';
+   writeToFile(tString,0);
+   writeToFile('BEGIN',1);
+   IF SyIsNot(equalSy) THEN EXIT;
+   newSy;
+   expr; IF NOT success THEN Exit;
+   (* SEM *)
+   writeToFile('END;', -1);
+END; (*rule*)
+
+PROCEDURE expr;
+BEGIN
+   IF sy = ltSy THEN BEGIN
+      IF SyIsNot(ltSy) THEN EXIT;
+      newSy;
+      (* SEM *)
+      writeToFile('IF sy = ... THEN BEGIN',1);
+      (* ENDSEM *)
+      term; IF NOT success THEN Exit;
+      (* SEM *)
+      writeToFile('END;', -1);
+      WHILE sy = barSy DO BEGIN
+         IF SyIsNot(barSy) THEN EXIT;
+         newSy;
+         (* SEM *)
+         writeToFile('ELSE IF sy = ... THEN BEGIN',-1);
+         (* ENDSEM *)
+         term; IF NOT success THEN Exit;
+         (* SEM *)
+         writeToFile('END;',-1);
+         (* ENDSEM *)
+      END; (*WHILE*)
+      IF SyIsNot(gtSy) THEN EXIT;
+      newSy;
+      (* SEM *)
+      writeToFile('ELSE success := FALSE;', -1);
+      (* ENDSEM *)
+   END (*IF*)
+   ELSE
+    term; IF NOT success THEN Exit;
+END; (*expr*)
+
+PROCEDURE term;
+BEGIN
+   fact; IF NOT success THEN Exit;
+   WHILE sy <> identSy DO BEGIN
+      fact; IF NOT success THEN Exit;
+   END; (*WHILE*)
+END; (*term*)
+
+PROCEDURE fact;
+var tString : string;
+BEGIN
+   IF sy = identSy THEN BEGIN
+       IF SyIsNot(identSy) THEN EXIT;
+       (* SEM *)
+       tString := 'IF SyIsNot(' + identStr + 'Sy) THEN Exit;';
+       writeToFile(tString, 0);
+       tString := 'NewSy;';
+       writeToFile(tString, 0);
+         (* ENDSEM *)
+      newSy;
+   END (*IF*)
+   ELSE IF sy = leftParSy THEN BEGIN
+      IF SyIsNot(leftParSy) THEN EXIT;
+      newSy;
+      expr; IF NOT success THEN Exit;
+      IF SyIsNot(rightParSy) THEN EXIT;
+      newSy;
+   END (*IF*)
+   ELSE IF sy = leftOptSy THEN BEGIN
+      IF SyIsNot(leftOptSy) THEN EXIT;
+      newSy;
+      expr; IF NOT success THEN Exit;
+      IF SyIsNot(rightOptSy) THEN EXIT;
+      newSy;
+   END (*IF*)
+   ELSE IF sy = leftIterSy THEN BEGIN
+       (* SEM *)
+       writeToFile('WHILE sy = ... DO BEGIN',1);
+       (* ENDSEM *)
+      IF SyIsNot(leftIterSy) THEN EXIT;
+      newSy;
+      expr; IF NOT success THEN Exit;
+      IF SyIsNot(rightIterSy) THEN EXIT;
+      (* SEM *)
+      writeToFile('END;',-1);
+      (* ENDSEM *)
+      newSy;
+   END (*IF*)
+   ELSE
+   success := FALSE;
+END; (*fact*)
 
 begin
 end.
