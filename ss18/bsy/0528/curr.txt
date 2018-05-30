@@ -1,0 +1,6 @@
+ECTs 1.Semester: 28 Wochenstunden
+ECTs 2.Semester: 28 Wochenstunden
+ECTs 3.Semester: 28 Wochenstunden
+ECTs 4.Semester: 28 Wochenstunden
+ECTs 5.Semester: 28 Wochenstunden
+ECTs 6.Semester: 6 Wochenstunden

@@ -40,6 +40,10 @@ end;
   PROCEDURE Expr(var binaryTree: TreePtr);    FORWARD;
   PROCEDURE Term(var binaryTree: TreePtr);    FORWARD;
   PROCEDURE Fact(var binaryTree: TreePtr);    FORWARD;
+  PROCEDURE EmitCodeForExprTree(t: TreePtr);  FORWARD;
+  PROCEDURE Simplify(var t: TreePtr);           FORWARD;
+  PROCEDURE ConstantFolding(var t: TreePtr);  FORWARD;
+
 
   PROCEDURE S;
 (*-----------------------------------------------------------------*)
@@ -54,6 +58,8 @@ BEGIN
       WriteLn('*** Error in line ', syLnr:0, ', column ', syCnr:0)
     ELSE
         WriteLn('... parsing ended successfully ');
+    Simplify(binaryTree);
+    ConstantFolding(binaryTree);
     writeTreeInOrder(binaryTree);
   END; (*S*)
 
@@ -76,6 +82,7 @@ BEGIN
     NewSy;
     StatSeq(binaryTree); IF NOT success THEN Exit;
     (* sem *)
+    EmitCodeForExprTree(binaryTree);
     Emit1(EndOpc);
     (* endsem *)
     IF SyIsNot(endSy) THEN Exit;
@@ -188,6 +195,7 @@ var destId : STRING;
                 (* ENDSEM *)
                 NewSy;
                 IF SyIsNot(thenSy) THEN Exit;
+                newSy;
                 Stat(binaryTree); IF NOT success THEN Exit;
                 IF sy = elseSy THEN BEGIN
                     newSy;
@@ -236,7 +244,7 @@ var t: TreePtr;
         CASE sy OF
           plusSy: BEGIN
               NewSy;
-              Term(binaryTree); IF NOT success THEN Exit;
+              Term(binaryTree^.right); IF NOT success THEN Exit;
               (* sem *)
               t := newTree('+');
               t^.left := binaryTree;
@@ -246,7 +254,7 @@ var t: TreePtr;
             END;
           minusSy: BEGIN
               NewSy;
-              Term(binaryTree); IF NOT success THEN Exit;
+              Term(binaryTree^.right); IF NOT success THEN Exit;
               (* sem *)
               t := newTree('-');
               t^.left := binaryTree;
@@ -266,7 +274,7 @@ var t: TreePtr;
         CASE sy OF
           timesSy: BEGIN
               NewSy;
-              Fact(binaryTree); IF NOT success THEN Exit;
+              Fact(binaryTree^.right); IF NOT success THEN Exit;
               (* sem *)
               t := newTree('*');
               t^.left := binaryTree;
@@ -276,7 +284,7 @@ var t: TreePtr;
             END;
           divSy: BEGIN
                NewSy;
-               Fact(binaryTree); IF NOT success THEN Exit;
+               Fact(binaryTree^.right); IF NOT success THEN Exit;
                (* sem *)
               t := newTree('/');
               t^.left := binaryTree;
@@ -322,25 +330,133 @@ var t: TreePtr;
   END; (*Fact*)
 
 PROCEDURE EmitCodeForExprTree(t: TreePtr);
+var tVal : string;
+    i, code : integer;
+    opChar: char;
 begin
     if(t <> NIL) then begin
         EmitCodeForExprTree(t^.left);
-        CASE t^.val OF
-            '+': BEGIN
-                    
+        tVal := t^.val;
+        val(tVal, i, code);
+        if(code = 0) then
+            Emit2(LoadConstOpc,i)
+        else
+            if(length(tVal) > 1) then begin
+                IF NOT IsDecl(identStr) THEN
+                  SemErr('var. not decl.')
+                ELSE
+                  Emit2(LoadValOpc,AddrOf(identStr));
+            end else begin
+                opChar := tVal[1];
+                CASE opChar OF
+                    '+': BEGIN
+                            Emit1(AddOpc);
+                        END;
+                    '-': BEGIN
+                            Emit1(SubOpc);
+                        END;
+                    '*': BEGIN
+                            Emit1(MulOpc);
+                        END;
+                    '/': BEGIN
+                            Emit1(DivOpc);
+                        END;
+                    ELSE BEGIN
+                            IF NOT IsDecl(identStr) THEN
+                                SemErr('var. not decl.')
+                            ELSE
+                                Emit2(LoadValOpc,AddrOf(identStr));
+                        END;
                 END;
-            '-': BEGIN
-
-                END;
-            '*': BEGIN
-
-                END;
-            '/': BEGIN
-                    
-                END;
-        END;
+            end;
         EmitCodeForExprTree(t^.right);
     end;
 end;
 
+procedure Simplify(var t: TreePtr);
+var tVal : string;
+    i, code : integer;
+    opChar: char;
+begin
+    if(t <> NIL) then begin
+        Simplify(t^.left);
+        Simplify(t^.right);
+        tVal := t^.val;
+        val(tVal, i, code);
+        if((code <> 0) and (length(tVal) = 1)) then begin
+            opChar := tVal[1];
+            CASE opChar OF
+                '+': BEGIN
+                        if(t^.left^.val = '0') then
+                            t := t^.right
+                        else if(t^.right^.val = '0') then
+                            t := t^.left;
+                    END;
+                '-': BEGIN
+                        if(t^.left^.val = '0') then
+                            t := t^.right
+                        else if(t^.right^.val = '0') then
+                            t := t^.left;
+                    END;
+                '*': BEGIN
+                        if(t^.left^.val = '1') then
+                            t := t^.right
+                        else if(t^.right^.val = '1') then
+                            t := t^.left;
+                    END;
+                '/': BEGIN
+                        if(t^.left^.val = '1') then
+                            t := t^.right
+                        else if(t^.right^.val = '1') then
+                            t := t^.left;
+                    END;
+                ELSE BEGIN
+                    IF NOT IsDecl(identStr) THEN
+                        SemErr('var. not decl.')
+                    ELSE
+                        Emit2(LoadValOpc,AddrOf(identStr));
+                END;
+            END;      
+        end;
+    end;
+end;
+
+procedure ConstantFolding(var t: TreePtr);
+var tValLeft,tValRight : string;
+    valString: string;
+    iLeft,iRight, codeLeft, codeRight : integer;
+    opChar: char;
+begin
+    if(t <> NIL) then begin
+        valString := '';
+        ConstantFolding(t^.left);
+        ConstantFolding(t^.right);
+        if(t^.left <> NIL) and (t^.right <> NIL) then begin
+            tValLeft := t^.left^.val;
+            tValRight := t^.right^.val;
+            val(tValLeft, iLeft, codeLeft);
+            val(tValRight, iRight, codeRight);
+            if(codeLeft = 0) and (codeRight = 0) then begin
+                opChar := t^.val[1];
+                CASE opChar OF
+                    '+': BEGIN
+                            Str(iLeft + iRight, valString);
+                        END;
+                    '-': BEGIN
+                            Str(iLeft - iRight, valString);
+                        END;
+                    '*': BEGIN
+                            Str(iLeft * iRight, valString);
+                        END;
+                    '/': BEGIN
+                            Str(iLeft DIV iRight, valString);
+                        END;
+                END;
+                t^.val := valString;
+            end;
+        end;
+    end;
+end;
+
+    BEGIN
 END. (*MPP_SS*)

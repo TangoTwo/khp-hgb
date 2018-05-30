@@ -184,6 +184,7 @@ var destId : STRING;
                 (* ENDSEM *)
                 NewSy;
                 IF SyIsNot(thenSy) THEN Exit;
+                newSy;
                 Stat; IF NOT success THEN Exit;
                 IF sy = elseSy THEN BEGIN
                     newSy;

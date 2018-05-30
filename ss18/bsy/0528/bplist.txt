@@ -1,0 +1,21 @@
+click for knowledge GmbH;Monika Freudenberger 
+emergentec;Georg Summer,Andreas Heinzel,Eva-Maria Forstner
+TU Graz, Institut für Genomik und Bioinformatik;Maria Fischer,Stephan Pabinger,Tanja Grill
+Universität Linz, Institut für Biophysik;Andreas Köfler
+MIC Datenverarbeitung GmbH;Hubert Landl
+IKT Linz GmbH;Günter Mayrhofer
+KH Elisabethinen + Med Uni Wien;Sara Ivcevic,Alexandra Parraghy,Carina Üblackner,Carolin Stütz,Dominique Maier
+Programmierfabrik GmbH;Adrian Bergmann
+solvistas GmbH;Sophie Blank
+softaware gmbH Asten;Manuel Perfler
+Upper Austrian Research GmbH;Marco Hampel
+Inte:Ligand Softwareentwicklungs- und Consulting GmbH;Noel Diamant,Christine Huynh
+Vidamon GmbH;Stefan Mittermair
+Univ. of Queensland Inst. For Molecular Bioscience;Katharina Gottwald
+University of New South Wales, School of Biotechnology and Biomolecular Sciences;Florian Breitwieser
+Wellcome Trust Sanger Institute Cambridge;Tomislav Ilicic,Christoph Schlaffner,Petra Gutenbrunner
+Harvard School of Public Health;Daniel Pletzer,Philipp Heindl
+Dana-Farber Cancer Institute Harvard Cancer Center;Thomas Schwarzl,Daniel Gusenleitner
+University of California San Diego;Stefan Brunner,Petra Stepanowsky
+MIT;Anna Gattinger,Konstantin Krismer
+Koch Institute at MIT;Tobias Ehrenberger

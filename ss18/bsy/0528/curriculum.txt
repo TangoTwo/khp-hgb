@@ -1,0 +1,35 @@
+School of Informatics, Communications and Media
+Upper Austria University of Applied Sciences
+Curriculum Bioinformatics  B.Sc.
+Lectures Hours per week in semester
+Computer Science
+Computer Science Introduction;4;0;0;0;0;0
+Algorithms and Datastrucrures;8;8;0;0;0;0
+Software Development;0;0;5;5;5;0
+Data Engineering;0;4;4;3;0;0
+Operating Systems and Network Technology;0;3;0;3;0;0
+Web Techniques;0;0;2;0;0;0
+Life Sciences and Math/Statitstics
+Biolab;0;0;0;2;0;0
+Mathematics;4;4;0;0;0;0
+Statistics;0;0;4;4;4;0
+Chemistry/Biochemistry;3;0;3;0;0;0
+Biology;3;0;0;0;0;0
+Physiology;0;4;0;0;0;0
+Cell Biology;0;0;3;0;0;0
+Genetics;0;0;0;2;0;0
+Proteomics;0;0;0;0;2;0
+Intergrative Bioinformatics
+Projectmanagement;2;2;0;0;0;0
+Interdisciplinary Project;0;0;3;3;6;0
+Internship and Bachelorthesis Seminar;0;0;0;0;0;4
+Softwareapplications for Bioinformaticians;0;0;3;0;0;0
+Algorithms in Bioinformatics;0;0;0;0;3;0
+Signal and Imageprocessing;0;0;0;3;0;0
+Machine Learning;0;0;0;0;4;0
+Business and Social Skills
+Business Administration;0;0;0;2;1;0
+Bioethics;0;0;0;0;0;1
+English;2;2;1;1;1;0
+Law;0;0;0;0;0;1
+Social Skills;2;1;0;0;2;0

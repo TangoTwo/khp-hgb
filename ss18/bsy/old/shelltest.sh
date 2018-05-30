@@ -5,3 +5,7 @@ then
 else
 	echo "Number of args: $#"
 fi
+a = 10
+echo "$a"
+echo '$a'
+echo `$a`
