@@ -4,3 +4,7 @@
 + isEmpty:BOOLEAN:VIRTUAL
 + Init(maxElement:INTEGER);
 + ~Init
+
+DynArrStack --> Stack
++ Push : VIRTUAL
++ Pop : VIRTUAL
