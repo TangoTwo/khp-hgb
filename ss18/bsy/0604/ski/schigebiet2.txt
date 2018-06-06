@@ -1,0 +1,8 @@
+Groszglockner Resort 	;13;¤ 45 (Tageskarte Hauptsaison)
+Matrei in Osttirol,Kals am Groszglockner,Groszdorf,Lesach,Virgen
+Lermoos - Grubigstein 	;8;¤ 43 (Tageskarte Hauptsaison)
+Lermoos,Laehn
+Soelden 	;33;¤ 52 (Tageskarte Hauptsaison)
+Soelden,Hochsoelden,Zwieselstein,Huben,Laengenfeld
+Ski Juwel Alpbachtal Wildschoenau 	;46;¤ 44 (Tageskarte Hauptsaison)
+Inneralpbach,Auffach,Alpbach,Oberau,Reith im Alpbachtal,Brixlegg

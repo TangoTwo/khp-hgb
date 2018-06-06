@@ -1,6 +1,6 @@
-unit V_AV;
+program V_AV;
 
-const INIT_CAP_SIZE = 16;
+const DEFAULT_CAP_SIZE = 16;
 
 type
     intArray = array[1..1] of integer;
@@ -10,32 +10,38 @@ type
             arrPtr : ^intArray;
             capacityCount : integer;
             top : integer; //equals size
+            initCapacity : integer;
             PUBLIC
-                constructor init;
+                constructor init(userCapacity : integer);
                 procedure add(val : integer);
-                procedure instertElementAt(pos : integer; val : integer);
+                procedure insertElementAt(pos : integer; val : integer);
                 procedure getElementAt(pos : integer; var val : integer; var ok : boolean);
                 function size : integer;
                 function capacity : integer;
                 procedure clear;
             PRIVATE
                 procedure realloc;
-                procedure errorIfOutOfRange(pos : integer);
+                function isOutOfRange(pos : integer) : boolean;
     end;
 
-constructor init;
+constructor VectorObj.init(userCapacity : integer);
 begin
     if(arrPtr <> NIL) then begin
         writeln('Can''t initialize non-empty stack!');
         halt;
     end;
+    if(userCapacity <= 0) then begin
+        writeLn('No capacity given. Creating with default size ', DEFAULT_CAP_SIZE);
+        initCapacity := DEFAULT_CAP_SIZE;
+    end else
+        initCapacity := userCapacity;
     new(arrPtr);
     top := 0;
-    capacityCount := INIT_CAP_SIZE;
+    capacityCount := initCapacity;
     GetMem(arrPtr, SIZEOF(integer) * capacityCount);
 end;
 
-procedure add(val : integer);
+procedure VectorObj.add(val : integer);
 begin
     if top >= capacityCount then begin
         realloc;
@@ -46,36 +52,50 @@ begin
     (*$R+*)
 end;
 
-procedure insertElementAt(pos : integer; val : integer);
+procedure VectorObj.insertElementAt(pos : integer; val : integer);
+var i : integer;
 begin
-    errorIfOutOfRange(isPtr, pos);
     inc(top);
-    for pos+1 to top do
-        arrPtr^[pos] := arrPtr^[pos-1];
+    if(isOutOfRange(pos)) then
+        pos := top
+    else if pos < 0 then
+        pos := 0;
+    i := top;
+    while (i > pos) do begin
+        (*$R-*)
+        arrPtr^[i] := arrPtr^[i-1];
+        (*$R+*)
+        dec(i);
+    end;
     (*$R-*)
-    isPtr^.arrPtr^[pos] := val;
+    arrPtr^[pos] := val;
     (*$R+*)
 end;
 
-procedure getElementAt(pos : integer; var val : integer; var ok : boolean);
+procedure VectorObj.getElementAt(pos : integer; var val : integer; var ok : boolean);
 begin
-    errorIfOutOfRange(pos);
+    ok := TRUE;
+    if(isOutOfRange(pos)) then begin
+        ok := FALSE;
+        val := -1;
+        exit;
+    end;
     (*$R-*)
     val := arrPtr^[pos];
     (*$R+*)
 end;
 
-function size : integer;
+function VectorObj.size : integer;
 begin
     size := top;
 end;
 
-function capacity : integer;
+function VectorObj.capacity : integer;
 begin
     capacity := capacityCount;
 end;
 
-procedure clear;
+procedure VectorObj.clear;
 begin
     if arrPtr = NIL then begin
         writeLn('Cannot dispose uninitialized vector!');
@@ -83,10 +103,10 @@ begin
     end;
     freeMem(arrPtr, SIZEOF(integer) * capacityCount);
     arrPtr := NIL;
-    init;
+    init(initCapacity);
 end;
 
-procedure realloc;
+procedure VectorObj.realloc;
 var newArray : ^intArray;
     i : integer;
 begin
@@ -101,13 +121,47 @@ begin
     arrPtr := newArray;
 end;
 
-procedure errorIfOutOfRange(pos : integer);
+function VectorObj.isOutOfRange(pos : integer) : boolean;
 begin
-    if pos > top then begin
-        writeln('Pos out of range!');
-        halt;
-    end;
+    if pos > top then
+        isOutOfRange := TRUE
+    else
+        isOutOfRange := FALSE
 end;
 
+var
+    intVector : Vector;
+    i : integer;
+    tVal : integer;
+    ok : boolean;
 begin
+    New(intVector, init(4));
+    writeLn(intVector^.size);
+    for i := 1 to 40 do begin
+        intVector^.add(i);
+    end;
+    writeLn('Current size: ', intVector^.size);
+    intVector^.getElementAt(30, tVal, ok);
+    writeLn('Element 30:', tVal);
+    writeLn('Current capacity: ', intVector^.capacity);
+    intVector^.insertElementAt(30, 100);
+    intVector^.getElementAt(30, tVal, ok);
+    if(ok) then
+        writeLn('Element 30:', tVal)
+    else
+        writeLn('Ok: ', ok);
+    intVector^.getElementAt(31, tVal, ok);
+    if(ok) then
+        writeLn('Element 31:', tVal)
+    else
+        writeLn('Ok: ', ok);
+    writeLn('Current size: ', intVector^.size);
+    intVector^.clear;
+    writeLn('Current size: ', intVector^.size);
+    intVector^.getElementAt(31, tVal, ok);
+    if(ok) then
+        writeLn('Element 31:', tVal)
+    else
+        writeLn('Ok: ', ok);
+    writeLn('Current capacity: ', intVector^.capacity);
 end.

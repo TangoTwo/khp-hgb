@@ -13,6 +13,7 @@ type
             initCapacity : integer;
             PUBLIC
                 constructor init(userCapacity : integer);
+                destructor done;
                 procedure add(val : integer); virtual;
                 procedure insertElementAt(pos : integer; val : integer); virtual;
                 procedure getElementAt(pos : integer; var val : integer; var ok : boolean);
@@ -56,6 +57,12 @@ begin
     top := 0;
     capacityCount := initCapacity;
     GetMem(arrPtr, SIZEOF(integer) * capacityCount);
+end;
+
+destructor VectorObj.done;
+begin
+    freeMem(arrPtr, SIZEOF(integer) * capacityCount);
+    arrPtr := NIL;
 end;
 
 procedure VectorObj.add(val : integer);
@@ -152,37 +159,16 @@ begin
         writeln('Given value is not a natural number!');
         exit;
     end;
-    if top >= capacityCount then begin
-        realloc;
-    end;
-    inc(top);
-    (*$R-*)
-    arrPtr^[top] := val;
-    (*$R+*)
+    inherited add(val);
 end;
 
 procedure NaturalVectorObj.insertElementAt(pos : integer; val : integer);
-var i : integer;
 begin
     if NOT isNatural(val) then begin
         writeln('Given value is not a natural number!');
         exit;
     end;
-    inc(top);
-    if(isOutOfRange(pos)) then
-        pos := top
-    else if pos < 0 then
-        pos := 0;
-    i := top;
-    while (i > pos) do begin
-        (*$R-*)
-        arrPtr^[i] := arrPtr^[i-1];
-        (*$R+*)
-        dec(i);
-    end;
-    (*$R-*)
-    arrPtr^[pos] := val;
-    (*$R+*)
+    inherited insertElementAt(pos, val);
 end;
 
 function NaturalVectorObj.isNatural(val : integer) : boolean;
@@ -199,37 +185,16 @@ begin
         writeln('Given value is not a prime number!');
         exit;
     end;
-    if top >= capacityCount then begin
-        realloc;
-    end;
-    inc(top);
-    (*$R-*)
-    arrPtr^[top] := val;
-    (*$R+*)
+    inherited add(val);
 end;
 
 procedure PrimeVectorObj.insertElementAt(pos : integer; val : integer);
-var i : integer;
 begin
     if NOT isPrime(val) then begin
         writeln('Given value is not a prime number!');
         exit;
     end;
-    inc(top);
-    if(isOutOfRange(pos)) then
-        pos := top
-    else if pos < 0 then
-        pos := 0;
-    i := top;
-    while (i > pos) do begin
-        (*$R-*)
-        arrPtr^[i] := arrPtr^[i-1];
-        (*$R+*)
-        dec(i);
-    end;
-    (*$R-*)
-    arrPtr^[pos] := val;
-    (*$R+*)
+    inherited insertElementAt(pos, val);
 end;
 
 function PrimeVectorObj.isPrime(val : integer) : boolean;
@@ -246,44 +211,50 @@ begin
 end;
 
 var
-    intVector : PrimeVector;
+    intVector : vector;
+    natVector : NaturalVector;
+    priVector : PrimeVector;
     i : integer;
     tVal : integer;
     ok : boolean;
 begin
     New(intVector, init(4));
-    writeLn(intVector^.size);
+    New(natVector, init(20));
+    New(priVector, init(17));
+    
     for i := -20 to 20 do begin
         intVector^.add(i);
+        natVector^.add(i);
+        priVector^.add(i);
     end;
-    writeLn('Current size: ', intVector^.size);
-    intVector^.getElementAt(30, tVal, ok);
-    writeLn('Element 30:', tVal);
-    writeLn('Current capacity: ', intVector^.capacity);
-    intVector^.insertElementAt(30, 100);
-    intVector^.getElementAt(30, tVal, ok);
-    if(ok) then
-        writeLn('Element 30:', tVal)
-    else
-        writeLn('Ok: ', ok);
-    intVector^.getElementAt(31, tVal, ok);
-    if(ok) then
-        writeLn('Element 31:', tVal)
-    else
-        writeLn('Ok: ', ok);
-    writeLn('Current size: ', intVector^.size);
+    writeLn('Current size intVec: ', intVector^.size);
+    writeLn('Current size natVector: ', natVector^.size);
+    writeLn('Current size priVector: ', priVector^.size);
 
+    write('intVec=[');
     for i := 1 to intVector^.capacity do begin
         intVector^.getElementAt(i, tVal, ok);
         if(ok) then
-            writeLn('Element ', i, ':', tVal)
+            write(tVal,',')
     end;
-    intVector^.clear;
-    writeLn('Current size: ', intVector^.size);
-    intVector^.getElementAt(31, tVal, ok);
-    if(ok) then
-        writeLn('Element 31:', tVal)
-    else
-        writeLn('Ok: ', ok);
-    writeLn('Current capacity: ', intVector^.capacity);
+    write(']');
+    writeln;
+
+    write('natVec=[');
+    for i := 1 to natVector^.capacity do begin
+        natVector^.getElementAt(i, tVal, ok);
+        if(ok) then
+            write(tVal,',')
+    end;
+    write(']');
+    writeln;
+
+    write('priVec=[');
+    for i := 1 to priVector^.capacity do begin
+        priVector^.getElementAt(i, tVal, ok);
+        if(ok) then
+            write(tVal,',')
+    end;
+    write(']');
+    writeln;
 end.
