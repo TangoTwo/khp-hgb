@@ -1,0 +1,6 @@
+33 St.Pölten
+34 Bregenz
+67 Innsbruck
+89 Graz
+100 Linz
+289.4

@@ -1,0 +1,9 @@
+39.2: Wien
+38.3: Linz
+37.4: Salzburg
+37.2: Innsbruck
+34.5: Bregenz
+33.2: Graz
+30.2: Klagenfurt
+20.2: Eisenstadt
+19.2: St.Pölten

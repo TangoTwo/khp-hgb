@@ -1,0 +1,18 @@
+100:Oberösterreich;Linz
+Sommer:38.3 Grad
+5:Salzburg;Salzburg
+Sommer:37.4 Grad
+23:Wien;Wien
+Sommer:39.2 Grad
+67:Tirol;Innsbruck
+Sommer:37.2 Grad
+34:Vorarlberg;Bregenz
+Sommer:34.5 Grad
+89:Steiermark;Graz
+Sommer:33.2 Grad
+1:Kärnten;Klagenfurt
+Sommer:30.2 Grad
+9:Burgenland;Eisenstadt
+Herbst:20.2 Grad
+33:Niederösterreich;St.Pölten
+Herbst:19.2 Grad
