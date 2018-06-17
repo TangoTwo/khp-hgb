@@ -18,12 +18,13 @@ procedure S;
 begin
     (* S = expr EOF. *)
     success := TRUE;
-    new(pic, init);
+    new(pic, init('origin'));
     cartoon; if not success then exit;
     if curSy <> eofSy then begin success := FALSE; exit; end;
     newSy;
     (* sem *)
-    //write(e);
+    pic^.write;
+writeln('Wrote stuff');
     (* endsem *)
 end;
 
@@ -50,8 +51,8 @@ begin
             showSy : begin
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
-                    if pic.contains(identStr) <> NIL then
-                        pic.contains(identStr)^.visibility(TRUE);
+                    if pic^.contains(identStr) <> NIL then
+                        //pic^.contains(identStr)^.visibility(TRUE);
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
@@ -59,8 +60,8 @@ begin
             hideSy : begin
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
-                    if pic.contains(identStr) <> NIL then
-                        pic.contains(identStr)^.visibility(FALSE);
+                    if pic^.contains(identStr) <> NIL then
+                        //pic.contains(identStr)^.visibility(FALSE);
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
@@ -101,7 +102,7 @@ begin
                 newSy;
                 (*SEM*) 
                 new(l, init(p, q, identStr));
-                pic.add(l);
+                pic^.add(l);
                 (*ENDSEM*)
             end;
         rectangleSy : begin 
@@ -120,7 +121,7 @@ begin
                 newSy;
                 (*SEM*) 
                 new(r, init(p, q, identStr));
-                pic.add(r);
+                pic^.add(r);
                 (*ENDSEM*)
             end;
         circleSy : begin 
@@ -136,16 +137,18 @@ begin
                 newSy;
                 (*SEM*) 
                 new(c, init(p, radius, identStr));
-                pic.add(c);
+                pic^.add(c);
                 (*ENDSEM*)
             end;
         pictureSy : begin 
-                newSy; 
-                (*SEM*) new(userPic, init); (*ENDSEM*)
-                if curSy <> identSy then begin success := FALSE; exit; end;
+                (*SEM*) new(userPic, init(identStr)); (*ENDSEM*)
+                newSy;
+		if curSy <> identSy then begin success := FALSE; 
+exit; 
+end;
                 (*SEM*)
-                if pic.contains(identStr) <> NIL then
-                    userPic.add(^pic.contains(identStr));
+                if pic^.contains(identStr) <> NIL then
+                    userPic^.add(pic^.contains(identStr))
                 else
                     writeLn(identStr, ' not declared!');
                 (*ENDSEM*)
@@ -154,8 +157,8 @@ begin
                     newSy;
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
-                    if pic.contains(identStr) <> NIL then
-                        userPic.add(^pic.contains(identStr));
+                    if pic^.contains(identStr) <> NIL then
+                        userPic^.add(pic^.contains(identStr))
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
@@ -184,8 +187,8 @@ begin
     (*SEM*)yMove := numVal;(*ENDSEM*)
     newSy;
     (*SEM*)
-    if pic.contains(identStr) <> NIL then
-        pic.contains(identStr)^.move(xMove, yMove);
+    if pic^.contains(identStr) <> NIL then
+        pic^.contains(identStr)^.move(xMove, yMove)
     else
         writeLn(identStr, ' not declared!');
     (*ENDSEM*)
