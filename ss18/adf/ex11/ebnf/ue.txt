@@ -1,0 +1,29 @@
+Compilerbau
+
+Zeichen (in Datei) --> Lexer --Symbole-->Syntaxanalysator --Symboltabelle AST (Abstrakter Syntaxbaum--> Codegenerator --> *.exe
+
+Calc
+(1+3)*3 --> 12
+
+Symbol = (plusSy, numbSy)
+
+Implementierung Lexer
+VAR
+    curSy:Symbol
+    curCh:CHAR
+    
+PROC NewSy()
+liest nächstes Symbol & setzt curSy
+
+PROC NewCh()
+liest nächstes Zeichen aus Eingabedatei und setzt curCh
+
+Methode rekursiver Abstieg
+für die Syntaxanalyse for
+LL(1) - Grammatiken
+
+Attributierte Grammatik mit semantische Aktionen (Für Kommissionelle wichtig!)
+
+Expr = Term {('+'|'-') Term}.
+Term = Fact {('*'|'/') Fact}.
+Fact = number | '(' Expr ')'.
