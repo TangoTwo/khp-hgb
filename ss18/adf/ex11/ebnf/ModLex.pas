@@ -2,7 +2,7 @@ unit ModLex;
 
 interface
 type
-    symbol = (numberSy, identSy
+    symbol = (numberSy, identSy,
               equalSy, semicolonSy, plusSy,
               showSy, hideSy, 
               lineSy, rectangleSy,
@@ -15,7 +15,7 @@ var
     identStr : string;
 
 procedure newSy;
-procedure initCalcLex(inFileName : string);
+procedure initLex(inFileName : string);
 
 implementation
 const EOF_CH = chr(26);
@@ -48,26 +48,26 @@ begin
         EOF_CH: begin curSy := eofSy;      newCh; end;
         'a'..'z', 'A'..'Z': BEGIN
           identStr := '';
-          WHILE ch IN ['a'.. 'z', 'A' ..'Z', '0'..'9', '_'] DO BEGIN
-            identStr := Concat(identStr, UpCase(ch));
+          WHILE curCh IN ['a'.. 'z', 'A' ..'Z', '0'..'9', '_'] DO BEGIN
+            identStr := Concat(identStr, UpCase(curCh));
             NewCh;
           END; (*WHILE*)
           IF      identStr = 'SHOW' THEN
-            sy := showSy
+            curSy := showSy
           ELSE IF identStr = 'HIDE' THEN
-            sy := hideSy
+            curSy := hideSy
           ELSE IF identStr = 'LINE' THEN
-            sy := lineSy
+            curSy := lineSy
           ELSE IF identStr = 'RECTANCLE' THEN
-            sy := rectangleSy
+            curSy := rectangleSy
           ELSE IF identStr = 'CIRCLE' THEN
-            sy := circleSy
+            curSy := circleSy
           ELSE IF identStr = 'PICTURE' THEN
-            sy := pictureSy
+            curSy := pictureSy
           ELSE IF identStr = 'MOVE' THEN
-            sy := moveSy
+            curSy := moveSy
           ELSE
-            sy := identSy;
+            curSy := identSy;
         END;
         '0'..'9': begin
                 (* read a number *)
@@ -81,6 +81,7 @@ begin
             end;
         else begin curSy := noSy; newCh; end; (* default case *)
     end; (* case *)
+    writeln(curSy);
 end;
 
 procedure newCh;

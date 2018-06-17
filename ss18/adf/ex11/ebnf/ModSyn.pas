@@ -1,4 +1,4 @@
-unit ModCalcSyn;
+unit ModSyn;
 
 interface
 var
@@ -22,7 +22,7 @@ begin
     if curSy <> eofSy then begin success := FALSE; exit; end;
     newSy;
     (* sem *)
-    write(e);
+    //write(e);
     (* endsem *)
 end;
 
@@ -31,6 +31,7 @@ begin
     (* Statement [ ';' Statement }. *)
     statement; if not success then exit;
     while (curSy = semicolonSy)do begin
+        newSy;
         statement; if not success then exit;
     end; (* while *)
 end;
@@ -38,10 +39,18 @@ end;
 procedure statement;
 begin
     (* ident '=' ShapeDef | ('SHOW' | 'HIDE') ident | Action. *)
-    if(curSy = identSy) then do begin
-    end else if(curSy = showSy) or (curSy = hideSy) then do begin
+    if(curSy = identSy) then begin
+        newSy;
+        if curSy <> equalSy then begin success := FALSE; exit; end;
+        newSy;
+        shapeDef; if not success then exit;
+    end else if(curSy = showSy) or (curSy = hideSy) then begin
+        newSy;
+        if curSy <> identSy then begin success := FALSE; exit; end;
+        writeLn(identStr);
+        newSy;
     end else begin
-        action;
+        action; if not success then exit;
     end;
 end;
 
@@ -112,7 +121,7 @@ end;
 
 procedure action;
 var ident : string;
-    x-move, y-move : integer;
+    xMove, yMove : integer;
 begin
     if curSy <> moveSy then begin success := FALSE; exit; end;
     newSy;
@@ -120,10 +129,10 @@ begin
     (*SEM*)ident := identStr; (*ENDSEM*)
     newSy;
     if curSy <> numberSy then begin success := FALSE; exit; end;
-    (*SEM*)x-move := numVal;(*ENDSEM*)
+    (*SEM*)xMove := numVal;(*ENDSEM*)
     newSy;
-    if curSy <> identSy then begin success := FALSE; exit; end;
-    (*SEM*)y-move := numVal;(*ENDSEM*)
+    if curSy <> numberSy then begin success := FALSE; exit; end;
+    (*SEM*)yMove := numVal;(*ENDSEM*)
     newSy;
 end;
 
