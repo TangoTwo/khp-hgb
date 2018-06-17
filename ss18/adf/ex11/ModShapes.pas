@@ -10,8 +10,9 @@ type
 	pointRec = record
 				x : integer;
 				y : integer;
-			end;
-	shape = class
+            end;
+    shape = ^shapeObj;
+	shapeObj = object
                 visible : boolean;
                 name : string;
 				procedure move(mx, my : integer); virtual; abstract; (* abstract methods have no definition *)
@@ -20,7 +21,8 @@ type
                 function contains(ident : string) : pointer; virtual;
 			end;
 	shapeArray = array[1..MAX] of shape;
-	line = class(shape)
+    line = ^lineObj;
+	lineObj = object(shape)
 				private
 					startP, endP : PointRec;
 				public
@@ -29,8 +31,8 @@ type
                     procedure write; virtual; 
                     procedure draw(dc : HDC); virtual;
 			end;
-
-	rectangle = class(shape)
+    rectangle = ^rectangleObj;
+	rectangleObj = object(shape)
 					private
 						p0, p1, p2, p3 : pointRec;
 					public
@@ -39,7 +41,8 @@ type
                         procedure write; virtual;
                         procedure draw(dc : HDC); virtual;
 				end;
-	circle = class(shape)
+    circle = ^circleObj;
+	circleObj = object(shape)
 					private
 						center : pointRec;
 						radius : integer;
@@ -52,8 +55,8 @@ type
                         procedure write; virtual;
                         procedure draw(dc : HDC); virtual;
 				end;
-
-	picture = class(shape)
+    picture = ^pictureObj;
+	pictureObj = object(shape)
 					private
 						shapes : shapeArray;
 						numShapes : integer;
@@ -201,7 +204,7 @@ var i : integer;
 begin
 	writeLn('Picture with ', numShapes, ' shapes: ');
 	for i := 1 to numShapes do
-		shapes[i].write;
+		shapes[i]^.write;
 end;
 
 procedure picture.draw(dc : HDC);
