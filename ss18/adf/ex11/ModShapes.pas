@@ -2,9 +2,10 @@ unit modShapes;
 
 interface
 
-uses WinGraph; (* for HDC *)
-	const
-		MAX = 10;
+USES Windows, WinGraph; (* for HDC *)
+    
+const
+    MAX = 10;
 
 type
 	pointRec = record
@@ -18,11 +19,11 @@ type
 				procedure move(mx, my : integer); virtual; abstract; (* abstract methods have no definition *)
 				procedure write; virtual; abstract;
 				procedure draw(dc : HDC); virtual; abstract;
-                function contains(ident : string) : pointer; virtual;
+                function contains(ident : string) : ^shapeObj; virtual;
 			end;
 	shapeArray = array[1..MAX] of shape;
     line = ^lineObj;
-	lineObj = object(shape)
+	lineObj = object(shapeObj)
 				private
 					startP, endP : PointRec;
 				public
@@ -32,7 +33,7 @@ type
                     procedure draw(dc : HDC); virtual;
 			end;
     rectangle = ^rectangleObj;
-	rectangleObj = object(shape)
+	rectangleObj = object(shapeObj)
 					private
 						p0, p1, p2, p3 : pointRec;
 					public
@@ -42,7 +43,7 @@ type
                         procedure draw(dc : HDC); virtual;
 				end;
     circle = ^circleObj;
-	circleObj = object(shape)
+	circleObj = object(shapeObj)
 					private
 						center : pointRec;
 						radius : integer;
@@ -56,7 +57,7 @@ type
                         procedure draw(dc : HDC); virtual;
 				end;
     picture = ^pictureObj;
-	pictureObj = object(shape)
+	pictureObj = object(shapeObj)
 					private
 						shapes : shapeArray;
 						numShapes : integer;
@@ -66,7 +67,7 @@ type
 						procedure add(s : shape);
                         procedure write; virtual;
                         procedure draw(dc : HDC); virtual;
-                        function contains(ident : string) : pointer; virtual;
+                        function contains(ident : string) : ^shapeObj; virtual;
 				end;
 
 implementation
@@ -78,15 +79,15 @@ begin
 end;
 
 (***************Shape**************)
-function shape.contains(ident : string) : Pointer;
+function shapeObj.contains(ident : string) : ^shapeObj;
 begin
     if(name = ident) then
-        contains := Pointer(self);
+        contains := ^shapeObj(self);
     else
         contains := NIL;
 end;
 (***************Line***************)
-constructor line.init(tStartP, tEndP : PointRec; ident : string);
+constructor lineObj.init(tStartP, tEndP : PointRec; ident : string);
 begin
     self.name := ident;
 	self.startP := tStartP;
@@ -94,25 +95,25 @@ begin
 	visible := TRUE;
 end;
 
-procedure line.move(mx, my : integer);
+procedure lineObj.move(mx, my : integer);
 begin
 	addToPoint(startP, mx, my);
 	addToPoint(endP, mx, my);
 end;
 
-procedure line.write;
+procedure lineObj.write;
 begin
 	writeLn('Line from ', startP. x, ',', startP.y, ') to (', endP.x, ',' endP.y, ')');
 end;
 
-procedure line.draw(dc : HDC);
+procedure lineObj.draw(dc : HDC);
 begin
     moveTo(dc, startP.x, startP.y);
     lineTo(dc, endP.x, endP.y);
 end;
 
 (************************RECTANGLE*****************)
-constructor rectangle.init(lt, rb : PointRec; ident : string);
+constructor rectangleObj.init(lt, rb : PointRec; ident : string);
 begin
     self.name := ident;
 	p0 := lt;
@@ -123,7 +124,7 @@ begin
 	p3.y := p2.y;
 end;
 
-procedure rectangle.move(mx, my : integer);
+procedure rectangleObj.move(mx, my : integer);
 begin
 	addToPoint(p0, mx, my);
 	addToPoint(p1, mx, my);
@@ -131,13 +132,13 @@ begin
 	addToPoint(p3, mx, my);
 end;
 
-procedure rectangle.write;
+procedure rectangleObj.write;
 begin
 	writeLn('Rectangle: ');
 	writeLn('(', p0.x,',', p0.y,')');
 end;
 
-procedure rectangle.draw(dc : HDC);
+procedure rectangleObj.draw(dc : HDC);
 begin
     moveTo(dc, p0.x, p0.y);
     lineTo(dc, p1.x, p1.y);
@@ -147,7 +148,7 @@ begin
 end;
 
 (*********************Circle****************************)
-constructor circle.init(c: pointRec; r : integer; ident : string);
+constructor circleObj.init(c: pointRec; r : integer; ident : string);
 begin
     self.name := ident;
 	self.center := c;
@@ -155,37 +156,38 @@ begin
 	visible := TRUE;
 end;
 
-procedure circle.move(mx, my : integer),
+procedure circleObj.move(mx, my : integer),
 begin
 	addToPoint(center, mx, my);
 end;
 
-procedure circle.write;
+procedure circleObj.write;
 begin
 	writeLn('Circle with center: (', center.x, ',', center.y, ') radius: ', radius);
 end;
 
-procedure circle.draw(dc : HDC);
+procedure circleObj.draw(dc : HDC);
 begin
-    
+      Ellipse(dc, center.x - radius, center.y - radius,
+          center.x + radius, center.y + radius);
 end;
 
 (********************PICTURE**************************)
-constructor picture.init(ident : string);
+constructor pictureObj.init(ident : string);
 begin
     self.name := ident;
 	numShapes := 0;
 	visible := TRUE;
 end;
 
-procedure picture.move(mx, my : integer);
+procedure pictureObj.move(mx, my : integer);
 var i : integer;
 begin
 	for i := 1 to numShapes do
 		shapes[i].move(mx, my);
 end;
 
-procedure picture.add(s : shape);
+procedure pictureObj.add(s : shape);
 begin
 	if numShapes >= MAX then begin
 		writeLn('Picture is full');
@@ -199,7 +201,7 @@ begin
 	shapes[numShapes] := s;
 end;
 
-procedure picture.write
+procedure pictureObj.write
 var i : integer;
 begin
 	writeLn('Picture with ', numShapes, ' shapes: ');
@@ -207,7 +209,7 @@ begin
 		shapes[i]^.write;
 end;
 
-procedure picture.draw(dc : HDC);
+procedure pictureObj.draw(dc : HDC);
 var i : integer;
 begin
     for i := 1 to numShapes do begin
@@ -215,9 +217,9 @@ begin
     end;
 end;
 
-function picture.contains(ident : string) : pointer;
+function pictureObj.contains(ident : string) : ^shapeObj;
 var i : integer;
-    tPointer : Pointer;
+    tPointer : ^shapeObj;
 begin
     tPointer := inherited contains(ident);
     if(tPointer = NIL) then begin
