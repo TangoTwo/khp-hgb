@@ -1,0 +1,10 @@
+OO-Prog
+
+Lückntext
+_____ Stack ______
+procedure PUSH(e : _____)
+					_____
+	_____ init (_____)
+				_____
+	_____ done ______
+	end;
