@@ -12,30 +12,32 @@ type
 				y : integer;
 			end;
 	shape = class
-				visible : boolean;
+                visible : boolean;
+                name : string;
 				procedure move(mx, my : integer); virtual; abstract; (* abstract methods have no definition *)
 				procedure write; virtual; abstract;
 				procedure draw(dc : HDC); virtual; abstract;
+                function contains(ident : string) : pointer; virtual;
 			end;
 	shapeArray = array[1..MAX] of shape;
 	line = class(shape)
 				private
 					startP, endP : PointRec;
 				public
-					constructor init(tStartP, tEndP : pointRec);
+					constructor init(tStartP, tEndP : pointRec; ident : string);
 					procedure move(mx, my : integer); virtual;
-procedure write; virtual; 
-procedure draw(dc : HDC); virtual;
+                    procedure write; virtual; 
+                    procedure draw(dc : HDC); virtual;
 			end;
 
 	rectangle = class(shape)
 					private
 						p0, p1, p2, p3 : pointRec;
 					public
-						constructor init(lt, rb : pointRec);
+						constructor init(lt, rb : pointRec; ident : string);
 						procedure move(mx, my : integer); virtual;
-procedure write; virtual;
-procedure draw(dc : HDC); virtual;
+                        procedure write; virtual;
+                        procedure draw(dc : HDC); virtual;
 				end;
 	circle = class(shape)
 					private
@@ -43,10 +45,12 @@ procedure draw(dc : HDC); virtual;
 						radius : integer;
 					public
 						constructor init(c : pointRec;
-										 r : integer);
+                                         r : integer;
+                                         ident : string
+                                        );
 						procedure move(mx, my : integer); virtual;
-procedure write; virtual;
-procedure draw(dc : HDC); virtual;
+                        procedure write; virtual;
+                        procedure draw(dc : HDC); virtual;
 				end;
 
 	picture = class(shape)
@@ -54,11 +58,12 @@ procedure draw(dc : HDC); virtual;
 						shapes : shapeArray;
 						numShapes : integer;
 					public
-						constructor init;
+						constructor init(ident : string);
 						procedure move(mx, my : integer); virtual;
 						procedure add(s : shape);
-procedure write; virtual;
-procedure draw(dc : HDC); virtual;
+                        procedure write; virtual;
+                        procedure draw(dc : HDC); virtual;
+                        function contains(ident : string) : pointer; virtual;
 				end;
 
 implementation
@@ -69,15 +74,24 @@ begin
 	p.y := p.y + y;
 end;
 
-(***************Line***************)
-constructor lineObj.init(tStartP, tEndP : PointRec);
+(***************Shape**************)
+function shape.contains(ident : string) : Pointer;
 begin
+    if(name = ident) then
+        contains := Pointer(self);
+    else
+        contains := NIL;
+end;
+(***************Line***************)
+constructor line.init(tStartP, tEndP : PointRec; ident : string);
+begin
+    self.name := ident;
 	self.startP := tStartP;
 	self.endP := tEndP;
 	visible := TRUE;
 end;
 
-procedure lineObj.move(mx, my : integer);
+procedure line.move(mx, my : integer);
 begin
 	addToPoint(startP, mx, my);
 	addToPoint(endP, mx, my);
@@ -95,8 +109,9 @@ begin
 end;
 
 (************************RECTANGLE*****************)
-constructor rectangle.init(lt, rb : PointRec);
+constructor rectangle.init(lt, rb : PointRec; ident : string);
 begin
+    self.name := ident;
 	p0 := lt;
 	p2 := rb;
 	p1.x := p2.x;
@@ -129,8 +144,9 @@ begin
 end;
 
 (*********************Circle****************************)
-constructor circle.init(c: pointRec; r : integer);
+constructor circle.init(c: pointRec; r : integer; ident : string);
 begin
+    self.name := ident;
 	self.center := c;
 	self.radius := r;
 	visible := TRUE;
@@ -152,8 +168,9 @@ begin
 end;
 
 (********************PICTURE**************************)
-constructor picture.init;
+constructor picture.init(ident : string);
 begin
+    self.name := ident;
 	numShapes := 0;
 	visible := TRUE;
 end;
@@ -193,6 +210,20 @@ begin
     for i := 1 to numShapes do begin
         shapes[i]^.draw(dc); (* forward all messages *)
     end;
+end;
+
+function picture.contains(ident : string) : pointer;
+var i : integer;
+    tPointer : Pointer;
+begin
+    tPointer := inherited contains(ident);
+    if(tPointer = NIL) then begin
+        i := 1;
+        while (i <= numShapes) and (tPointer = NIL) do begin
+            tPointer := shapes[i]^.contains(ident); (* forward all messages *)
+        end;
+    end;
+    contains := tPointer;
 end;
 
 

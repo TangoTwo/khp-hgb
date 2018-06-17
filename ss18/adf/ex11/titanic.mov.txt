@@ -1,0 +1,9 @@
+mickeyBody = line 100 100 100 30;
+mickeyLeftFoot = line 100 30 80 0;
+mickeyRightFoot = line 100 30 120 0;
+mickeyLeftArm = line 100 80 80 60;
+mickeyRightArm = line 100 80 120 60;
+mickeyHead = circle 100 100 20;
+
+micky = picture mickeyBody + mickeyLeftFoot + mickeyRightFoot + mickeyLeftArm + mickeyRightArm + mickeyHead;
+move micky 0 30;
