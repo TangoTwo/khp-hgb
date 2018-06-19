@@ -20,6 +20,7 @@ type
 				procedure write; virtual; abstract;
 				procedure draw(dc : HDC); virtual; abstract;
                 function contains(ident : string) : shape; virtual;
+                function setVisible(visible : boolean); virtual;
 			end;
 	shapeArray = array[1..MAX] of shape;
     line = ^lineObj;
@@ -68,6 +69,7 @@ type
                         procedure write; virtual;
                         procedure draw(dc : HDC); virtual;
                         function contains(ident : string) : shape; virtual;
+                        function setVisible(visible : boolean); virtual;
 				end;
 
 implementation
@@ -86,6 +88,10 @@ begin
         contains := @self
     else
         contains := NIL;
+end;
+function shapeObj.setVisible(visible : boolean);
+begin
+    self.visible := visible;
 end;
 (***************Line***************)
 constructor lineObj.init(tStartP, tEndP : PointRec; ident : string);
@@ -109,6 +115,7 @@ end;
 
 procedure lineObj.draw(dc : HDC);
 begin
+    if not visible then exit;
     moveTo(dc, startP.x, startP.y);
     lineTo(dc, endP.x, endP.y);
 end;
@@ -141,6 +148,7 @@ end;
 
 procedure rectangleObj.draw(dc : HDC);
 begin
+    if not visible then exit;
     moveTo(dc, p0.x, p0.y);
     lineTo(dc, p1.x, p1.y);
     lineTo(dc, p2.x, p2.y);
@@ -169,7 +177,8 @@ end;
 
 procedure circleObj.draw(dc : HDC);
 begin
-      Ellipse(dc, center.x - radius, center.y - radius,
+    if not visible then exit;
+    Ellipse(dc, center.x - radius, center.y - radius,
           center.x + radius, center.y + radius);
 end;
 
@@ -213,6 +222,7 @@ end;
 procedure pictureObj.draw(dc : HDC);
 var i : integer;
 begin
+    if not visible then exit;
     for i := 1 to numShapes do begin
         shapes[i]^.draw(dc); (* forward all messages *)
     end;
@@ -227,14 +237,12 @@ begin
     if(tPointer = NIL) then begin
         i := 1;
         while (i <= numShapes) and (tPointer = NIL) do begin
-            tPointer := shapes[i]^.contains(ident); (* forward all 
-messages *)
-inc(i);
+            tPointer := shapes[i]^.contains(ident); (* forward all messages *)
+            inc(i);
         end;
     end;
     contains := tPointer;
 end;
-
 
 begin
 end.

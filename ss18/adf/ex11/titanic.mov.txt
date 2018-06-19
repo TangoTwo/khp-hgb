@@ -1,33 +1,14 @@
-mickeyBody = line 100 100 100 30; mickeyLeftFoot = line 100 30 80 
-0;mickeyRightFoot = line 100 30 120 0; mickeyLeftArm = line 100 80 80 
-60; mickeyRightArm = line 100 80 120 60;
-micky = picture mickeyBody + mickeyLeftFoot + mickeyRightFoot + mickeyLeftArm + mickeyRightArm;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30;
-move micky 0 30
+roseBody        = line 100 100 100 30;
+roseLeftFoot    = line 100 100 80 130;
+roseRightFoot   = line 100 100 120 130;
+roseLeftArm     = line 100 20 120 40;
+roseRightArm    = line 100 20 120 40;
+roseHead        = circle 100 100 20;
+rose = picture roseBody + roseLeftFoot + roseRightFoot + roseLeftArm + roseRightArm + roseHead;
+jackBody        = line 120 100 120 30;
+jackLeftFoot    = line 120 100 100 130;
+jackRightFoot   = line 120 100 140 130;
+jackLeftArm     = line 120 20 140 40;
+jackRightArm    = line 120 20 140 40;
+jackHead        = circle 120 100 20;
+jack = picture jackBody + jackLeftFoot + jackRightFoot + jackLeftArm + jackRightArm + jackHead;
