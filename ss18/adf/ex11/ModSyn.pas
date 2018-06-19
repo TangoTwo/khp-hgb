@@ -13,6 +13,7 @@ procedure statement; forward;
 procedure shapeDef; forward;
 procedure action; forward;
 var pic : picture;
+    tName : string;
     
 procedure S;
 begin
@@ -42,6 +43,7 @@ procedure statement;
 begin
     (* ident '=' ShapeDef | ('SHOW' | 'HIDE') ident | Action. *)
     if(curSy = identSy) then begin
+        tName := identStr;
         newSy;
         if curSy <> equalSy then begin success := FALSE; exit; end;
         newSy;
@@ -101,7 +103,7 @@ begin
                 (*SEM*)q.y := numVal;(*ENDSEM*)
                 newSy;
                 (*SEM*) 
-                new(l, init(p, q, identStr));
+                new(l, init(p, q, tName));
                 pic^.add(l);
                 (*ENDSEM*)
             end;
@@ -120,7 +122,7 @@ begin
                 (*SEM*)q.y := numVal;(*ENDSEM*)
                 newSy;
                 (*SEM*) 
-                new(r, init(p, q, identStr));
+                new(r, init(p, q, tName));
                 pic^.add(r);
                 (*ENDSEM*)
             end;
@@ -136,12 +138,12 @@ begin
                 (*SEM*)radius := numVal;(*ENDSEM*)      
                 newSy;
                 (*SEM*) 
-                new(c, init(p, radius, identStr));
+                new(c, init(p, radius, tName));
                 pic^.add(c);
                 (*ENDSEM*)
             end;
         pictureSy : begin 
-                (*SEM*) new(userPic, init(identStr)); (*ENDSEM*)
+                (*SEM*) new(userPic, init(tName)); (*ENDSEM*)
                 newSy;
                 if curSy <> identSy then begin success := FALSE; exit; end;
                 (*SEM*)
