@@ -12,3 +12,4 @@ jackLeftArm     = line 120 20 140 40;
 jackRightArm    = line 120 20 140 40;
 jackHead        = circle 120 100 20;
 jack = picture jackBody + jackLeftFoot + jackRightFoot + jackLeftArm + jackRightArm + jackHead;
+hide rose

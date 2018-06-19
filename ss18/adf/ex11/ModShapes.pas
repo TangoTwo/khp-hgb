@@ -5,7 +5,7 @@ interface
 USES Windows, WinGraph, sysutils; (* for HDC *)
     
 const
-    MAX = 10;
+    MAX = 254;
 
 type
 	pointRec = record
@@ -20,7 +20,7 @@ type
 				procedure write; virtual; abstract;
 				procedure draw(dc : HDC); virtual; abstract;
                 function contains(ident : string) : shape; virtual;
-                function setVisible(visible : boolean); virtual;
+                procedure setVisible(visible : boolean); virtual;
 			end;
 	shapeArray = array[1..MAX] of shape;
     line = ^lineObj;
@@ -69,8 +69,9 @@ type
                         procedure write; virtual;
                         procedure draw(dc : HDC); virtual;
                         function contains(ident : string) : shape; virtual;
-                        function setVisible(visible : boolean); virtual;
-				end;
+			procedure setVisible(visible : boolean); 
+virtual;
+                    end;
 
 implementation
 
@@ -89,7 +90,7 @@ begin
     else
         contains := NIL;
 end;
-function shapeObj.setVisible(visible : boolean);
+procedure shapeObj.setVisible(visible : boolean);
 begin
     self.visible := visible;
 end;
@@ -227,6 +228,16 @@ begin
         shapes[i]^.draw(dc); (* forward all messages *)
     end;
     sleep(5);
+end;
+
+procedure pictureObj.setVisible(visible : boolean);
+var i : integer;
+begin
+	i := 1;
+	while (i <= numShapes) do begin
+		shapes[i]^.setVisible(visible);
+		inc(i);
+	end;
 end;
 
 function pictureObj.contains(ident : string) : shape;
