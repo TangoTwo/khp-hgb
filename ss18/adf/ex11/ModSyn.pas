@@ -165,6 +165,7 @@ begin
                     (*ENDSEM*)
                     newSy;
                 end; (* while *)
+		pic^.add(userPic);
             end;
         else begin
             success := FALSE; exit;
