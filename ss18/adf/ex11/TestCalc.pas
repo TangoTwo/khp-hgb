@@ -1,5 +1,5 @@
 program TestCalc;
-uses ModLex, ModSyn;
+uses ModLex, ModSyn, Crt, Windows, WinGraph;
 
 var
     inputFileName : string;
@@ -11,6 +11,7 @@ begin
         inputFileName := ParamStr(1);
     initLex(inputFileName);  
 newSy;
-    S; // read a sentence using procedure for sentence symbol S
+    redrawproc := S; // read a sentence using procedure for sentence symbol S
+    WGMain;
     writeLn('Success: ', success);
 end.

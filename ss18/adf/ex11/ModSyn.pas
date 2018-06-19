@@ -1,12 +1,13 @@
 unit ModSyn;
 
 interface
+uses Windows, Crt, WinGraph;
 var
     success : boolean;
-procedure S;
+procedure S(tDc: HDC; tWnd: HWnd; tRe: TRect);
 
 implementation
-uses ModLex, ModShapes, Windows, CRT, WinGraph;
+uses ModLex, ModShapes;
 
 procedure cartoon; forward;
 procedure statement; forward;
@@ -14,10 +15,16 @@ procedure shapeDef; forward;
 procedure action; forward;
 var pic : picture;
     tName : string;
+    dc : HDC;
+wnd : HWnd;
+re : TRect;
     
-procedure S;
+procedure S(tDc: HDC; tWnd: HWnd; tRe: TRect);
 begin
     (* S = expr EOF. *)
+    dc := tDc;
+    wnd := tWnd;
+    re := tRe;
     success := TRUE;
     new(pic, init('origin'));
     cartoon; if not success then exit;
@@ -166,6 +173,7 @@ begin
                     newSy;
                 end; (* while *)
 		pic^.add(userPic);
+		pic^.draw(dc);
             end;
         else begin
             success := FALSE; exit;
@@ -194,6 +202,8 @@ begin
     else
         writeLn(identStr, ' not declared!');
     (*ENDSEM*)
+    FillRect(dc, re, 0);
+    pic^.draw(dc);
 end;
 
 begin
