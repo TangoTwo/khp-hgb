@@ -20,6 +20,8 @@ procedure initLex(inFileName : string);
 implementation
 const EOF_CH = chr(26);
     TAB_CH = chr(9);
+    WNL_CH = chr(13);
+    LNL_CH = chr(10);
 var
     inFile : text;
     line : string;
@@ -40,7 +42,8 @@ end;
 procedure newSy;
 begin
     (* skip whitespace *)
-    while (curCh = ' ') or (curCh = TAB_CH) do newCh;
+    writeln(ord(curCh));
+    while (curCh = ' ') or (curCh = TAB_CH) or (curCh = WNL_CH) or (curCh = LNL_CH) do newCh;
     case curCh of
         '=':    begin curSy := equalSy;     newCh; end;
         ';':    begin curSy := semicolonSy;    newCh; end;
@@ -58,7 +61,7 @@ begin
             curSy := hideSy
           ELSE IF identStr = 'LINE' THEN
             curSy := lineSy
-          ELSE IF identStr = 'RECTANCLE' THEN
+          ELSE IF identStr = 'RECTANGLE' THEN
             curSy := rectangleSy
           ELSE IF identStr = 'CIRCLE' THEN
             curSy := circleSy
@@ -73,7 +76,7 @@ begin
                 (* read a number *)
                 numVal := Ord(curCh) - Ord('0'); (* value of digit*)
                 newCh;
-                while (curCh > '0') and (curCh <= '9') do begin
+                while (curCh >= '0') and (curCh <= '9') do begin
                     numVal := numVal * 10 + Ord(curCh) - Ord('0');
                     newCh;
                 end;
@@ -89,8 +92,17 @@ begin
     if curChPos < length(line) then begin
         inc(curChPos);
         curCh := line[curChPos]
-    end else
-        curCh := EOF_CH;
+    end else begin
+        readLn(inFile, line);
+        writeLn('LINE LENGTH', length(line));
+        if(length(line) = 0) then
+            curCh := EOF_CH
+        else begin
+            curChPos := 0;
+            inc(curChPos);
+            curCh := line[curChPos]
+        end;
+    end;
 end;
 
 begin
