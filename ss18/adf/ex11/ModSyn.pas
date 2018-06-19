@@ -58,27 +58,26 @@ begin
     end else if(curSy = showSy) or (curSy = hideSy) then begin
         case curSy of
             showSy : begin
+                    newSy;
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
                     if pic^.contains(identStr) <> NIL then
-                        //pic^.contains(identStr)^.visibility(TRUE);
+                        pic^.contains(identStr)^.visibility(TRUE);
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
                 end;
             hideSy : begin
+                    newSy;
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
                     if pic^.contains(identStr) <> NIL then
-                        //pic.contains(identStr)^.visibility(FALSE);
+                        pic.contains(identStr)^.visibility(FALSE);
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
                 end;
         end;
-        newSy;
-        
-        writeLn(identStr);
         newSy;
     end else begin
         action; if not success then exit;

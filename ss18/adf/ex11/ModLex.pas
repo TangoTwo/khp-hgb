@@ -42,7 +42,6 @@ end;
 procedure newSy;
 begin
     (* skip whitespace *)
-    writeln(ord(curCh));
     while (curCh = ' ') or (curCh = TAB_CH) or (curCh = WNL_CH) or (curCh = LNL_CH) do newCh;
     case curCh of
         '=':    begin curSy := equalSy;     newCh; end;
@@ -84,7 +83,6 @@ begin
             end;
         else begin curSy := noSy; newCh; end; (* default case *)
     end; (* case *)
-    writeln(curSy);
 end;
 
 procedure newCh;
@@ -94,7 +92,6 @@ begin
         curCh := line[curChPos]
     end else begin
         readLn(inFile, line);
-        writeLn('LINE LENGTH', length(line));
         if(length(line) = 0) then
             curCh := EOF_CH
         else begin
