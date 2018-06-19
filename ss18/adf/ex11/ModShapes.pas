@@ -82,7 +82,6 @@ end;
 function shapeObj.contains(ident : string) : shape;
 begin
     ident := upperCase(ident);
-	writeLn(ident, 'EQUALS', name);
     if(name = ident) then
         contains := @self
     else
@@ -217,6 +216,7 @@ begin
     for i := 1 to numShapes do begin
         shapes[i]^.draw(dc); (* forward all messages *)
     end;
+    sleep(5);
 end;
 
 function pictureObj.contains(ident : string) : shape;

@@ -62,7 +62,7 @@ begin
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
                     if pic^.contains(identStr) <> NIL then
-                        pic^.contains(identStr)^.visibility(TRUE);
+                        //pic^.contains(identStr)^.visibility(TRUE)
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
@@ -72,7 +72,7 @@ begin
                     if curSy <> identSy then begin success := FALSE; exit; end;
                     (*SEM*)
                     if pic^.contains(identStr) <> NIL then
-                        pic.contains(identStr)^.visibility(FALSE);
+                        //pic.contains(identStr)^.visibility(FALSE)
                     else
                         writeLn(identStr, ' not declared!');
                     (*ENDSEM*)
