@@ -147,6 +147,7 @@ begin
                 newSy;
                 if curSy <> identSy then begin success := FALSE; exit; end;
                 (*SEM*)
+		//writeLn('Pointer:', integer(pic^.contains(identStr)));
                 if pic^.contains(identStr) <> NIL then
                     userPic^.add(pic^.contains(identStr))
                 else

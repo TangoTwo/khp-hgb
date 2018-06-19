@@ -2,7 +2,7 @@ unit modShapes;
 
 interface
 
-USES Windows, WinGraph; (* for HDC *)
+USES Windows, WinGraph, sysutils; (* for HDC *)
     
 const
     MAX = 10;
@@ -81,6 +81,8 @@ end;
 (***************Shape**************)
 function shapeObj.contains(ident : string) : shape;
 begin
+    ident := upperCase(ident);
+	writeLn(ident, 'EQUALS', name);
     if(name = ident) then
         contains := @self
     else
@@ -89,7 +91,7 @@ end;
 (***************Line***************)
 constructor lineObj.init(tStartP, tEndP : PointRec; ident : string);
 begin
-    self.name := ident;
+    self.name := upperCase(ident);
 	self.startP := tStartP;
 	self.endP := tEndP;
 	visible := TRUE;
@@ -227,6 +229,7 @@ begin
         while (i <= numShapes) and (tPointer = NIL) do begin
             tPointer := shapes[i]^.contains(ident); (* forward all 
 messages *)
+inc(i);
         end;
     end;
     contains := tPointer;
