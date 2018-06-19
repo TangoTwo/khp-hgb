@@ -227,7 +227,7 @@ begin
     for i := 1 to numShapes do begin
         shapes[i]^.draw(dc); (* forward all messages *)
     end;
-    sleep(5);
+    sleep(1);
 end;
 
 procedure pictureObj.setVisible(visible : boolean);
