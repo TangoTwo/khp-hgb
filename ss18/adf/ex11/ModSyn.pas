@@ -143,9 +143,7 @@ begin
         pictureSy : begin 
                 (*SEM*) new(userPic, init(identStr)); (*ENDSEM*)
                 newSy;
-		if curSy <> identSy then begin success := FALSE; 
-exit; 
-end;
+                if curSy <> identSy then begin success := FALSE; exit; end;
                 (*SEM*)
                 if pic^.contains(identStr) <> NIL then
                     userPic^.add(pic^.contains(identStr))
