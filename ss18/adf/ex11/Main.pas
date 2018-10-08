@@ -1,4 +1,4 @@
-program TestCalc;
+program Main;
 uses ModLex, ModSyn, Crt, Windows, WinGraph;
 
 var
