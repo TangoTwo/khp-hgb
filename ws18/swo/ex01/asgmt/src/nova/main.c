@@ -9,9 +9,9 @@ int main(int argc, char * argv[]){
 		return 2;
 	}
 	
-	int avgConsumption = atoi(argv[1]);
+	float avgConsumption = atof(argv[1]);
 	int fuelType = atoi(argv[2]);
-	int nova = 0;
+	float nova = 0;
 	int subtractor;
 	
 	if(fuelType == DIESEL)
@@ -23,6 +23,6 @@ int main(int argc, char * argv[]){
 		return 1;
 	}
 	nova = (avgConsumption - subtractor) * 200;
-	printf("Nova=%d\n",nova);
+	printf("Nova=%.2f\n",nova);
 	return 0;
 }
