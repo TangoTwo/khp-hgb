@@ -39,3 +39,12 @@ r=(c/s)+(f*d)-(f-i);
 	d			d
 		 d
 ### Explizite Typkonversion
+TBD
+# Master Theorem
+T(n) = 3T(n/2)+O(n^1)
+T(n) = ?
+a = 3
+b = 2
+c = 1
+c_crit = log(3>1)
+T(n) = O(n^log(3)) = O(n^1.53)
