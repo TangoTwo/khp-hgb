@@ -1,0 +1,31 @@
+.stdbody {
+    text-align: center;
+	line-height: 110%;
+    font-family: 'IBM Plex Sans', 'Roboto', sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.image{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.textlink:link    {color:00d8ff; background-color:transparent; text-decoration:none}
+.textlink:visited {color:00d8ff; background-color:transparent;}
+.textlink:hover   {color:00d8ff; background-color:transparent;}
+.textlink:active  {color:00d8ff; background-color:transparent;}
+.line { 
+    margin: 10px 0;
+    height: 1px;
+    border: 0;
+}
+.icon{color:white; font-family: 'IBM Plex Sans', 'Roboto', sans-serif;}
+.icon-gennohov {background-color:#0093DD;}
+.icon-gen:hover {background-color:#0093DD;}
+.icon-fb:hover {background-color:#3b5998;}
+.icon-tw:hover {background-color:#1DA1F2;}
+.icon-gp:hover {background-color:#dc4e41;}
+.icon-gh:hover {background-color:#4183c4;}
+.icon-bb:hover {background-color:#205081;}
+.icon-in:hover {background-color:#0077b5;}
+.icon-xi:hover {background-color:#026466;}
+.icon-gpg:hover {background-color:#FF7100;}
+.lowercase { text-transform:lowercase !important;}
