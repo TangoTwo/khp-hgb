@@ -1,0 +1,19 @@
+{
+	"name": "Project@ue",
+	"directory": "/home/khp/git/fh-hgb/ws18/swo/ex03/ue",
+	"files": [ { "list": [ "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/CMakeFiles/3.10.2/CMakeCCompiler.cmake", "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake", "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/CMakeFiles/3.10.2/CMakeSystem.cmake", "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/CMakeLists.txt", "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/geo/geo.c", "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/geo/prg.c", "/home/khp/git/fh-hgb/ws18/swo/ex03/ue/geo/weight.c", "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake", "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake", "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake", "/usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake", "/usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake", "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake", "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake", "/usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake", "/usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake", "/usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake", "/usr/share/cmake-3.10/Modules/Compiler/GNU.cmake", "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake", "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake", "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake", "/usr/share/cmake-3.10/Modules/Platform/Linux.cmake", "/usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"] } ],
+	"build": {
+		"directory": "/home/khp/git/fh-hgb/ws18/swo/ex03/ue",
+		"default_target": "all",
+		"clean_target": "clean",
+		"build": "/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  all",
+		"clean": "/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  clean",
+		"quick": "/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  install",
+		"targets":[
+			 {"name":"all", "build_cmd":"/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  all"}
+			,{"name":"clean", "build_cmd":"/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  clean"}
+			,{"name":"rebuild_cache", "build_cmd":"/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  rebuild_cache"}
+			,{"name":"prg", "build_cmd":"/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  prg"}
+			,{"name":"prg/fast", "build_cmd":"/usr/bin/make -C \"/home/khp/git/fh-hgb/ws18/swo/ex03/ue\"  prg/fast"}
+	] }
+}

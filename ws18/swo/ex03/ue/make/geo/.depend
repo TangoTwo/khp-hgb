@@ -1,0 +1,3 @@
+geo.o: geo.c geo.h
+weight.o: weight.c geo.h weight.h
+prg.o: prg.c geo.h weight.h

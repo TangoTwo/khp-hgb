@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/prg.dir/geo/geo.c.o CMakeFiles/prg.dir/geo/prg.c.o CMakeFiles/prg.dir/geo/weight.c.o  -o prg 
