@@ -1,5 +1,11 @@
--- 3
-SELECT 
+-- 3.1
+SELECT last_name, first_name
+FROM actors
+WHERE COUNT(last_name, first_name) > 1;
+
+-- 3.2
+SELECT title
+FROM 
 -- 5
 SELECT manager_id, store_id, SUM(earnings)
 FROM managers INNER JOIN stores USING(store_id)
