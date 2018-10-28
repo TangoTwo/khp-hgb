@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/pipe.dir/main.c.o  -o pipe 
