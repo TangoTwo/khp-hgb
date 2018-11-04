@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My favorite movies</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1>My favorite movies</h1>
+      <section>
+        <div class="tile tile--1">
+          <div class="tile__image__wrapper">
+            <img class="tile__image" src="images/harry-potter-01.jpg" alt="Harry Potter and his school friends">
+          </div>
+          <h2 class="tile__header">Harry Potter and the Philosopher's Stone</h2>
+          <div class="tile__content">
+            <p>An orphaned boy enrolled in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.</p>
+            <ul class="tile__meta">
+              <li class="tile__meta__item">Fantasy</li>
+              <li class="tile__meta__item">2h 32min</li>
+              <li class="tile__meta__item">2001</li>
+            </ul>
+            <a class="tile__more" href="./movies/harry-potter-01.html">Read more</a>
+          </div>
+        </div>
+        <div class="tile tile--2">
+          <div class="tile__image__wrapper">
+            <img class="tile__image" src="images/harry-potter-02.jpg" alt="Harry Potter in a wizard duel">
+          </div>
+          <h2 class="tile__header">Harry Potter and the Chamber of Secrets</h2>
+          <div class="tile__content">
+            <p>Harry ignores warnings not to return to Hogwarts, only to find the school plagued by a series of mysterious attacks and a strange voice haunting him.</p>
+            <ul class="tile__meta">
+              <li class="tile__meta__item">Fantasy</li>
+              <li class="tile__meta__item">2h 41min</li>
+              <li class="tile__meta__item">2002</li>
+            </ul>
+            <a class="tile__more" href="./movies/harry-potter-02.html">Read more</a>
+          </div>
+        </div>
+        <div class="tile tile--3">
+          <div class="tile__image__wrapper">
+            <img class="tile__image" src="images/harry-potter-03.jpg" alt="Harry Potter got a present from Sirius">
+          </div>
+          <h2 class="tile__header">Harry Potter and the Prisoner of Azkaban</h2>
+          <div class="tile__content">
+            <p>It's Harry's third year at Hogwarts; not only does he have a new "Defense Against the Dark Arts" teacher, but there is also trouble brewing. Convicted murderer Sirius Black has escaped the Wizards' Prison and is coming after Harry.</p>
+            <ul class="tile__meta">
+              <li class="tile__meta__item">Fantasy</li>
+              <li class="tile__meta__item">2h 22min</li>
+              <li class="tile__meta__item">2004</li>
+            </ul>
+            <a class="tile__more" href="./movies/harry-potter-03.html">Read more</a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <form method="GET">
+          <fieldset>
+            <legend>Personal data</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="18"><br>
+            <label for="country">Country</label>
+            <select id="country">
+              <option>Austria</option>
+              <option>Germany</option>
+              <option>Italy</option>
+              <option>...</option>
+            </select><br>
+          </fieldset>
+          <fieldset>
+            <legend>My favorite genres</legend>
+            <input type="checkbox" name="genres" id="horror" value="horror">
+            <label for="horror">Horror</label>
+            <input type="checkbox" name="genres" id="romance" value="romance">
+            <label for="romance">Romance</label>
+            <input type="checkbox" name="genres" id="comedy" value="comedy">
+            <label for="comedy">Comedy</label>
+            <input type="checkbox" name="genres" id="science-fiction" value="science-fiction">
+            <label for="science-fiction">Science Fiction</label>
+            <input type="checkbox" name="genres" id="action" value="action">
+            <label for="action">Action</label>
+          </fieldset>
+          <textarea rows="10" cols="30">Your message...</textarea><br>
+          <input type="submit" value="Submit form">
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
