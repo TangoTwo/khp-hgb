@@ -1,3 +1,0 @@
-/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/lis/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/lis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/lis/cmake-build-debug/CMakeFiles/lis.dir

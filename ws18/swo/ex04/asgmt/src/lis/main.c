@@ -21,7 +21,6 @@ int longest_increasing_run(int const s[], int const n){
 int longest_increasing_subsequence(int const s[], int const n){
     int l[MAX];
     int p[MAX];
-    int maxL = -1;
     int maxLIndex = -1;
     for (int i = 0; i < n; ++i) {
         int tempL = 0;
@@ -36,8 +35,7 @@ int longest_increasing_subsequence(int const s[], int const n){
         }
         l[i] = tempL+1;
         p[i] = tempP;
-        if(l[i] >= maxL) {
-            maxL = l[i];
+        if(l[i] >= l[maxLIndex]) {
             maxLIndex = i;
         }
     }
@@ -47,7 +45,7 @@ int longest_increasing_subsequence(int const s[], int const n){
         nextIndex = p[nextIndex];
     }
     printf("\n");
-    return maxL;
+    return l[maxLIndex];
 }
 
 int main() {
