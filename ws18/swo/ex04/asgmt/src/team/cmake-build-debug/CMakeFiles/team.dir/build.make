@@ -43,10 +43,10 @@ RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/src/team
+CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug
+CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/team.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/team.dir/flags.make
 
 CMakeFiles/team.dir/main.c.o: CMakeFiles/team.dir/flags.make
 CMakeFiles/team.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/team.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/team.dir/main.c.o   -c /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/team.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/team.dir/main.c.o   -c /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/main.c
 
 CMakeFiles/team.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/team.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/main.c > CMakeFiles/team.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/main.c > CMakeFiles/team.dir/main.c.i
 
 CMakeFiles/team.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/team.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/main.c -o CMakeFiles/team.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/main.c -o CMakeFiles/team.dir/main.c.s
 
 CMakeFiles/team.dir/stackoperm.c.o: CMakeFiles/team.dir/flags.make
 CMakeFiles/team.dir/stackoperm.c.o: ../stackoperm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/team.dir/stackoperm.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/team.dir/stackoperm.c.o   -c /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/stackoperm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/team.dir/stackoperm.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/team.dir/stackoperm.c.o   -c /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/stackoperm.c
 
 CMakeFiles/team.dir/stackoperm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/team.dir/stackoperm.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/stackoperm.c > CMakeFiles/team.dir/stackoperm.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/stackoperm.c > CMakeFiles/team.dir/stackoperm.c.i
 
 CMakeFiles/team.dir/stackoperm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/team.dir/stackoperm.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/stackoperm.c -o CMakeFiles/team.dir/stackoperm.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/stackoperm.c -o CMakeFiles/team.dir/stackoperm.c.s
 
 # Object files for target team
 team_OBJECTS = \
@@ -95,7 +95,7 @@ team: CMakeFiles/team.dir/main.c.o
 team: CMakeFiles/team.dir/stackoperm.c.o
 team: CMakeFiles/team.dir/build.make
 team: CMakeFiles/team.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable team"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable team"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/team.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/team.dir/clean:
 .PHONY : CMakeFiles/team.dir/clean
 
 CMakeFiles/team.dir/depend:
-	cd /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khp/git/khp-hgb/ws18/swo/ex04/src/team /home/khp/git/khp-hgb/ws18/swo/ex04/src/team /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles/team.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles/team.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/team.dir/depend
 

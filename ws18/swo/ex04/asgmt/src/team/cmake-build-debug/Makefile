@@ -48,10 +48,10 @@ RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/src/team
+CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug
+CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

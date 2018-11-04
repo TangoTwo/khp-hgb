@@ -2,12 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
-#include "stackoperm.h"
+#include <limits.h>
 
 #define TEAM_SIZE 4
 #define ARGUMENTS 1
-
-const int AMOUNT_TEAMS;
 
 typedef struct runner runner;
 typedef struct team team;
@@ -55,6 +53,13 @@ void copyRunnerArray(runner *from[], runner *to[], int length){
 void copyTeamArray(team from[], team to[], int length){
     for (int i = 0; i < length; ++i) {
         to[i] = from[i];
+    }
+}
+
+void calcSum(team teamArray[], int index) {
+    teamArray[index].time = 0;
+    for (int i = 0; i < TEAM_SIZE; ++i) {
+        teamArray[index].time += teamArray[index].runners[i]->bestTime;
     }
 }
 
@@ -134,7 +139,6 @@ void sortRunnerArray(runner *runnerArray[], int length){
 void getBestDistribution2(runner *runnerArray[], team teamArray[], int AMOUNT_RUNNERS, int AMOUNT_TEAMS){
     runner *tRunnerArray[AMOUNT_RUNNERS];
     team tTeamArray[AMOUNT_TEAMS];
-
     int tRunnerArrayLength;
 
     for (int i = 0; i < AMOUNT_RUNNERS; ++i) {
@@ -155,11 +159,55 @@ void getBestDistribution2(runner *runnerArray[], team teamArray[], int AMOUNT_RU
     }
 }
 
-void getBestDistribution(runner *runnerArray[], team teamArray[], int AMOUNT_RUNNERS, int AMOUNT_TEAMS){
-    unsigned long long p = pnk(AMOUNT_RUNNERS, AMOUNT_RUNNERS);
-    printf ("\n total permutations : %llu\n\n", p);
+void getAllPossibleTeams(runner *runnerArray[], team possibleTeams[], int AMOUNT_RUNNERS, int* amount_teams) {
+    runner *tRunnerArray[AMOUNT_RUNNERS];
+    team tCurTeam;
+    int tRunnerArrayLength;
 
-    permute(runnerArray, 0, AMOUNT_RUNNERS);
+    for (int j = 0; j < TEAM_SIZE; ++j) {
+        tCurTeam.runners[j] = NULL;
+    }
+    tCurTeam.time = 0;
+
+    for (int i = 0; i < AMOUNT_RUNNERS; ++i) {
+        bool success = false;
+        runner* currentRunner = runnerArray[i];
+        int tAmountRunners = removeRunnerFromArray(runnerArray, tRunnerArray, i, AMOUNT_RUNNERS);
+        for (int j = 0; j < TEAM_SIZE; ++j) {
+            if(tCurTeam.runners[j] == NULL) {
+                tCurTeam.runners[j] = currentRunner;
+                success = true;
+            }
+        }
+        if(success)
+            getAllPossibleTeams(tRunnerArray, possibleTeams, tAmountRunners, amount_teams);
+        else{//TEAM is full
+            possibleTeams[*amount_teams+1] = tCurTeam;
+            *amount_teams++;
+            return;
+        }
+    }
+}
+
+void getBestDistribution(runner *runnerArray[], team teamArray[], int AMOUNT_RUNNERS, int AMOUNT_TEAMS){
+    runner *tRunnerArray[AMOUNT_RUNNERS];
+    team tTeamArray[AMOUNT_TEAMS];
+    int tRunnerArrayLength;
+    int bestDiff = INT_MAX;
+    team bestTeamDist[AMOUNT_TEAMS];
+
+    for (int i = 0; i < 1000; ++i) {
+        int sumDiff = 0;
+        copyTeamArray(teamArray, tTeamArray, AMOUNT_TEAMS);
+        //SWAP TEAMS
+        for (int j = 0; j < AMOUNT_TEAMS; ++j) {
+            sumDiff += tTeamArray[j].time;
+        }
+        if(sumDiff < bestDiff) {
+            bestDiff = sumDiff;
+            copyTeamArray(tTeamArray, bestTeamDist, AMOUNT_TEAMS);
+        }
+    }
 }
 
 int main(int argc, char* argv[]) {
@@ -177,6 +225,9 @@ int main(int argc, char* argv[]) {
 
     sortRunnerArray(runnerArray, AMOUNT_RUNNERS);
 
-    getBestDistribution(runnerArray, teamArray, AMOUNT_RUNNERS, AMOUNT_TEAMS);
+    //getBestDistribution(runnerArray, teamArray, AMOUNT_RUNNERS, AMOUNT_TEAMS);
+    team possibleTeams[TEAM_SIZE^AMOUNT_RUNNERS];
+    int amountTeams = 0;
+    getAllPossibleTeams(runnerArray, possibleTeams, AMOUNT_RUNNERS, &amountTeams);
     return EXIT_SUCCESS;
 }

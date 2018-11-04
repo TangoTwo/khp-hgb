@@ -18,6 +18,29 @@ int longest_increasing_run(int const s[], int const n){
     return longestRun;
 }
 
+void printArray(int s[], int n, char name[]) {
+    for (int i = 0; i < n; ++i) {
+        printf("%s[%i] = %i \n", name, i, s[i]);
+    }
+    printf("\n\n");
+}
+
+void printSequence(int s[], int l[], int p[], int maxLIndex) {
+    int tSequence[l[maxLIndex]];
+    int nextIndex = maxLIndex;
+    for (int m = 0; m < l[maxLIndex]; ++m) {
+        tSequence[m] = s[nextIndex];
+        nextIndex = p[nextIndex];
+    }
+
+    for (int m = l[maxLIndex]-1; m >= 0; --m) {
+        if(m == l[maxLIndex]-1)
+            printf("%i ", tSequence[m]);
+        else
+            printf("- %i ", tSequence[m]);
+    }
+}
+
 int longest_increasing_subsequence(int const s[], int const n){
     int l[MAX];
     int p[MAX];
@@ -41,11 +64,10 @@ int longest_increasing_subsequence(int const s[], int const n){
             maxLIndex = i;
         }
     }
-    int nextIndex = maxLIndex;
-    for (int m = 0; m < l[maxLIndex]; ++m) {
-        printf("%i - ", s[nextIndex]);
-        nextIndex = p[nextIndex];
-    }
+    printArray(s, n, "s");
+    printArray(l, n, "l");
+    printArray(p, n, "p");
+    printSequence(s, l, p, maxLIndex);
     printf("\n");
     return maxL;
 }
@@ -54,7 +76,7 @@ int main() {
     int const s[MAX] = {9, 5, 2, 8, 7, 3, 1, 6, 4};
     int const n = 9;
 
-    printf("%i", longest_increasing_run(s, n));
-    printf("%i", longest_increasing_subsequence(s, n));
+    printf("Longest increasing run = %i \n\n\n", longest_increasing_run(s, n));
+    printf("Longest increasing sequence = %i \n\n\n", longest_increasing_subsequence(s, n));
     return 0;
 }

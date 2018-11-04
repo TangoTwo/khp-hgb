@@ -3,3 +3,6 @@
 
 CMakeFiles/team.dir/main.c.o: ../main.c
 
+CMakeFiles/team.dir/stackoperm.c.o: ../stackoperm.c
+CMakeFiles/team.dir/stackoperm.c.o: ../stackoperm.h
+

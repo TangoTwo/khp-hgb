@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/main.c" "/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles/team.dir/main.c.o"
-  "/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/stackoperm.c" "/home/khp/git/khp-hgb/ws18/swo/ex04/src/team/cmake-build-debug/CMakeFiles/team.dir/stackoperm.c.o"
+  "/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/main.c" "/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles/team.dir/main.c.o"
+  "/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/stackoperm.c" "/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/cmake-build-debug/CMakeFiles/team.dir/stackoperm.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
