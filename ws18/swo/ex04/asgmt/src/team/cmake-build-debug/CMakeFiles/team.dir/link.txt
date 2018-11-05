@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/team.dir/main.c.o CMakeFiles/team.dir/stackoperm.c.o  -o team -lm 

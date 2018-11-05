@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/lis.dir/lis/main.c.o  -o lis 

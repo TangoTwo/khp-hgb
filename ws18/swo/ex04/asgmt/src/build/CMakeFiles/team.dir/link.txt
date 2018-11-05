@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/team.dir/team/main.c.o  -o team -lm 

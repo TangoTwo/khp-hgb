@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khp/git/khp-hgb/ws18/swo/ex04/asgmt/src/team/main.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+stdbool.h
+-
+limits.h
+-
+
