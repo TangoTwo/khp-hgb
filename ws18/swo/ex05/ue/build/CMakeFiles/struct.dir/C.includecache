@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/struct/struct_test.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+

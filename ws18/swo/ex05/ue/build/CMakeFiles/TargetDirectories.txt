@@ -1,0 +1,4 @@
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/build/CMakeFiles/edit_cache.dir
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/build/CMakeFiles/rebuild_cache.dir
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/build/CMakeFiles/struct.dir
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/build/CMakeFiles/preproc.dir

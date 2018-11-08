@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/struct.dir/struct/struct_test.c.o  -o struct 

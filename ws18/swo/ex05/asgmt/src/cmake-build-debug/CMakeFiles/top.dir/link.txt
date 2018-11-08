@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/top.dir/top/top.c.o  -o top 

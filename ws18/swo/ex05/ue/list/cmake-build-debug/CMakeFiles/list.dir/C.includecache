@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/list/list_ads.c
+stdlib.h
+-
+stdio.h
+-
+list_ads.h
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/list/list_ads.h
+
+/home/khp/git/khp-hgb/ws18/swo/ex05/ue/list/list_ads.h
+

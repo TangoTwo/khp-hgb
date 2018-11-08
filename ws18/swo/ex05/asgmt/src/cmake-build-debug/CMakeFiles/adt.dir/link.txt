@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/adt.dir/adt/lis.c.o  -o adt 

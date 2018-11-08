@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/preproc.dir/preproc/preproc_test.c.o  -o preproc 

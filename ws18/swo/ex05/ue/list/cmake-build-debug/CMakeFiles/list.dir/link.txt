@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/list.dir/main.c.o CMakeFiles/list.dir/list_ads.c.o  -o list 
