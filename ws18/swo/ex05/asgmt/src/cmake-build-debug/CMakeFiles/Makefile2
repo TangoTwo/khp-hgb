@@ -59,10 +59,10 @@ RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src
+CMAKE_SOURCE_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/adt.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-deb
 CMakeFiles/adt.dir/all:
 	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/depend
 	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target adt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target adt"
 .PHONY : CMakeFiles/adt.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/adt.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/adt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/adt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/adt.dir/rule
 
 # Convenience name for target.
@@ -108,7 +108,7 @@ clean: CMakeFiles/adt.dir/clean
 CMakeFiles/top.dir/all:
 	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/depend
 	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target top"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8 "Built target top"
 .PHONY : CMakeFiles/top.dir/all
 
 # Include target in all.
@@ -118,9 +118,9 @@ all: CMakeFiles/top.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/top.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/top.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/top.dir/rule
 
 # Convenience name for target.

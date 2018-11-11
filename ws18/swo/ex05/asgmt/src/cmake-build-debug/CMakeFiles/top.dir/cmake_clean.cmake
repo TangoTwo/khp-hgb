@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/top.dir/top/main.c.o"
   "CMakeFiles/top.dir/top/top.c.o"
+  "CMakeFiles/top.dir/adt/al_adt.c.o"
   "top.pdb"
   "top"
 )

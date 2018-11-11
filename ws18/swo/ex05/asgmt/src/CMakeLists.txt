@@ -19,5 +19,5 @@ target_link_libraries(adt compile_flags)
 # Übungsbeispiel 2
 # ----------------
 file(GLOB_RECURSE BSP2 "top/*")
-add_executable(top ${BSP2})
-target_link_libraries(top compile_flags)
+add_executable(top ${BSP2} adt/al_adt.c)
+target_link_libraries(top compile_flags -lm)

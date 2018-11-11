@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/adt/lis.c" "/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir/adt/lis.c.o"
+  "/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c" "/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir/adt/al_adt.c.o"
+  "/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.c" "/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir/adt/am_adt.c.o"
+  "/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/main.c" "/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir/adt/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

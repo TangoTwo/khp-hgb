@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.c
+stdbool.h
+-
+string.h
+-
+stdlib.h
+-
+stdio.h
+-
+am_adt.h
+/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.h
+stdbool.h
+-
+

@@ -43,10 +43,10 @@ RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src
+CMAKE_SOURCE_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/adt.dir/depend.make
@@ -57,30 +57,60 @@ include CMakeFiles/adt.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/adt.dir/flags.make
 
-CMakeFiles/adt.dir/adt/lis.c.o: CMakeFiles/adt.dir/flags.make
-CMakeFiles/adt.dir/adt/lis.c.o: ../adt/lis.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/adt.dir/adt/lis.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adt.dir/adt/lis.c.o   -c /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/adt/lis.c
+CMakeFiles/adt.dir/adt/al_adt.c.o: CMakeFiles/adt.dir/flags.make
+CMakeFiles/adt.dir/adt/al_adt.c.o: ../adt/al_adt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/adt.dir/adt/al_adt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adt.dir/adt/al_adt.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c
 
-CMakeFiles/adt.dir/adt/lis.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adt.dir/adt/lis.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/adt/lis.c > CMakeFiles/adt.dir/adt/lis.c.i
+CMakeFiles/adt.dir/adt/al_adt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adt.dir/adt/al_adt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c > CMakeFiles/adt.dir/adt/al_adt.c.i
 
-CMakeFiles/adt.dir/adt/lis.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adt.dir/adt/lis.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/adt/lis.c -o CMakeFiles/adt.dir/adt/lis.c.s
+CMakeFiles/adt.dir/adt/al_adt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adt.dir/adt/al_adt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c -o CMakeFiles/adt.dir/adt/al_adt.c.s
+
+CMakeFiles/adt.dir/adt/am_adt.c.o: CMakeFiles/adt.dir/flags.make
+CMakeFiles/adt.dir/adt/am_adt.c.o: ../adt/am_adt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/adt.dir/adt/am_adt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adt.dir/adt/am_adt.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.c
+
+CMakeFiles/adt.dir/adt/am_adt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adt.dir/adt/am_adt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.c > CMakeFiles/adt.dir/adt/am_adt.c.i
+
+CMakeFiles/adt.dir/adt/am_adt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adt.dir/adt/am_adt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.c -o CMakeFiles/adt.dir/adt/am_adt.c.s
+
+CMakeFiles/adt.dir/adt/main.c.o: CMakeFiles/adt.dir/flags.make
+CMakeFiles/adt.dir/adt/main.c.o: ../adt/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/adt.dir/adt/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/adt.dir/adt/main.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/main.c
+
+CMakeFiles/adt.dir/adt/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/adt.dir/adt/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/main.c > CMakeFiles/adt.dir/adt/main.c.i
+
+CMakeFiles/adt.dir/adt/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/adt.dir/adt/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/main.c -o CMakeFiles/adt.dir/adt/main.c.s
 
 # Object files for target adt
 adt_OBJECTS = \
-"CMakeFiles/adt.dir/adt/lis.c.o"
+"CMakeFiles/adt.dir/adt/al_adt.c.o" \
+"CMakeFiles/adt.dir/adt/am_adt.c.o" \
+"CMakeFiles/adt.dir/adt/main.c.o"
 
 # External object files for target adt
 adt_EXTERNAL_OBJECTS =
 
-adt: CMakeFiles/adt.dir/adt/lis.c.o
+adt: CMakeFiles/adt.dir/adt/al_adt.c.o
+adt: CMakeFiles/adt.dir/adt/am_adt.c.o
+adt: CMakeFiles/adt.dir/adt/main.c.o
 adt: CMakeFiles/adt.dir/build.make
 adt: CMakeFiles/adt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable adt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable adt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/adt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -93,6 +123,6 @@ CMakeFiles/adt.dir/clean:
 .PHONY : CMakeFiles/adt.dir/clean
 
 CMakeFiles/adt.dir/depend:
-	cd /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/adt.dir/depend
 

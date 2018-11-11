@@ -1,1 +1,1 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/top.dir/top/top.c.o  -o top 
+/usr/bin/cc -g  -rdynamic CMakeFiles/top.dir/top/main.c.o CMakeFiles/top.dir/top/top.c.o CMakeFiles/top.dir/adt/al_adt.c.o  -o top -lm 

@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="adt">
-				<Option output="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/adt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/adt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 adt"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 adt"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="adt/fast">
-				<Option output="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/adt" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/adt" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,15 +67,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 adt/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 adt/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="top">
-				<Option output="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/top" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/top" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -90,15 +90,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 top"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 top"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="top/fast">
-				<Option output="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/top" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/top" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -113,36 +113,52 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 top/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 top/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/adt/lis.c">
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c">
 			<Option target="adt"/>
-		</Unit>
-		<Unit filename="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/adt/lis.h">
-			<Option target="adt"/>
-		</Unit>
-		<Unit filename="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/top/top.c">
 			<Option target="top"/>
 		</Unit>
-		<Unit filename="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/top/top.h">
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.h">
+			<Option target="adt"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.c">
+			<Option target="adt"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/am_adt.h">
+			<Option target="adt"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/main.c">
+			<Option target="adt"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/main.h">
+			<Option target="adt"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/main.c">
 			<Option target="top"/>
 		</Unit>
-		<Unit filename="/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/CMakeLists.txt">
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/top.c">
+			<Option target="top"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/top.h">
+			<Option target="top"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

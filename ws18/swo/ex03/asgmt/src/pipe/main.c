@@ -53,15 +53,16 @@ bool possibleRecursiveWithBT(int const x, int const lengths[], int const counts[
     for(i = 0; counts[i] <= 0 && i < n; i++); //get first stocked pipe length
     if(i == n) // no pipes left
         return false;
-    else if(lengths[i] == x) //if current pipe is fitted length is reached
-        return true;
 
     copyTo(counts, tempCounts, n);
     tempCounts[i] = 0; //reduce count (take pipe from stock)
     for(int count = 0; count <= counts[i]; count++){
         tempX = x - lengths[i]*count;
+        printf("%i ", tempX);
         if(tempX < 0)   //backtracking --> we are already above x in length
             return false;
+        else if(tempX == 0)
+        	return true;
         if(possibleRecursive(tempX, lengths, tempCounts, n))
             return true;
     }
@@ -71,9 +72,9 @@ bool possibleRecursiveWithBT(int const x, int const lengths[], int const counts[
 int main() {
     clock_t start_t, endIt_t, endRec_t, endRecBT_t;
     bool posIt, posRec, posRecBT;
-	int const x = -2;
-	int const lengths[] = {3, 4, 9, 11, 13, 15};
-	int const counts[] = {20, 20, 10, 10, 10, 8};
+	int const x = 330;
+	int const lengths[] = {1, 3, 6, 10, 25, 1000};
+	int const counts[] = {8, 5, 12, 15, 20, 0};
 	int const n = 6;
 
 	start_t = clock();

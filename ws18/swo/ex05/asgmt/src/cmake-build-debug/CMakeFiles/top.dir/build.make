@@ -43,10 +43,10 @@ RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src
+CMAKE_SOURCE_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/top.dir/depend.make
@@ -57,30 +57,60 @@ include CMakeFiles/top.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/top.dir/flags.make
 
+CMakeFiles/top.dir/top/main.c.o: CMakeFiles/top.dir/flags.make
+CMakeFiles/top.dir/top/main.c.o: ../top/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/top.dir/top/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/top.dir/top/main.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/main.c
+
+CMakeFiles/top.dir/top/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/top.dir/top/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/main.c > CMakeFiles/top.dir/top/main.c.i
+
+CMakeFiles/top.dir/top/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/top.dir/top/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/main.c -o CMakeFiles/top.dir/top/main.c.s
+
 CMakeFiles/top.dir/top/top.c.o: CMakeFiles/top.dir/flags.make
 CMakeFiles/top.dir/top/top.c.o: ../top/top.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/top.dir/top/top.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/top.dir/top/top.c.o   -c /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/top/top.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/top.dir/top/top.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/top.dir/top/top.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/top.c
 
 CMakeFiles/top.dir/top/top.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/top.dir/top/top.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/top/top.c > CMakeFiles/top.dir/top/top.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/top.c > CMakeFiles/top.dir/top/top.c.i
 
 CMakeFiles/top.dir/top/top.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/top.dir/top/top.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/top/top.c -o CMakeFiles/top.dir/top/top.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/top/top.c -o CMakeFiles/top.dir/top/top.c.s
+
+CMakeFiles/top.dir/adt/al_adt.c.o: CMakeFiles/top.dir/flags.make
+CMakeFiles/top.dir/adt/al_adt.c.o: ../adt/al_adt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/top.dir/adt/al_adt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/top.dir/adt/al_adt.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c
+
+CMakeFiles/top.dir/adt/al_adt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/top.dir/adt/al_adt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c > CMakeFiles/top.dir/adt/al_adt.c.i
+
+CMakeFiles/top.dir/adt/al_adt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/top.dir/adt/al_adt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/adt/al_adt.c -o CMakeFiles/top.dir/adt/al_adt.c.s
 
 # Object files for target top
 top_OBJECTS = \
-"CMakeFiles/top.dir/top/top.c.o"
+"CMakeFiles/top.dir/top/main.c.o" \
+"CMakeFiles/top.dir/top/top.c.o" \
+"CMakeFiles/top.dir/adt/al_adt.c.o"
 
 # External object files for target top
 top_EXTERNAL_OBJECTS =
 
+top: CMakeFiles/top.dir/top/main.c.o
 top: CMakeFiles/top.dir/top/top.c.o
+top: CMakeFiles/top.dir/adt/al_adt.c.o
 top: CMakeFiles/top.dir/build.make
 top: CMakeFiles/top.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable top"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable top"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/top.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -93,6 +123,6 @@ CMakeFiles/top.dir/clean:
 .PHONY : CMakeFiles/top.dir/clean
 
 CMakeFiles/top.dir/depend:
-	cd /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/top.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/top.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/top.dir/depend
 

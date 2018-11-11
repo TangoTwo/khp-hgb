@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/adt.dir/adt/lis.c.o"
+  "CMakeFiles/adt.dir/adt/al_adt.c.o"
+  "CMakeFiles/adt.dir/adt/am_adt.c.o"
+  "CMakeFiles/adt.dir/adt/main.c.o"
   "adt.pdb"
   "adt"
 )

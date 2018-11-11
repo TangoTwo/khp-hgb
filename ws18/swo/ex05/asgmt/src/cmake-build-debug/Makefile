@@ -48,10 +48,10 @@ RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/bin/cm
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src
+CMAKE_SOURCE_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/khp-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -136,32 +136,116 @@ top/fast:
 	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/build
 .PHONY : top/fast
 
-adt/lis.o: adt/lis.c.o
+adt/al_adt.o: adt/al_adt.c.o
 
-.PHONY : adt/lis.o
+.PHONY : adt/al_adt.o
 
 # target to build an object file
-adt/lis.c.o:
-	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/lis.c.o
-.PHONY : adt/lis.c.o
+adt/al_adt.c.o:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/al_adt.c.o
+	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/adt/al_adt.c.o
+.PHONY : adt/al_adt.c.o
 
-adt/lis.i: adt/lis.c.i
+adt/al_adt.i: adt/al_adt.c.i
 
-.PHONY : adt/lis.i
+.PHONY : adt/al_adt.i
 
 # target to preprocess a source file
-adt/lis.c.i:
-	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/lis.c.i
-.PHONY : adt/lis.c.i
+adt/al_adt.c.i:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/al_adt.c.i
+	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/adt/al_adt.c.i
+.PHONY : adt/al_adt.c.i
 
-adt/lis.s: adt/lis.c.s
+adt/al_adt.s: adt/al_adt.c.s
 
-.PHONY : adt/lis.s
+.PHONY : adt/al_adt.s
 
 # target to generate assembly for a file
-adt/lis.c.s:
-	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/lis.c.s
-.PHONY : adt/lis.c.s
+adt/al_adt.c.s:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/al_adt.c.s
+	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/adt/al_adt.c.s
+.PHONY : adt/al_adt.c.s
+
+adt/am_adt.o: adt/am_adt.c.o
+
+.PHONY : adt/am_adt.o
+
+# target to build an object file
+adt/am_adt.c.o:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/am_adt.c.o
+.PHONY : adt/am_adt.c.o
+
+adt/am_adt.i: adt/am_adt.c.i
+
+.PHONY : adt/am_adt.i
+
+# target to preprocess a source file
+adt/am_adt.c.i:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/am_adt.c.i
+.PHONY : adt/am_adt.c.i
+
+adt/am_adt.s: adt/am_adt.c.s
+
+.PHONY : adt/am_adt.s
+
+# target to generate assembly for a file
+adt/am_adt.c.s:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/am_adt.c.s
+.PHONY : adt/am_adt.c.s
+
+adt/main.o: adt/main.c.o
+
+.PHONY : adt/main.o
+
+# target to build an object file
+adt/main.c.o:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/main.c.o
+.PHONY : adt/main.c.o
+
+adt/main.i: adt/main.c.i
+
+.PHONY : adt/main.i
+
+# target to preprocess a source file
+adt/main.c.i:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/main.c.i
+.PHONY : adt/main.c.i
+
+adt/main.s: adt/main.c.s
+
+.PHONY : adt/main.s
+
+# target to generate assembly for a file
+adt/main.c.s:
+	$(MAKE) -f CMakeFiles/adt.dir/build.make CMakeFiles/adt.dir/adt/main.c.s
+.PHONY : adt/main.c.s
+
+top/main.o: top/main.c.o
+
+.PHONY : top/main.o
+
+# target to build an object file
+top/main.c.o:
+	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/top/main.c.o
+.PHONY : top/main.c.o
+
+top/main.i: top/main.c.i
+
+.PHONY : top/main.i
+
+# target to preprocess a source file
+top/main.c.i:
+	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/top/main.c.i
+.PHONY : top/main.c.i
+
+top/main.s: top/main.c.s
+
+.PHONY : top/main.s
+
+# target to generate assembly for a file
+top/main.c.s:
+	$(MAKE) -f CMakeFiles/top.dir/build.make CMakeFiles/top.dir/top/main.c.s
+.PHONY : top/main.c.s
 
 top/top.o: top/top.c.o
 
@@ -200,9 +284,18 @@ help:
 	@echo "... adt"
 	@echo "... top"
 	@echo "... edit_cache"
-	@echo "... adt/lis.o"
-	@echo "... adt/lis.i"
-	@echo "... adt/lis.s"
+	@echo "... adt/al_adt.o"
+	@echo "... adt/al_adt.i"
+	@echo "... adt/al_adt.s"
+	@echo "... adt/am_adt.o"
+	@echo "... adt/am_adt.i"
+	@echo "... adt/am_adt.s"
+	@echo "... adt/main.o"
+	@echo "... adt/main.i"
+	@echo "... adt/main.s"
+	@echo "... top/main.o"
+	@echo "... top/main.i"
+	@echo "... top/main.s"
 	@echo "... top/top.o"
 	@echo "... top/top.i"
 	@echo "... top/top.s"
