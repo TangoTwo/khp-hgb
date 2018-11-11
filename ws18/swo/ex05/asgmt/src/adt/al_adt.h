@@ -7,24 +7,30 @@
 
 #include <stdbool.h>
 
-typedef struct node* nodePtr_t;
-typedef struct connection* connectionPtr_t;
+typedef struct node *adtPtr_t;
+typedef struct connection *connectionPtr_t;
 struct node {
-    char* payload;
+    char *payload;
     connectionPtr_t nextConnection;
-    nodePtr_t nextNode;
+    adtPtr_t nextNode;
 };
-struct connection{
-    nodePtr_t node;
+struct connection {
+    adtPtr_t node;
     connectionPtr_t nextConnection;
 };
 
-nodePtr_t initAL(void);
-void destroyAL(nodePtr_t);
-void createNodeAL(nodePtr_t, char*);
-bool createEdgeAL(nodePtr_t, char*, char*);
-void deleteNodeAL(nodePtr_t, char*);
-bool deleteEdgeAL(nodePtr_t, char*, char*);
-void printAL(nodePtr_t);
+adtPtr_t init(void);
+
+void destroy(adtPtr_t);
+
+void createNode(adtPtr_t, char *);
+
+bool createEdge(adtPtr_t, char *, char *);
+
+void deleteNode(adtPtr_t, char *);
+
+bool deleteEdge(adtPtr_t, char *, char *);
+
+void print(adtPtr_t);
 
 #endif //PROJECT_AL_ADT_H

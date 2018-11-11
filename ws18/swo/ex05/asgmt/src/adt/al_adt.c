@@ -8,24 +8,24 @@
 #include <stdio.h>
 #include "al_adt.h"
 
-void initNode(nodePtr_t nodePtr) {
+void initNode(adtPtr_t nodePtr) {
     nodePtr->payload = "";
     nodePtr->nextConnection = NULL;
     nodePtr->nextNode = NULL;
 }
 
-nodePtr_t initAL(void) {
-    nodePtr_t newNode = malloc(sizeof(struct node));
+adtPtr_t init(void) {
+    adtPtr_t newNode = malloc(sizeof(struct node));
     initNode(newNode);
     return newNode;
 }
 
-void createNodeAL(nodePtr_t nodePtr, char *name) {
-    if (nodePtr->payload == "") { //first element
+void createNode(adtPtr_t nodePtr, char *name) {
+    if (strcmp(nodePtr->payload, "") == 0) { //first element
         nodePtr->payload = name;
         return;
     }
-    nodePtr_t newNode = malloc(sizeof(struct node));
+    adtPtr_t newNode = malloc(sizeof(struct node));
     initNode(newNode);
     newNode->payload = name;
     while (nodePtr->nextNode != NULL)
@@ -33,7 +33,7 @@ void createNodeAL(nodePtr_t nodePtr, char *name) {
     nodePtr->nextNode = newNode;
 }
 
-nodePtr_t getNodePtr(nodePtr_t nodePtr, char *name) {
+adtPtr_t getNodePtr(adtPtr_t nodePtr, char *name) {
     while (nodePtr != NULL) {
         if (strcmp(nodePtr->payload, name) == 0) {
             return nodePtr;
@@ -43,9 +43,9 @@ nodePtr_t getNodePtr(nodePtr_t nodePtr, char *name) {
     return NULL;
 }
 
-bool createEdgeAL(nodePtr_t nodePtr, char *from, char *to) {
-    nodePtr_t fromPtr;
-    nodePtr_t toPtr;
+bool createEdge(adtPtr_t nodePtr, char *from, char *to) {
+    adtPtr_t fromPtr;
+    adtPtr_t toPtr;
     connectionPtr_t newConnection = malloc(sizeof(struct connection));
     newConnection->nextConnection = NULL;
     fromPtr = getNodePtr(nodePtr, from);
@@ -71,6 +71,7 @@ bool createEdgeAL(nodePtr_t nodePtr, char *from, char *to) {
 
         fromConnection->nextConnection = newConnection;
     }
+    return true;
 }
 
 void deleteConnectionList(connectionPtr_t connectionPtr) {
@@ -80,8 +81,8 @@ void deleteConnectionList(connectionPtr_t connectionPtr) {
     }
 }
 
-void deleteNodeByPtrAL(nodePtr_t originPtr, nodePtr_t delPtr) {
-    nodePtr_t tPtr = originPtr;
+void deleteNodeByPtr(adtPtr_t originPtr, adtPtr_t delPtr) {
+    adtPtr_t tPtr = originPtr;
     while (tPtr->nextNode != delPtr)
         tPtr = tPtr->nextNode;
 
@@ -111,22 +112,23 @@ void deleteNodeByPtrAL(nodePtr_t originPtr, nodePtr_t delPtr) {
     free(delPtr);
 }
 
-void deleteNodeAL(nodePtr_t nodePtr, char *name) {
-    nodePtr_t namePtr;
-    nodePtr_t originPtr = nodePtr;
+void deleteNode(adtPtr_t nodePtr, char *name) {
+    adtPtr_t namePtr;
+    adtPtr_t originPtr = nodePtr;
 
     namePtr = getNodePtr(nodePtr, name);
 
     if (namePtr == NULL) {
         printf("Name does not exist!\n");
+        return;
     }
 
-    deleteNodeByPtrAL(originPtr, namePtr);
+    deleteNodeByPtr(originPtr, namePtr);
 }
 
-bool deleteEdgeAL(nodePtr_t nodePtr, char *from, char *to) {
-    nodePtr_t fromPtr;
-    nodePtr_t toPtr;
+bool deleteEdge(adtPtr_t nodePtr, char *from, char *to) {
+    adtPtr_t fromPtr;
+    adtPtr_t toPtr;
 
     fromPtr = getNodePtr(nodePtr, from);
     toPtr = getNodePtr(nodePtr, to);
@@ -158,7 +160,7 @@ bool deleteEdgeAL(nodePtr_t nodePtr, char *from, char *to) {
     return false;
 }
 
-void printAL(nodePtr_t node) {
+void print(adtPtr_t node) {
     while (node != NULL) {
         printf("%s : ", node->payload);
         connectionPtr_t nextConnection = node->nextConnection;
@@ -171,9 +173,9 @@ void printAL(nodePtr_t node) {
     }
 }
 
-void destroyAL(nodePtr_t node){
+void destroy(adtPtr_t node){
     if(node != NULL) {
-        destroyAL(node->nextNode);
+        destroy(node->nextNode);
         deleteConnectionList(node->nextConnection);
         free(node);
     }

@@ -7,20 +7,26 @@
 
 #include <stdbool.h>
 
-typedef struct amStruct_t* amPtr_t;
-struct amStruct_t{
-    unsigned int maxNodes;
-    unsigned int nodesCount;
-    char** payload;
-    bool* matrix;
+typedef struct amStruct_t *adtPtr_t;
+struct amStruct_t {
+    int maxNodes;
+    int nodesCount;
+    char **payload;
+    bool *matrix;
 };
 
-amPtr_t initAM(void);
-void destroyAM(amPtr_t);
-void createNodeAM(amPtr_t, char*);
-bool createEdgeAM(amPtr_t, char*, char*);
-void deleteNodeAM(amPtr_t, char*);
-bool deleteEdgeAM(amPtr_t, char*, char*);
-void printAM(amPtr_t);
+adtPtr_t init(void);
+
+void destroy(adtPtr_t);
+
+void createNode(adtPtr_t, char *);
+
+bool createEdge(adtPtr_t, char *, char *);
+
+void deleteNode(adtPtr_t, char *);
+
+bool deleteEdge(adtPtr_t, char *, char *);
+
+void print(adtPtr_t);
 
 #endif //PROJECT_AM_ADT_H

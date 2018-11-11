@@ -1,4 +1,0 @@
-/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/adt.dir
-/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/top.dir
-/home/khp/git/fh-hgb/ws18/swo/ex05/asgmt/src/cmake-build-debug/CMakeFiles/edit_cache.dir

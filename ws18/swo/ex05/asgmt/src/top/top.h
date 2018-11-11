@@ -7,6 +7,6 @@
 
 #include "../adt/al_adt.h"
 
-nodePtr_t topological_sort(nodePtr_t);
+adtPtr_t topological_sort(adtPtr_t);
 
 #endif //PROJECT_TOP_H

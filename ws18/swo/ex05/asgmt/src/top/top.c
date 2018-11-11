@@ -10,7 +10,7 @@
 typedef struct nodeConnections* nodeConnectionsPtr_t;
 
 struct nodeConnections{
-    nodePtr_t node;
+    adtPtr_t node;
     int connections;
 };
 
@@ -23,7 +23,7 @@ int countConnections(connectionPtr_t connectionPtr) {
     return i;
 }
 
-int countNodes(nodePtr_t nodePtr) {
+int countNodes(adtPtr_t nodePtr) {
     int i = 0;
     while(nodePtr != NULL) {
         nodePtr = nodePtr->nextNode;
@@ -32,7 +32,7 @@ int countNodes(nodePtr_t nodePtr) {
     return i;
 }
 
-void fillNodeConnections(nodePtr_t nodePtr, nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount) {
+void fillNodeConnections(adtPtr_t nodePtr, nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount) {
     for (int i = 0; i < nodeCount; ++i) {
         (nodeConnectionsPtr + i)->node = nodePtr;
         (nodeConnectionsPtr + i)->connections = countConnections(nodePtr->nextConnection);
@@ -44,10 +44,10 @@ void sortNodeConnections(nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount)
     if(nodeCount <= 1)
         return;
     else {
-        nodeConnectionsPtr_t left = malloc(nodeCount * sizeof(struct nodeConnections));
-        nodeConnectionsPtr_t right = malloc(nodeCount * sizeof(struct nodeConnections));
-        int leftMax = ceil((double)nodeCount/2);
-        int rightMax = floor((double)nodeCount/2);
+        nodeConnectionsPtr_t left = malloc((unsigned int)nodeCount * sizeof(struct nodeConnections));
+        nodeConnectionsPtr_t right = malloc((unsigned int)nodeCount * sizeof(struct nodeConnections));
+        int leftMax = (int)ceil((double)nodeCount/2);
+        int rightMax = (int)floor((double)nodeCount/2);
 
         for(int i = 0; i < leftMax; i++)
             *(left + i) = *(nodeConnectionsPtr + i);
@@ -82,8 +82,8 @@ void sortNodeConnections(nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount)
     }
 }
 
-nodePtr_t reconnectNodes(nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount) {
-    nodePtr_t returnPtr = nodeConnectionsPtr->node;
+adtPtr_t reconnectNodes(nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount) {
+    adtPtr_t returnPtr = nodeConnectionsPtr->node;
     int i;
     for (i = 0; i < nodeCount-1; ++i) {
         nodeConnectionsPtr->node->nextNode = (nodeConnectionsPtr+1)->node;
@@ -93,9 +93,9 @@ nodePtr_t reconnectNodes(nodeConnectionsPtr_t nodeConnectionsPtr, int nodeCount)
     return returnPtr;
 }
 
-nodePtr_t topological_sort(nodePtr_t nodePtr) {
+adtPtr_t topological_sort(adtPtr_t nodePtr) {
     int nodeCount = countNodes(nodePtr);
-    nodeConnectionsPtr_t nodeConnectionsPtr = malloc(nodeCount* sizeof(struct nodeConnections));
+    nodeConnectionsPtr_t nodeConnectionsPtr = malloc((unsigned int)nodeCount* sizeof(struct nodeConnections));
 
     fillNodeConnections(nodePtr, nodeConnectionsPtr, nodeCount);
     sortNodeConnections(nodeConnectionsPtr, nodeCount);

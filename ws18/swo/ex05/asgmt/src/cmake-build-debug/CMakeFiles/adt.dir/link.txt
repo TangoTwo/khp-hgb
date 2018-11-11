@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/adt.dir/adt/al_adt.c.o CMakeFiles/adt.dir/adt/am_adt.c.o CMakeFiles/adt.dir/adt/main.c.o  -o adt 

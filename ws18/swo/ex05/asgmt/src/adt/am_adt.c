@@ -10,7 +10,7 @@
 #define INITIAL_SIZE 2
 #define SIZE_MULTIPLIER 2
 
-int mapPayloadToIndex(char **payload, char *searched, unsigned int nodesCount) {
+int mapPayloadToIndex(char **payload, char *searched, int nodesCount) {
     for (int i = 0; i < nodesCount; ++i) {
         if (strcmp(*(payload + i), searched) == 0) {
             return i;
@@ -19,13 +19,13 @@ int mapPayloadToIndex(char **payload, char *searched, unsigned int nodesCount) {
     return -1;
 }
 
-void copyPayload(char **from, char **to, unsigned int size) {
+void copyPayload(char **from, char **to, int size) {
     for (int i = 0; i < size; ++i) {
         *(to + i) = *(from + i);
     }
 }
 
-bool *mapIndexToAddr(bool *matrix, unsigned int from, unsigned int to, unsigned int nodesCount, unsigned int maxNodes) {
+bool *mapIndexToAddr(bool *matrix, int from, int to, int nodesCount, int maxNodes) {
     if (from > nodesCount || to > nodesCount) {
         printf("Invalid index!");
         return NULL;
@@ -34,7 +34,7 @@ bool *mapIndexToAddr(bool *matrix, unsigned int from, unsigned int to, unsigned 
     return memAddr;
 }
 
-void copyMatrix(bool *from, unsigned int fromMaxNodes, bool *to, unsigned int toMaxNodes, unsigned int nodesCount) {
+void copyMatrix(bool *from, int fromMaxNodes, bool *to, int toMaxNodes, int nodesCount) {
     for (int i = 0; i < (nodesCount); ++i) {
         for (int j = 0; j < nodesCount; ++j) {
             *mapIndexToAddr(to, i, j, nodesCount, toMaxNodes) = *mapIndexToAddr(from, i, j, nodesCount, fromMaxNodes);
@@ -42,27 +42,27 @@ void copyMatrix(bool *from, unsigned int fromMaxNodes, bool *to, unsigned int to
     }
 }
 
-void resizeAM(amPtr_t amPtr, unsigned int size) { //extra ned im Header
+void resizeAM(adtPtr_t amPtr, int size) { //extra ned im Header
     char **oldPayload = amPtr->payload;
     bool *oldMatrix = amPtr->matrix;
-    unsigned int oldMaxNodes = amPtr->maxNodes;
+    int oldMaxNodes = amPtr->maxNodes;
     amPtr->maxNodes = size;
-    amPtr->payload = (char **) malloc(amPtr->maxNodes * sizeof(char *));
-    amPtr->matrix = (bool *) malloc(amPtr->maxNodes * amPtr->maxNodes * sizeof(bool));
+    amPtr->payload = (char **) malloc((unsigned int)amPtr->maxNodes * sizeof(char *));
+    amPtr->matrix = (bool *) malloc((unsigned int)(amPtr->maxNodes * amPtr->maxNodes) * sizeof(bool));
     copyPayload(oldPayload, amPtr->payload, amPtr->nodesCount);
     copyMatrix(oldMatrix, oldMaxNodes, amPtr->matrix, amPtr->maxNodes, amPtr->nodesCount);
     free(oldMatrix);
     free(oldPayload);
 }
 
-amPtr_t initAM(void) {
-    amPtr_t amPtr = malloc(sizeof(struct amStruct_t));
+adtPtr_t init(void) {
+    adtPtr_t amPtr = malloc(sizeof(struct amStruct_t));
     amPtr->nodesCount = 0;
     resizeAM(amPtr, INITIAL_SIZE);
     return amPtr;
 }
 
-void destroyAM(amPtr_t amPtr) {
+void destroy(adtPtr_t amPtr) {
     for (int i = 0; i < amPtr->nodesCount; ++i) {
         free(*(amPtr->payload + i));
     }
@@ -71,7 +71,7 @@ void destroyAM(amPtr_t amPtr) {
     free(amPtr);
 }
 
-void createNodeAM(amPtr_t amPtr, char *name) {
+void createNode(adtPtr_t amPtr, char *name) {
     char *tString = malloc(strlen(name) * sizeof(char));
     strcpy(tString, name);
     if (amPtr->nodesCount == amPtr->maxNodes) {
@@ -88,7 +88,7 @@ void createNodeAM(amPtr_t amPtr, char *name) {
     }
 }
 
-bool createEdgeAM(amPtr_t amPtr, char *from, char *to) {
+bool createEdge(adtPtr_t amPtr, char *from, char *to) {
     int fromIndex = mapPayloadToIndex(amPtr->payload, from, amPtr->nodesCount);
     int toIndex = mapPayloadToIndex(amPtr->payload, to, amPtr->nodesCount);
     if (fromIndex == -1) {
@@ -100,28 +100,29 @@ bool createEdgeAM(amPtr_t amPtr, char *from, char *to) {
     }
 
     *mapIndexToAddr(amPtr->matrix, fromIndex, toIndex, amPtr->nodesCount, amPtr->maxNodes) = true;
+    return true;
 }
 
-void deleteNodeAM(amPtr_t amPtr, char *name) {
+void deleteNode(adtPtr_t amPtr, char *name) {
     //swap with last index and reduce nodesCount
     int removeIndex = mapPayloadToIndex(amPtr->payload, name, amPtr->nodesCount);
-    if (name == -1) {
+    if (removeIndex == -1) {
         printf("%s does not exist!", name);
     }
     for (int i = 0; i < amPtr->nodesCount; ++i) {
         *(mapIndexToAddr(amPtr->matrix, removeIndex, i, amPtr->nodesCount, amPtr->maxNodes)) = *(mapIndexToAddr(
-                amPtr->matrix, amPtr->nodesCount-1, i, amPtr->nodesCount, amPtr->maxNodes));
+                amPtr->matrix, amPtr->nodesCount - 1, i, amPtr->nodesCount, amPtr->maxNodes));
     }
     for (int i = 0; i < amPtr->nodesCount; ++i) {
         *(mapIndexToAddr(amPtr->matrix, i, removeIndex, amPtr->nodesCount, amPtr->maxNodes)) = *(mapIndexToAddr(
-                amPtr->matrix, i, amPtr->nodesCount-1, amPtr->nodesCount, amPtr->maxNodes));
+                amPtr->matrix, i, amPtr->nodesCount - 1, amPtr->nodesCount, amPtr->maxNodes));
     }
     *(amPtr->payload + removeIndex) = *(amPtr->payload + (amPtr->nodesCount - 1));
     free(*(amPtr->payload + (amPtr->nodesCount)));
     amPtr->nodesCount--;
 }
 
-bool deleteEdgeAM(amPtr_t amPtr, char *from, char *to) {
+bool deleteEdge(adtPtr_t amPtr, char *from, char *to) {
     int fromIndex = mapPayloadToIndex(amPtr->payload, from, amPtr->nodesCount);
     int toIndex = mapPayloadToIndex(amPtr->payload, to, amPtr->nodesCount);
     if (fromIndex == -1) {
@@ -133,9 +134,10 @@ bool deleteEdgeAM(amPtr_t amPtr, char *from, char *to) {
     }
 
     *mapIndexToAddr(amPtr->matrix, fromIndex, toIndex, amPtr->nodesCount, amPtr->maxNodes) = false;
+    return true;
 }
 
-void printAM(amPtr_t amPtr) {
+void print(adtPtr_t amPtr) {
     printf("    ");
     for (int k = 0; k < amPtr->nodesCount; ++k) {
         printf("%s", *(amPtr->payload + k));

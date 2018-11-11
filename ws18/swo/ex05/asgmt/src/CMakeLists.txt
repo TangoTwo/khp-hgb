@@ -12,12 +12,20 @@ endif()
 
 # Übungsbeispiel 1
 # ----------------
-file(GLOB_RECURSE BSP1 "adt/*")
-add_executable(adt ${BSP1})
-target_link_libraries(adt compile_flags)
+file(GLOB_RECURSE BSP1 "adt/test.c")
+file(GLOB_RECURSE amSrc "adt/am_*")
+file(GLOB_RECURSE alSrc "adt/al_*")
+# matrix
+add_executable(matrix ${BSP1} ${amSrc})
+target_link_libraries(matrix compile_flags)
+# list
+add_executable(list ${BSP1} ${alSrc})
+target_link_libraries(list compile_flags)
+target_compile_definitions(list PUBLIC USE_LIST=1)
 
 # Übungsbeispiel 2
 # ----------------
 file(GLOB_RECURSE BSP2 "top/*")
-add_executable(top ${BSP2} adt/al_adt.c)
+add_executable(top ${BSP1} ${alSrc} ${BSP2})
 target_link_libraries(top compile_flags -lm)
+target_compile_definitions(top PUBLIC USE_LIST=1 SORT=1)
