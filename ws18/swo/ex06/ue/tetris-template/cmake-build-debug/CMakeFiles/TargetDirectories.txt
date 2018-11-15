@@ -1,3 +1,0 @@
-/home/khp/git/khp-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/khp/git/khp-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/khp/git/khp-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles/tetris.dir
