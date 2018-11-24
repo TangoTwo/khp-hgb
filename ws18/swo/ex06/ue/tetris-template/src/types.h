@@ -3,7 +3,9 @@
 
 #include <assert.h>
 
+#define BLOCKS_IN_FORM 4
 #define UNUSED(var) ((void)var)
+#define AMOUNT_FORMS 7
 
 typedef enum {
 	color_black,
@@ -25,7 +27,25 @@ typedef struct {
     color color;
 } block;
 
+typedef struct {
+    block blocks[BLOCKS_IN_FORM];
+} form_type;
+
+typedef struct{
+    color color;
+    form_type form_type;
+    position pos;
+} form;
+
+form_type form_types[AMOUNT_FORMS];
+
+extern void init_form_types(void);
+
+form_type rotate_form_type(form_type);
+
 extern void render_quad(const position pos, const color color);
 
 extern void render_block(const block block);
+
+extern void render_form(const form form);
 #endif

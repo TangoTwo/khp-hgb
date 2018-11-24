@@ -12,17 +12,36 @@
 #define HEIGHT WIDTH * (GB_ROWS / GB_COLS)
 
 
-static block current = {{GB_COLS / 2, GB_ROWS - 1}, color_red};
+static form current;
 
 static bool game_over = false;
 
 static bool try_move(int dx, int dy) {
-    position pos = current.pos;
-    pos.x += dx;
-    pos.y += dy;
-    if (!gb_valid_pos(pos))
-        return false;
-    current.pos = pos;
+    position future_pos = current.pos;
+    future_pos.x += dx;
+    future_pos.y += dy;
+    for (int i = 0; i < BLOCKS_IN_FORM; ++i) {
+        position t_pos = future_pos;
+        t_pos.x = future_pos.x + current.form_type.blocks[i].pos.x;
+        t_pos.y = future_pos.y + current.form_type.blocks[i].pos.y;
+        if (!gb_valid_pos(t_pos))
+            return false;
+    }
+    current.pos = future_pos;
+    return true;
+}
+
+static bool try_rotate() {
+    form t_form = current;
+    t_form.form_type = rotate_form_type(current.form_type);
+    for (int i = 0; i < BLOCKS_IN_FORM; ++i) {
+        position t_pos = t_form.pos;
+        t_pos.x = t_pos.x + t_form.form_type.blocks[i].pos.x;
+        t_pos.y = t_pos.y + t_form.form_type.blocks[i].pos.y;
+        if (!gb_valid_pos(t_pos))
+            return false;
+    }
+    current = t_form;
     return true;
 }
 
@@ -58,23 +77,29 @@ static void on_key(GLFWwindow *window, int key, int scancode, int action, int mo
         case GLFW_KEY_RIGHT:
             dx = +1;
             break;
+        case GLFW_KEY_UP:
+            break;
         default:
             return;
     }
 
-    if (action == GLFW_PRESS || action == GLFW_REPEAT)
+    if (action == GLFW_PRESS || action == GLFW_REPEAT) {
         if (!try_move(dx, dy)) {
             if (dy == -1) {
-                gb_add_block(current);
+                gb_add_form(current);
                 //create new block
                 current.pos.x = GB_COLS / 2;
                 current.pos.y = GB_ROWS - 1;
                 current.color = random_color();
-                if(!gb_valid_pos(current.pos)) {
+                current.form_type = form_types[rand()%AMOUNT_FORMS];
+                if (!gb_valid_pos(current.pos)) {
                     game_over = true;
                 }
             }
         }
+        if (key == GLFW_KEY_UP)
+            try_rotate();
+    }
 }
 
 void on_timer(void) {
@@ -102,6 +127,11 @@ int main() {
 
     double timer_interval = 0.5;
     timer_init(timer_interval, on_timer);
+    init_form_types();
+    current.pos.x = GB_COLS / 2;
+    current.pos.y = GB_ROWS - 1;
+    current.form_type = form_types[0];
+    current.color = color_cyan;
 
     while (!glfwWindowShouldClose(window)) {
         timer_test();
@@ -115,7 +145,7 @@ int main() {
                  1); //scale logical pixel to screen pixels
 
         gb_render(); //render gameboard
-        render_block(current); //render current block
+        render_form(current); //render current block
 
         const GLenum error = glGetError();
         if (error != GL_NO_ERROR) fprintf(stderr, "ERROR: %s\n", gluErrorString(error));

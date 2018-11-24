@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.c
+assert.h
+-
+stddef.h
+-
+GLFW/glfw3.h
+-
+timer.h
+/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.h
+
