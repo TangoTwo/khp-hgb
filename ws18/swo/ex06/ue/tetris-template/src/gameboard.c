@@ -13,7 +13,7 @@ bool gb_valid_pos(const position pos) {
     if (!(0 <= pos.x && pos.x < GB_COLS &&
         0 <= pos.y))
         return false;
-    for (int i = 0; i < block_count; ++i) {
+    for (size_t i = 0; i < block_count; ++i) {
         position p = blocks[i].pos;
         if (p.x == pos.x && p.y == pos.y)
             return false;
@@ -23,7 +23,7 @@ bool gb_valid_pos(const position pos) {
 
 void gb_remove_row(int row) {
     unsigned long int removedBlocks = 0;
-    for (int i = 0; i < block_count; ++i) {
+    for (size_t i = 0; i < block_count; ++i) {
         if(blocks[i].pos.y == row) {
             removedBlocks++;
         } else {
@@ -42,7 +42,7 @@ void gb_remove_completed_rows() {
     for (int j = 0; j < GB_ROWS; ++j) {
         rowArr[j] = 0;
     }
-    for (int i = 0; i < block_count; ++i) {
+    for (size_t i = 0; i < block_count; ++i) {
         rowArr[blocks[i].pos.y] += 1;
     }
     for (int k = 0; k < GB_ROWS; ++k) {
@@ -71,7 +71,7 @@ void gb_add_form(const form form) {
 }
 
 void gb_render(void) {
-    for (int i = 0; i < block_count; ++i) {
+    for (size_t i = 0; i < block_count; ++i) {
         render_block(blocks[i]);
     }
 }

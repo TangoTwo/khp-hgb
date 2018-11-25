@@ -7,6 +7,7 @@
 #include "timer.h"
 
 #define TIMER_MULTIPLICATOR 0.99
+
 static double timer_interval = 0;
 static timer_func callback = NULL;
 

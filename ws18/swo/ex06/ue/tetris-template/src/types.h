@@ -41,7 +41,7 @@ form_type form_types[AMOUNT_FORMS];
 
 extern void init_form_types(void);
 
-form_type rotate_form_type(form_type);
+extern form_type rotate_form_type(form_type);
 
 extern void render_quad(const position pos, const color color);
 

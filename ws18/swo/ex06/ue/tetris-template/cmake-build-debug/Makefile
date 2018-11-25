@@ -177,6 +177,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/random.o: src/random.c.o
+
+.PHONY : src/random.o
+
+# target to build an object file
+src/random.c.o:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/random.c.o
+.PHONY : src/random.c.o
+
+src/random.i: src/random.c.i
+
+.PHONY : src/random.i
+
+# target to preprocess a source file
+src/random.c.i:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/random.c.i
+.PHONY : src/random.c.i
+
+src/random.s: src/random.c.s
+
+.PHONY : src/random.s
+
+# target to generate assembly for a file
+src/random.c.s:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/random.c.s
+.PHONY : src/random.c.s
+
 src/timer.o: src/timer.c.o
 
 .PHONY : src/timer.o
@@ -203,6 +230,33 @@ src/timer.s: src/timer.c.s
 src/timer.c.s:
 	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/timer.c.s
 .PHONY : src/timer.c.s
+
+src/try.o: src/try.c.o
+
+.PHONY : src/try.o
+
+# target to build an object file
+src/try.c.o:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/try.c.o
+.PHONY : src/try.c.o
+
+src/try.i: src/try.c.i
+
+.PHONY : src/try.i
+
+# target to preprocess a source file
+src/try.c.i:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/try.c.i
+.PHONY : src/try.c.i
+
+src/try.s: src/try.c.s
+
+.PHONY : src/try.s
+
+# target to generate assembly for a file
+src/try.c.s:
+	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/src/try.c.s
+.PHONY : src/try.c.s
 
 src/types.o: src/types.c.o
 
@@ -246,9 +300,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/random.o"
+	@echo "... src/random.i"
+	@echo "... src/random.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"
+	@echo "... src/try.o"
+	@echo "... src/try.i"
+	@echo "... src/try.s"
 	@echo "... src/types.o"
 	@echo "... src/types.i"
 	@echo "... src/types.s"

@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tetris.dir/src/gameboard.c.o"
   "CMakeFiles/tetris.dir/src/main.c.o"
+  "CMakeFiles/tetris.dir/src/random.c.o"
   "CMakeFiles/tetris.dir/src/timer.c.o"
+  "CMakeFiles/tetris.dir/src/try.c.o"
   "CMakeFiles/tetris.dir/src/types.c.o"
   "tetris.pdb"
   "tetris"

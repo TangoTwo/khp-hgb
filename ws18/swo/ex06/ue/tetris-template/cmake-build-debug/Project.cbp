@@ -95,10 +95,22 @@
 		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/main.c">
 			<Option target="tetris"/>
 		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/random.c">
+			<Option target="tetris"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/random.h">
+			<Option target="tetris"/>
+		</Unit>
 		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.c">
 			<Option target="tetris"/>
 		</Unit>
 		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.h">
+			<Option target="tetris"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/try.c">
+			<Option target="tetris"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/try.h">
 			<Option target="tetris"/>
 		</Unit>
 		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/types.c">

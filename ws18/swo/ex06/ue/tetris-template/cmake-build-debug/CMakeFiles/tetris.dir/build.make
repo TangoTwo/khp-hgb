@@ -83,9 +83,22 @@ CMakeFiles/tetris.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tetris.dir/src/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/main.c -o CMakeFiles/tetris.dir/src/main.c.s
 
+CMakeFiles/tetris.dir/src/random.c.o: CMakeFiles/tetris.dir/flags.make
+CMakeFiles/tetris.dir/src/random.c.o: ../src/random.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tetris.dir/src/random.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tetris.dir/src/random.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/random.c
+
+CMakeFiles/tetris.dir/src/random.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tetris.dir/src/random.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/random.c > CMakeFiles/tetris.dir/src/random.c.i
+
+CMakeFiles/tetris.dir/src/random.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tetris.dir/src/random.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/random.c -o CMakeFiles/tetris.dir/src/random.c.s
+
 CMakeFiles/tetris.dir/src/timer.c.o: CMakeFiles/tetris.dir/flags.make
 CMakeFiles/tetris.dir/src/timer.c.o: ../src/timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tetris.dir/src/timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tetris.dir/src/timer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tetris.dir/src/timer.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.c
 
 CMakeFiles/tetris.dir/src/timer.c.i: cmake_force
@@ -96,9 +109,22 @@ CMakeFiles/tetris.dir/src/timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tetris.dir/src/timer.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/timer.c -o CMakeFiles/tetris.dir/src/timer.c.s
 
+CMakeFiles/tetris.dir/src/try.c.o: CMakeFiles/tetris.dir/flags.make
+CMakeFiles/tetris.dir/src/try.c.o: ../src/try.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/tetris.dir/src/try.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tetris.dir/src/try.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/try.c
+
+CMakeFiles/tetris.dir/src/try.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tetris.dir/src/try.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/try.c > CMakeFiles/tetris.dir/src/try.c.i
+
+CMakeFiles/tetris.dir/src/try.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tetris.dir/src/try.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/try.c -o CMakeFiles/tetris.dir/src/try.c.s
+
 CMakeFiles/tetris.dir/src/types.c.o: CMakeFiles/tetris.dir/flags.make
 CMakeFiles/tetris.dir/src/types.c.o: ../src/types.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/tetris.dir/src/types.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/tetris.dir/src/types.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/tetris.dir/src/types.c.o   -c /home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/src/types.c
 
 CMakeFiles/tetris.dir/src/types.c.i: cmake_force
@@ -113,7 +139,9 @@ CMakeFiles/tetris.dir/src/types.c.s: cmake_force
 tetris_OBJECTS = \
 "CMakeFiles/tetris.dir/src/gameboard.c.o" \
 "CMakeFiles/tetris.dir/src/main.c.o" \
+"CMakeFiles/tetris.dir/src/random.c.o" \
 "CMakeFiles/tetris.dir/src/timer.c.o" \
+"CMakeFiles/tetris.dir/src/try.c.o" \
 "CMakeFiles/tetris.dir/src/types.c.o"
 
 # External object files for target tetris
@@ -121,7 +149,9 @@ tetris_EXTERNAL_OBJECTS =
 
 tetris: CMakeFiles/tetris.dir/src/gameboard.c.o
 tetris: CMakeFiles/tetris.dir/src/main.c.o
+tetris: CMakeFiles/tetris.dir/src/random.c.o
 tetris: CMakeFiles/tetris.dir/src/timer.c.o
+tetris: CMakeFiles/tetris.dir/src/try.c.o
 tetris: CMakeFiles/tetris.dir/src/types.c.o
 tetris: CMakeFiles/tetris.dir/build.make
 tetris: /usr/lib/x86_64-linux-gnu/libglfw.so.3.2
@@ -129,7 +159,7 @@ tetris: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 tetris: /usr/lib/x86_64-linux-gnu/libGLX.so
 tetris: /usr/lib/x86_64-linux-gnu/libGLU.so
 tetris: CMakeFiles/tetris.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable tetris"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khp/git/fh-hgb/ws18/swo/ex06/ue/tetris-template/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable tetris"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tetris.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
