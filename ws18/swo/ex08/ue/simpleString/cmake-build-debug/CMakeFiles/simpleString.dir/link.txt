@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/simpleString.dir/main.cpp.o CMakeFiles/simpleString.dir/simpleString.cpp.o  -o simpleString 
