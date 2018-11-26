@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/ue.dir/main.cpp.o  -o ue 
