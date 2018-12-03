@@ -14,10 +14,10 @@ endif()
 # ----------------
 file(GLOB_RECURSE BSP1 "wmb/*")
 add_executable(wmb ${BSP1})
-target_link_libraries(lis compile_flags)
+target_link_libraries(wmb compile_flags)
 
 # Übungsbeispiel 2
 # ----------------
 file(GLOB_RECURSE BSP2 "adt/*")
 add_executable(adt ${BSP2})
-target_link_libraries(team compile_flags -lm)
+target_link_libraries(wmb compile_flags -lm)
