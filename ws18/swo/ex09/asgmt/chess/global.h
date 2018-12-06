@@ -1,0 +1,8 @@
+//
+// Created by khp on 06.12.18.
+//
+
+#ifndef SWO_GLOBAL_H
+#define SWO_GLOBAL_H
+bool UTF_8 = false;
+#endif //SWO_GLOBAL_H
