@@ -1,0 +1,29 @@
+//
+// Created by khp on 07.12.18.
+//
+
+#ifndef SWO_SYMBOLS_H
+#define SWO_SYMBOLS_H
+
+#define SYMBOL_BISHOP b
+#define SYMBOL_KING k
+#define SYMBOL_KNIGHT n
+#define SYMBOL_PAWN p
+#define SYMBOL_QUEEL q
+#define SYMBOL_ROOK r
+
+#define SYMBOL_BISHOP_WHITE_U8 u8"\u2657"
+#define SYMBOL_KING_WHITE_U8 u8"\u2654"
+#define SYMBOL_KNIGHT_WHITE_U8 u8"\u2658"
+#define SYMBOL_PAWN_WHITE_U8 u8"\u2659"
+#define SYMBOL_QUEEL_WHITE_U8 u8"\u2655"
+#define SYMBOL_ROOK_WHITE_U8 u8"\u2656"
+
+#define SYMBOL_BISHOP_BLACK_U8 u8"\u265D"
+#define SYMBOL_KING_BLACK_U8 u8"\u265A"
+#define SYMBOL_KNIGHT_BLACK_U8 u8"\u265E"
+#define SYMBOL_PAWN_BLACK_U8 u8"\u265F"
+#define SYMBOL_QUEEL_BLACK_U8 u8"\u265B"
+#define SYMBOL_ROOK_BLACK_U8 u8"\u2656"
+
+#endif //SWO_SYMBOLS_H

@@ -6,8 +6,7 @@
 #include <cstring>
 #include "chessfigures/bishop.h"
 #include "chessfigures/pawn.h"
-
-extern bool UTF_8;
+#include "global.h"
 
 int main(int argc, char *argv[]) {
     if (argc == 2 && std::strncmp(argv[1], "-u", 2) == 0) {

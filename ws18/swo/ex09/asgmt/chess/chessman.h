@@ -19,7 +19,7 @@ public:
 
     virtual int getColour() { return _colour; };
 
-    virtual std::string getSymbol() { return _symbol; };
+    virtual std::string getSymbol();
 
     virtual bool isEssential() { return _essential; };
 
@@ -27,7 +27,9 @@ public:
 
 protected:
     int _colour;
-    std::string _symbol;
+    char _symbol;
+    std::string _symbolWhiteU8;
+    std::string _symbolBlackU8;
     bool _essential;
     std::vector<RelCoord> _moveVect;
     Coord pos;
