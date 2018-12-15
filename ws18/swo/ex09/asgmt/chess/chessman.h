@@ -11,8 +11,8 @@
 
 class chessman {
 public:
-    enum {
-        COLOUR_WHITE, COLOUR_BLACK
+    enum class Colour : bool {
+        WHITE, BLACK
     };
     typedef std::pair<int, int> RelCoord;
     typedef std::pair<std::string, int> Coord;
@@ -26,7 +26,7 @@ public:
     virtual bool canMoveTo() = 0;
 
 protected:
-    int _colour;
+    Colour _colour;
     char _symbol;
     std::string _symbolWhiteU8;
     std::string _symbolBlackU8;

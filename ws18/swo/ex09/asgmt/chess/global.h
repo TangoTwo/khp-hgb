@@ -7,5 +7,6 @@
 
 static bool UTF_8 = false;
 #define ASCII_TOUPPER_OFFSET -32
-
+#define UTF_8_OFFSET 6
+#define DEFAULT_CHESSBOARD_SIZE 8
 #endif //SWO_GLOBAL_H
