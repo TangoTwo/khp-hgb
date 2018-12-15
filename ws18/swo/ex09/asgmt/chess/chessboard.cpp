@@ -3,6 +3,7 @@
 //
 
 #include "chessboard.h"
+#include "chessman.h"
 
 chessboard::chessboard(unsigned int size) {
     for (int i = 0; i < size; ++i) {
@@ -10,22 +11,30 @@ chessboard::chessboard(unsigned int size) {
         for (int j = 0; j < size; ++j) {
             tVect.push_back(nullptr);
         }
-        chessVect.push_back(tVect);
+        _chessVect.push_back(tVect);
     }
 }
 
 chessman *chessboard::getChessman(const unsigned int col, const unsigned int row) const {
-    if (col > chessVect.size() || row > chessVect.size())
+    if (col > _chessVect.size() || row > _chessVect.size())
         throw;
-    return chessVect[col][row];
+    return _chessVect[row][col];
 }
 
-chessman *chessboard::getChessman(char col, unsigned int row) const {
-    unsigned int tCol = std::toupper(col) - 'A';
-    row--;
-    return getChessman(tCol, row);
+chessman *chessboard::getChessman(Coord coord) const {
+    unsigned int tCol = std::toupper(coord.first) - 'A';
+    coord.second--;
+    if(tCol > this->getSize() || coord.second > this->getSize())
+        throw;
+    return getChessman(tCol, coord.second);
 }
 
-unsigned int chessboard::getSize() {
-    return (unsigned int) chessVect.size();
+unsigned int chessboard::getSize() const{
+    return (unsigned int) _chessVect.size();
+}
+
+void chessboard::placeChessman(const unsigned int col, const unsigned int row, chessman* chessman) {
+    if(col > this->getSize() || row > this->getSize())
+        throw;
+    _chessVect[col][row] = chessman;
 }

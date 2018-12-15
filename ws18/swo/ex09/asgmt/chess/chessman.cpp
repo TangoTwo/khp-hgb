@@ -2,13 +2,10 @@
 // Created by khp on 06.12.18.
 //
 
-#include <locale>
 #include "chessman.h"
+#include "global.h"
 
 std::string chessman::getSymbol() const{
-
-bool UTF_8 = true;
-std::string chessman::getSymbol() {
     if (UTF_8) {
         switch (_colour) {
             case Colour::WHITE:
@@ -20,13 +17,17 @@ std::string chessman::getSymbol() {
         }
     } else {
         switch (_colour) {
-            case Colour::WHITE:
-                return std::string{_symbol};
             case Colour::BLACK:
-                std::locale loc;
-                return std::string{_symbol + ASCII_TOUPPER_OFFSET};
+                return std::string{_symbol};
+            case Colour::WHITE:
+                return std::string{(_symbol + ASCII_TOUPPER_OFFSET)};
         }
     }
     return std::string{};
 }
 
+bool chessman::canMoveTo(Coord coord) const {
+    unsigned int tCol = std::toupper(coord.first) - 'A';
+    coord.second--;
+    return canMoveTo(tCol, coord.second);
+}

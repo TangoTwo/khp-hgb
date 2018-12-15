@@ -11,19 +11,20 @@
 
 class chessman {
 public:
+    typedef std::pair<char, unsigned int> Coord;
     enum class Colour : bool {
         WHITE, BLACK
     };
     typedef std::pair<int, int> RelCoord;
-    typedef std::pair<std::string, int> Coord;
 
-    virtual int getColour() { return _colour; };
+    virtual Colour getColour() { return _colour; };
 
     virtual std::string getSymbol() const;
 
     virtual bool isEssential() { return _essential; };
 
-    virtual bool canMoveTo() = 0;
+    virtual bool canMoveTo(Coord) const;
+    virtual bool canMoveTo(const unsigned int col, const unsigned int row) const = 0;
 
 protected:
     Colour _colour;
@@ -32,7 +33,6 @@ protected:
     std::string _symbolBlackU8;
     bool _essential;
     std::vector<RelCoord> _moveVect;
-    Coord pos;
 };
 
 

@@ -10,9 +10,9 @@
 
 class pawn : public chessman {
 public:
-    pawn(int colour);
+    pawn(Colour colour);
 
-    bool canMoveTo() override;
+    virtual bool canMoveTo(unsigned int col, unsigned int row) const override;
 };
 
 

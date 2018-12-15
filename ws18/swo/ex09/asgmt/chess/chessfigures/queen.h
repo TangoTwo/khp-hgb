@@ -8,8 +8,11 @@
 
 #include "../chessman.h"
 
-class queen : chessman {
+class queen : public chessman {
+public:
+    queen(Colour colour);
 
+    virtual bool canMoveTo(unsigned int col, unsigned int row) const override;
 };
 
 

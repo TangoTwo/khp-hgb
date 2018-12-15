@@ -11,16 +11,19 @@
 
 class chessboard {
 public:
+    typedef std::pair<char, unsigned int> Coord;
     explicit chessboard(unsigned int size = DEFAULT_CHESSBOARD_SIZE);
 
-    unsigned int getSize();
+    unsigned int getSize() const;
 
-    chessman *getChessman(unsigned int col, unsigned int row) const;
+    void placeChessman(unsigned int col, unsigned int row, chessman* chessman);
 
-    chessman *getChessman(char col, unsigned int row) const;
+    chessman* getChessman(unsigned int col, unsigned int row) const;
+
+    chessman *getChessman(Coord) const;
 
 private:
-    std::vector<std::vector<chessman *>> chessVect;
+    std::vector<std::vector<chessman *>> _chessVect;
 };
 
 

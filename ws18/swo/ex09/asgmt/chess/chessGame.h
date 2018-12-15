@@ -16,13 +16,18 @@ class chessGame {
 public:
     chessGame(unsigned int boardSize = DEFAULT_CHESSBOARD_SIZE);
 
-    bool pickupFigure(char col, unsigned int row);
+    void placeOnBoard(chessboard::Coord coord, chessman* chessman);
 
-    bool placeFigure(char col, unsigned int row);
+    bool pickupFigure(chessboard::Coord coord);
+
+    bool placeFigure(chessboard::Coord coord);
+
+    unsigned int getSize() const { return _chessboard.getSize();};
 
     std::ostream &print(std::ostream &os);
 
 private:
+    unsigned int _boardSize;
     chessboard _chessboard;
     Player _currentPlayer{Player::WHITE};
     chessman *_selectedFigure{nullptr};
