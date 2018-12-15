@@ -7,7 +7,7 @@
 #include "global.h"
 #include "chessfigures/symbols.h"
 
-std::string chessman::getSymbol() {
+std::string chessman::getSymbol() const{
     if (UTF_8) {
         switch (_colour) {
             case COLOUR_WHITE:
@@ -23,7 +23,7 @@ std::string chessman::getSymbol() {
                 return std::string{_symbol};
             case COLOUR_BLACK:
                 std::locale loc;
-                return std::string{std::toupper(_symbol, loc)};
+                return std::string{_symbol + ASCII_TOUPPER_OFFSET};
         }
     }
     return std::string{};

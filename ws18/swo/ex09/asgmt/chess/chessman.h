@@ -19,7 +19,7 @@ public:
 
     virtual int getColour() { return _colour; };
 
-    virtual std::string getSymbol();
+    virtual std::string getSymbol() const;
 
     virtual bool isEssential() { return _essential; };
 

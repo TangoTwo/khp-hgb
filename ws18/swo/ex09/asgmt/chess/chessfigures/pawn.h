@@ -13,7 +13,6 @@ public:
     pawn(int colour);
 
     bool canMoveTo() override;
-
 };
 
 
