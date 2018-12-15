@@ -4,24 +4,24 @@
 
 #include <locale>
 #include "chessman.h"
-#include "global.h"
-#include "chessfigures/symbols.h"
 
+
+bool UTF_8 = true;
 std::string chessman::getSymbol() {
     if (UTF_8) {
         switch (_colour) {
-            case COLOUR_WHITE:
+            case Colour::WHITE:
                 return _symbolWhiteU8;
-            case COLOUR_BLACK:
+            case Colour::BLACK:
                 return _symbolBlackU8;
             default:
                 break;
         }
     } else {
         switch (_colour) {
-            case COLOUR_WHITE:
+            case Colour::WHITE:
                 return std::string{_symbol};
-            case COLOUR_BLACK:
+            case Colour::BLACK:
                 std::locale loc;
                 return std::string{std::toupper(_symbol, loc)};
         }
