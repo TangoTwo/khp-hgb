@@ -11,6 +11,7 @@
 #include "chessman.h"
 
 class chessGame {
+    friend std::ostream &operator<<(std::ostream &os, const chessGame &cG);
 public:
     chessGame(unsigned int boardSize = DEFAULT_CHESSBOARD_SIZE);
 
@@ -24,7 +25,9 @@ public:
 
     chessman::Colour getPlayer() const { return _currentPlayerColour; };
 
-    std::ostream &print(std::ostream &os);
+    unsigned int getSize() const { return _chessboard.getSize(); };
+
+    std::ostream &print(std::ostream &os) const;
 
 private:
     unsigned int _boardSize;

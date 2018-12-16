@@ -6,7 +6,11 @@
 #include "chessboard.h"
 #include "exceptions.h"
 
+#define MIN_SIZE 6
 chessboard::chessboard(unsigned int size) {
+    if (size < MIN_SIZE) {
+        throw ChessboardTooSmallException();
+    }
     for (int i = 0; i < size; ++i) {
         std::vector<chessman *> tVect;
         for (int j = 0; j < size; ++j) {
@@ -35,8 +39,14 @@ void chessboard::placeChessman(Coord coord, chessman *chessman) {
 void chessboard::moveChessman(Coord from, Coord to) {
     exceptIfOutOfBounds(from);
     exceptIfOutOfBounds(to);
-    if (_chessVect[from.first][from.second] == nullptr)
+
+    if (this->getChessman(from) == nullptr)
         throw NoChessmanException();
+    else if (this->getChessman(to) != nullptr && this->getChessman(to)->isEssential())
+        throw GameOverException();
+
+    if (_chessVect[to.first][to.second] != nullptr)
+        delete (_chessVect[to.first][to.second]);
     _chessVect[to.first][to.second] = _chessVect[from.first][from.second];
     _chessVect[from.first][from.second] = nullptr;
 }

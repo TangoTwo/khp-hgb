@@ -33,7 +33,7 @@ protected:
     char _symbol;
     std::string _symbolWhiteU8;
     std::string _symbolBlackU8;
-    bool _essential;
+    bool _essential{false};
     unsigned int _moveCount{0};
 };
 

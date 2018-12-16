@@ -3,14 +3,13 @@
 //
 
 #include <iostream>
-#include "exceptions.h"
 #include "chessGame.h"
 
 chessGame::chessGame(unsigned int boardSize) : _chessboard{boardSize} {
     std::cout << "Created chessboard with size " << boardSize << std::endl;
 }
 
-std::ostream &chessGame::print(std::ostream &os) {
+std::ostream &chessGame::print(std::ostream &os) const {
     os << "  |";
     for (int k = 0; k < _chessboard.getSize(); ++k) {
         os << " " << char('a' + k) << " ";
@@ -78,9 +77,6 @@ bool chessGame::pickupFigure(Coord coord) {
 
 bool chessGame::placeFigure(Coord coord) {
     if (_selectedFigure->canMoveTo(_selectedFigureCoord, coord, &_chessboard)) {
-        if (_chessboard.getChessman(coord) != nullptr && _chessboard.getChessman(coord)->isEssential()) {
-            throw GameOverException();
-        }
         _chessboard.moveChessman(_selectedFigureCoord, coord);
         _selectedFigure->increaseMoveCount();
         _selectedFigureCoord = Coord(0, 0);
@@ -96,5 +92,10 @@ bool chessGame::placeFigure(Coord coord) {
 void chessGame::dropFigure() {
     _selectedFigure = nullptr;
     _selectedFigureCoord = Coord(0, 0);
+}
+
+std::ostream &operator<<(std::ostream &os, const chessGame &cG) {
+    cG.print(os);
+    return os;
 }
 

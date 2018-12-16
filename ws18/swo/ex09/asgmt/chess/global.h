@@ -5,7 +5,10 @@
 #ifndef SWO_GLOBAL_H
 #define SWO_GLOBAL_H
 
+#include <utility>
+
 extern bool UTF_8;
+extern bool CLEAR_CONSOLE;
 typedef std::pair<unsigned int, unsigned int> Coord;
 
 #define ASCII_TOUPPER_OFFSET -32

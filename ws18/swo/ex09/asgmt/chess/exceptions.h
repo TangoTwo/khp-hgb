@@ -20,4 +20,10 @@ class NoChessmanException : public std::exception {
     }
 };
 
+class ChessboardTooSmallException : public std::exception {
+    virtual const char *what() const throw() {
+        return "Board size too small!";
+    }
+};
+
 #endif //CHESS_EXCEPTIONS_H

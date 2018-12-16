@@ -13,6 +13,8 @@ pawn::pawn(Colour colour) {
 }
 
 bool pawn::canMoveTo(Coord from, Coord to, const chessboard *chessboard) const {
+    if (chessboard->getChessman(to) != nullptr && chessboard->getChessman(to)->getColour() == this->getColour())
+        return false;
     char multiplicator = 1;
     if (this->_colour == Colour::BLACK)
         multiplicator = -1;
