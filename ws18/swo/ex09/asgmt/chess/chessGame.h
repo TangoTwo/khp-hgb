@@ -8,29 +8,30 @@
 
 #include "chessboard.h"
 #include "global.h"
+#include "chessman.h"
 
 class chessGame {
-    enum class Player : bool {
-        WHITE, BLACK
-    };
 public:
     chessGame(unsigned int boardSize = DEFAULT_CHESSBOARD_SIZE);
 
-    void placeOnBoard(chessboard::Coord coord, chessman* chessman);
+    void placeOnBoard(Coord coord, chessman *chessman);
 
-    bool pickupFigure(chessboard::Coord coord);
+    bool pickupFigure(Coord coord);
 
-    bool placeFigure(chessboard::Coord coord);
+    void dropFigure();
 
-    unsigned int getSize() const { return _chessboard.getSize();};
+    bool placeFigure(Coord coord);
+
+    chessman::Colour getPlayer() const { return _currentPlayerColour; };
 
     std::ostream &print(std::ostream &os);
 
 private:
     unsigned int _boardSize;
     chessboard _chessboard;
-    Player _currentPlayer{Player::WHITE};
+    chessman::Colour _currentPlayerColour{chessman::Colour::WHITE};
     chessman *_selectedFigure{nullptr};
+    Coord _selectedFigureCoord{Coord(0, 0)};
 };
 
 

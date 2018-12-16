@@ -7,12 +7,13 @@
 
 
 #include "../chessman.h"
+#include "../global.h"
 
 class knight : public chessman {
 public:
     knight(Colour colour);
 
-    virtual bool canMoveTo(unsigned int col, unsigned int row) const override;
+    virtual bool canMoveTo(Coord from, Coord to, const chessboard *chessboard) const override;
 };
 
 

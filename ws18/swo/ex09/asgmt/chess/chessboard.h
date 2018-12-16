@@ -9,22 +9,27 @@
 #include "global.h"
 #include "chessman.h"
 
+class chessman;
 class chessboard {
 public:
-    typedef std::pair<char, unsigned int> Coord;
     explicit chessboard(unsigned int size = DEFAULT_CHESSBOARD_SIZE);
 
     unsigned int getSize() const;
 
-    void placeChessman(unsigned int col, unsigned int row, chessman* chessman);
+    void placeChessman(Coord coord, chessman *chessman);
 
-    chessman* getChessman(unsigned int col, unsigned int row) const;
+    void moveChessman(Coord from, Coord to);
 
-    chessman *getChessman(Coord) const;
+    chessman *getChessman(Coord coord) const;
+
+
 
 private:
+    void exceptIfOutOfBounds(Coord coord) const;
     std::vector<std::vector<chessman *>> _chessVect;
 };
+
+Coord toCoord(char, unsigned int);
 
 
 #endif //SWO_CHESSBOARD_H

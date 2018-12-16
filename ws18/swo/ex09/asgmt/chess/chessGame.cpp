@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "exceptions.h"
 #include "chessGame.h"
 
 chessGame::chessGame(unsigned int boardSize) : _chessboard{boardSize} {
@@ -23,18 +24,20 @@ std::ostream &chessGame::print(std::ostream &os) {
     for (int i = _chessboard.getSize()-1; i >= 0; --i) {
         os << i + 1 << " |";
         for (unsigned int j = 0; j < _chessboard.getSize(); ++j) {
-            chessman *tFigure = _chessboard.getChessman(i, j);
+            chessman *tFigure = _chessboard.getChessman(Coord(j, i));
 
 
+            bool tCanMove = false;
+            if (_selectedFigure != nullptr)
+                tCanMove = _selectedFigure->canMoveTo(_selectedFigureCoord, Coord(j, i), &_chessboard);
 
             if (tFigure == nullptr){
-                (i + j) % 2 ? os << " . " : os << " * ";
+                tCanMove ? os << "[" : os << " ";
+                (i + j) % 2 ? os << "." : os << "*";
+                tCanMove ? os << "]" : os << " ";
             } else if(tFigure == _selectedFigure) {
                 os << "(" << tFigure->getSymbol() << ")";
             } else {
-                bool tCanMove = false;
-                if(_selectedFigure != nullptr)
-                    tCanMove = _selectedFigure->canMoveTo(i, j);
                 tCanMove ? os << "[" : os << " ";
                 os << tFigure->getSymbol();
                 tCanMove ? os << "]" : os << " ";
@@ -55,11 +58,43 @@ std::ostream &chessGame::print(std::ostream &os) {
     return os;
 }
 
-void chessGame::placeOnBoard(chessboard::Coord coord, chessman* chessman) {
-    unsigned int tCol = std::toupper(coord.first) - 'A';
-    coord.second--;
-    if(tCol > _chessboard.getSize() || coord.second > _chessboard.getSize())
-        throw;
-    _chessboard.placeChessman(tCol, coord.second, chessman);
+void chessGame::placeOnBoard(Coord coord, chessman *chessman) {
+    _chessboard.placeChessman(coord, chessman);
+}
+
+bool chessGame::pickupFigure(Coord coord) {
+    if (coord.first < 0 || coord.second < 0 || coord.first > _chessboard.getSize() ||
+        coord.second > _chessboard.getSize())
+        return false;
+    chessman *tChessman = _chessboard.getChessman(coord);
+    if (tChessman == nullptr)
+        return false;
+    else if (tChessman->getColour() != _currentPlayerColour)
+        return false;
+    _selectedFigure = tChessman;
+    _selectedFigureCoord = coord;
+    return true;
+}
+
+bool chessGame::placeFigure(Coord coord) {
+    if (_selectedFigure->canMoveTo(_selectedFigureCoord, coord, &_chessboard)) {
+        if (_chessboard.getChessman(coord) != nullptr && _chessboard.getChessman(coord)->isEssential()) {
+            throw GameOverException();
+        }
+        _chessboard.moveChessman(_selectedFigureCoord, coord);
+        _selectedFigure->increaseMoveCount();
+        _selectedFigureCoord = Coord(0, 0);
+        _selectedFigure = nullptr;
+        _currentPlayerColour == chessman::Colour::BLACK ?
+                _currentPlayerColour = chessman::Colour::WHITE :
+                _currentPlayerColour = chessman::Colour::BLACK;
+        return true;
+    }
+    return false;
+}
+
+void chessGame::dropFigure() {
+    _selectedFigure = nullptr;
+    _selectedFigureCoord = Coord(0, 0);
 }
 

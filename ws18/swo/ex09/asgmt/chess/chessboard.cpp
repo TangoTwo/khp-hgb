@@ -2,8 +2,9 @@
 // Created by khp on 06.12.18.
 //
 
+#include <stdexcept>
 #include "chessboard.h"
-#include "chessman.h"
+#include "exceptions.h"
 
 chessboard::chessboard(unsigned int size) {
     for (int i = 0; i < size; ++i) {
@@ -15,26 +16,39 @@ chessboard::chessboard(unsigned int size) {
     }
 }
 
-chessman *chessboard::getChessman(const unsigned int col, const unsigned int row) const {
-    if (col > _chessVect.size() || row > _chessVect.size())
-        throw;
-    return _chessVect[row][col];
-}
-
 chessman *chessboard::getChessman(Coord coord) const {
-    unsigned int tCol = std::toupper(coord.first) - 'A';
-    coord.second--;
-    if(tCol > this->getSize() || coord.second > this->getSize())
-        throw;
-    return getChessman(tCol, coord.second);
+    exceptIfOutOfBounds(coord);
+    if (coord.first > _chessVect.size() || coord.second > _chessVect.size())
+        throw NoChessmanException();
+    return _chessVect[coord.first][coord.second];
 }
 
 unsigned int chessboard::getSize() const{
     return (unsigned int) _chessVect.size();
 }
 
-void chessboard::placeChessman(const unsigned int col, const unsigned int row, chessman* chessman) {
-    if(col > this->getSize() || row > this->getSize())
-        throw;
-    _chessVect[col][row] = chessman;
+void chessboard::placeChessman(Coord coord, chessman *chessman) {
+    exceptIfOutOfBounds(coord);
+    _chessVect[coord.first][coord.second] = chessman;
+}
+
+void chessboard::moveChessman(Coord from, Coord to) {
+    exceptIfOutOfBounds(from);
+    exceptIfOutOfBounds(to);
+    if (_chessVect[from.first][from.second] == nullptr)
+        throw NoChessmanException();
+    _chessVect[to.first][to.second] = _chessVect[from.first][from.second];
+    _chessVect[from.first][from.second] = nullptr;
+}
+
+void chessboard::exceptIfOutOfBounds(Coord coord) const {
+    if (coord.first > this->getSize() || coord.first > this->getSize())
+        throw std::range_error("Out of bounds!");
+}
+
+Coord toCoord(char col, unsigned int row) {
+    Coord tCoord;
+    tCoord.first = std::toupper(col) - 'A';
+    tCoord.second = row - 1;
+    return tCoord;
 }

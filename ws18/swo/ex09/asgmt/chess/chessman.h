@@ -8,23 +8,25 @@
 
 #include <vector>
 #include <string>
+#include "global.h"
+#include "chessboard.h"
 
+class chessboard;
 class chessman {
 public:
-    typedef std::pair<char, unsigned int> Coord;
     enum class Colour : bool {
         WHITE, BLACK
     };
-    typedef std::pair<int, int> RelCoord;
 
-    virtual Colour getColour() { return _colour; };
+    virtual Colour getColour() const { return _colour; };
 
     virtual std::string getSymbol() const;
 
     virtual bool isEssential() { return _essential; };
 
-    virtual bool canMoveTo(Coord) const;
-    virtual bool canMoveTo(const unsigned int col, const unsigned int row) const = 0;
+    virtual void increaseMoveCount() { _moveCount++; };
+
+    virtual bool canMoveTo(Coord from, Coord to, const chessboard *chessboard) const = 0;
 
 protected:
     Colour _colour;
@@ -32,7 +34,7 @@ protected:
     std::string _symbolWhiteU8;
     std::string _symbolBlackU8;
     bool _essential;
-    std::vector<RelCoord> _moveVect;
+    unsigned int _moveCount{0};
 };
 
 

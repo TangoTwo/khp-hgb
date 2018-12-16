@@ -3,7 +3,6 @@
 //
 
 #include "knight.h"
-#include "../global.h"
 #include "symbols.h"
 
 knight::knight(Colour colour) {
@@ -13,6 +12,13 @@ knight::knight(Colour colour) {
     _symbolWhiteU8 = SYMBOL_KNIGHT_WHITE_U8;
 }
 
-bool knight::canMoveTo(const unsigned int col, const unsigned int row) const {
+bool knight::canMoveTo(Coord from, Coord to, const chessboard *chessboard) const {
+    if (chessboard->getChessman(to) != nullptr && chessboard->getChessman(to)->getColour() == this->getColour())
+        return false;
+    if (to.first == from.first + 2 || to.first == from.first - 2) {
+        return to.second == from.second + 1 || to.second == from.second - 1;
+    } else if (to.second == from.second + 2 || to.second == from.second - 2) {
+        return to.first == from.first + 1 || to.first == from.first - 1;
+    }
     return false;
 }

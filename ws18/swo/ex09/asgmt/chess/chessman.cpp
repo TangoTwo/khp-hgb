@@ -3,7 +3,6 @@
 //
 
 #include "chessman.h"
-#include "global.h"
 
 std::string chessman::getSymbol() const{
     if (UTF_8) {
@@ -24,10 +23,4 @@ std::string chessman::getSymbol() const{
         }
     }
     return std::string{};
-}
-
-bool chessman::canMoveTo(Coord coord) const {
-    unsigned int tCol = std::toupper(coord.first) - 'A';
-    coord.second--;
-    return canMoveTo(tCol, coord.second);
 }

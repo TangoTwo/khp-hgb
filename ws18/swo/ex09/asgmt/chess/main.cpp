@@ -6,12 +6,11 @@
 #include <cstring>
 #include "chessGame.h"
 #include "chessfigures/bishop.h"
-#include "chessfigures/pawn.h"
 #include "chessfigures/rook.h"
 #include "chessfigures/queen.h"
 #include "chessfigures/king.h"
 #include "chessfigures/knight.h"
-#include "global.h"
+#include "exceptions.h"
 
 bool UTF_8 = false;
 
@@ -26,34 +25,59 @@ int main(int argc, char *argv[]) {
 
     chessGame cG;
 
-    for (int i = 0; i < cG.getSize(); ++i) {
-        cG.placeOnBoard(chessboard::Coord(('A' + i), 2), new pawn(chessman::Colour::WHITE));
-        cG.placeOnBoard(chessboard::Coord(('A' + i), 7), new pawn(chessman::Colour::BLACK));
+    /*for (int i = 0; i < cG.getSize(); ++i) {
+        cG.placeOnBoard(toCoord(('A' + i), 2), new pawn(chessman::Colour::WHITE));
+        cG.placeOnBoard(toCoord(('A' + i), 7), new pawn(chessman::Colour::BLACK));
+    }*/
+    cG.placeOnBoard(toCoord('A', 1), new rook(chessman::Colour::WHITE));
+    cG.placeOnBoard(toCoord('H', 1), new rook(chessman::Colour::WHITE));
+
+    cG.placeOnBoard(toCoord('A', 8), new rook(chessman::Colour::BLACK));
+    cG.placeOnBoard(toCoord('H', 8), new rook(chessman::Colour::BLACK));
+
+    cG.placeOnBoard(toCoord('B', 1), new knight(chessman::Colour::WHITE));
+    cG.placeOnBoard(toCoord('G', 1), new knight(chessman::Colour::WHITE));
+
+    cG.placeOnBoard(toCoord('B', 8), new knight(chessman::Colour::BLACK));
+    cG.placeOnBoard(toCoord('G', 8), new knight(chessman::Colour::BLACK));
+
+    cG.placeOnBoard(toCoord('C', 1), new bishop(chessman::Colour::WHITE));
+    cG.placeOnBoard(toCoord('F', 4), new bishop(chessman::Colour::WHITE));
+
+    cG.placeOnBoard(toCoord('C', 8), new bishop(chessman::Colour::BLACK));
+    cG.placeOnBoard(toCoord('F', 8), new bishop(chessman::Colour::BLACK));
+
+    cG.placeOnBoard(toCoord('E', 8), new king(chessman::Colour::BLACK));
+    cG.placeOnBoard(toCoord('E', 1), new king(chessman::Colour::WHITE));
+
+    cG.placeOnBoard(toCoord('D', 8), new queen(chessman::Colour::BLACK));
+    cG.placeOnBoard(toCoord('D', 1), new queen(chessman::Colour::WHITE));
+
+    bool gameOver = false;
+    while (!gameOver) {
+        std::cout << std::endl << std::endl;
+        std::cout << "Next Player is " << (cG.getPlayer() == chessman::Colour::WHITE ? "White" : "Black") << std::endl;
+        cG.print(std::cout);
+        std::string tString;
+        std::cout << "Pickup figure" << std::endl;
+        std::cin >> tString;
+        if (cG.pickupFigure(toCoord((char) tString[0], std::stoi(tString.substr(1))))) {
+            cG.print(std::cout);
+            std::cout << "Place figure!" << std::endl;
+            std::cin >> tString;
+            try {
+                if (cG.placeFigure(toCoord((char) tString[0], std::stoi(tString.substr(1))))) {
+                    std::cout << "Placed figure!" << std::endl;
+                } else {
+                    std::cout << "Can't place figure here!" << std::endl;
+                }
+            } catch (GameOverException &e) {
+                gameOver = true;
+            }
+        } else {
+            std::cout << "Can't pick up this figure!" << std::endl;
+        }
+        cG.dropFigure();
     }
-    cG.placeOnBoard(chessboard::Coord('A', 1), new rook(chessman::Colour::WHITE));
-    cG.placeOnBoard(chessboard::Coord('H', 1), new rook(chessman::Colour::WHITE));
-
-    cG.placeOnBoard(chessboard::Coord('A', 8), new rook(chessman::Colour::BLACK));
-    cG.placeOnBoard(chessboard::Coord('H', 8), new rook(chessman::Colour::BLACK));
-
-    cG.placeOnBoard(chessboard::Coord('B', 1), new knight(chessman::Colour::WHITE));
-    cG.placeOnBoard(chessboard::Coord('G', 1), new knight(chessman::Colour::WHITE));
-
-    cG.placeOnBoard(chessboard::Coord('B', 8), new knight(chessman::Colour::BLACK));
-    cG.placeOnBoard(chessboard::Coord('G', 8), new knight(chessman::Colour::BLACK));
-
-    cG.placeOnBoard(chessboard::Coord('C', 1), new bishop(chessman::Colour::WHITE));
-    cG.placeOnBoard(chessboard::Coord('F', 1), new bishop(chessman::Colour::WHITE));
-
-    cG.placeOnBoard(chessboard::Coord('C', 8), new bishop(chessman::Colour::BLACK));
-    cG.placeOnBoard(chessboard::Coord('F', 8), new bishop(chessman::Colour::BLACK));
-
-    cG.placeOnBoard(chessboard::Coord('E', 8), new king(chessman::Colour::BLACK));
-    cG.placeOnBoard(chessboard::Coord('E', 1), new king(chessman::Colour::WHITE));
-
-    cG.placeOnBoard(chessboard::Coord('D', 8), new queen(chessman::Colour::BLACK));
-    cG.placeOnBoard(chessboard::Coord('D', 1), new queen(chessman::Colour::WHITE));
-
-    cG.print(std::cout);
     return 0;
 }
