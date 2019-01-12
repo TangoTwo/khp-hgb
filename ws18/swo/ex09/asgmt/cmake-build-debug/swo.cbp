@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="swo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chess">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/chess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 chess"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chess/fast">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/chess" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 chess/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessboard.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessboard.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/bishop.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/bishop.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/king.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/king.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/knight.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/knight.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/pawn.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/pawn.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/queen.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/queen.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/rook.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/rook.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessfigures/symbols.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessman.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/chessman.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/global.h">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/chess/main.cpp">
+			<Option target="chess"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

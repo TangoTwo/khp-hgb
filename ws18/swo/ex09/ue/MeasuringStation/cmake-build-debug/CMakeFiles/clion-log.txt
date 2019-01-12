@@ -1,0 +1,4 @@
+/home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4284.156/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug

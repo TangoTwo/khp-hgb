@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="measuring_station">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/measuring_station" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 measuring_station"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="measuring_station/fast">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/measuring_station" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 measuring_station/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/actor.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/actor.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/alarm_filter.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/alarm_filter.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/alarm_info.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/alarm_info.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/base.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/base.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/broadcast_actor.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/broadcast_actor.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/filter.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/filter.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/information.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/information.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/main.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/object.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/pressure_sensor.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/pressure_sensor.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/print_actor.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/print_actor.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/sensor.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/sensor.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/station.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/station.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/status_info.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/status_info.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/temperature_sensor.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/temperature_sensor.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/value_filter.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/value_filter.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/value_info.cpp">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/src/value_info.h">
+			<Option target="measuring_station"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex09/ue/MeasuringStation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,3 @@
+/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/khp/git/fh-hgb/ws18/swo/ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir
