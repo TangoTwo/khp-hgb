@@ -5,12 +5,21 @@
 #include "deque.h"
 
 int main() {
-    swo3::deque<char> deque1{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'};
+    swo3::deque<int> deque1(3);
+    deque1.push_back(1);
+    deque1.push_back(3);
+    deque1.push_front(5);
+    deque1.push_front(6);
+    deque1.push_front(7);
+    deque1.push_front(8);
     deque1.pop_back();
-    deque1.pop_front();
-    for (const auto &item : deque1) {
-        std::cout << item;
-    }
-    std::cout << deque1.size();
+    deque1.pop_back();
+    deque1.pop_back();
+    deque1.pop_back();
+    deque1.pop_back();
+    for(auto it = deque1.begin(); it != deque1.end(); it++)
+        std::cout << *it << ",";
+
+    std::cout << std::endl << deque1.size();
     return EXIT_SUCCESS;
 }

@@ -21,32 +21,38 @@ namespace swo3 {
         using pointerArr = std::unique_ptr<T[]>;
         using size_type = size_t; // only replace with datatypes without negative values!
 
-        class iterator final {
+    class iterator final : public std::iterator<std::random_access_iterator_tag, T> {
             friend deque;
         public:
             using difference_type = int;
 
-            iterator() {};
+            iterator() = default;
 
-            iterator(iterator const &other) {
-                _pos = other._pos;
+            iterator(iterator const &other) : _pos{other._pos}, _first{other._first}, _last{other._last}{
             };
 
-            iterator &operator=(iterator const &other) {
+            iterator &operator=(iterator const &other){
                 _pos = other._pos;
-                return &this;
+                _first = other._first;
+                _last = other._last;
+                return *this;
             };
 
             iterator &operator++() {
-                iterator tIt = *this;
-                _pos++;
-                return tIt;
+                if(_pos == _last)  // loop around
+                    _pos = _first;
+                else
+                    _pos = (_pos + 1);
+                return *this;
             }
 
             iterator operator++(int) {
-                _pos = (_pos + 1) % _size; // loop around
-                _pos++;
-                return this;
+                iterator tIt = *this;
+                if(_pos == _last)  // loop around
+                    _pos = _first;
+                else
+                    _pos = (_pos + 1);
+                return tIt;
             }
 
             bool operator==(iterator const &other) {
@@ -62,14 +68,20 @@ namespace swo3 {
             }
 
             iterator &operator--() {
-                iterator tIt = this;
-                _pos--;
-                return &tIt;
+                if(_pos == _first)  // loop around
+                    _pos = _last;
+                else
+                    _pos = (_pos - 1);
+                return this;
             }
 
             iterator operator--(int) {
-                _pos--;
-                return this;
+                iterator tIt = *this;
+                if(_pos == _first)  // loop around
+                    _pos = _last;
+                else
+                    _pos = (_pos - 1);
+                return &tIt;
             }
 
             iterator &operator+=(difference_type n) {
@@ -126,6 +138,8 @@ namespace swo3 {
 
         private:
             pointer _pos;
+            pointer _first;
+            pointer _last;
         };
 
     public:
@@ -133,29 +147,31 @@ namespace swo3 {
             deque(DEFAULT_SIZE);
         }
 
-        explicit deque(size_type count) : _size{count}, _data{std::make_unique<T[]>(count)}, _front{count - 1} {
+        explicit deque(size_type count) : _size{count}, _data{std::make_unique<T[]>(count)} {
 
         }
 
-        deque(size_type count, T const &value) : _size{count}, _data{std::make_unique<T[]>(count)}, _front{count - 1} {
+        deque(size_type count, T const &value) : _size{count}, _data{std::make_unique<T[]>(count)} {
             for (size_type i = 0; i < _size; ++i) {
                 _data[i] = value;
             }
         };
 
         deque(deque const &other) : _size{other._size}, _data{std::make_unique<T[]>(other._size)},
-                                    _front{other._size - 1} {
+                                    _front{other._front}, _end{other._end} {
             std::copy(other._data, other._data + _size, _data);
         };
 
-        deque(deque &&other) noexcept : _size{other._size}, _data{other._data}, _front{other._size - 1} {
+        deque(deque &&other) noexcept : _size{other._size}, _data{other._data},
+                                        _front{other._front}, _end{other._end} {
             other._size = 0;
             other._data.reset();
         };
 
         deque(std::initializer_list<T> init) {
             _size = init.size();
-            _front = _size - 1;
+            _front = 0;
+            _end = 0;
             _data = std::make_unique<T[]>(_size);
             for (size_type i = 0; i < _size; ++i) {
                 _data[i] = *(init.begin() + i);
@@ -227,12 +243,16 @@ namespace swo3 {
         iterator begin() noexcept {
             iterator tIt;
             tIt._pos = &_data[_front];
+            tIt._first = &_data[0];
+            tIt._last = &_data[_size-1];
             return tIt;
         }
 
         iterator end() noexcept {
             iterator tIt;
             tIt._pos = &_data[_end];
+            tIt._first = &_data[0];
+            tIt._last = &_data[_size-1];
             return tIt;
         }
 
@@ -252,7 +272,7 @@ namespace swo3 {
         }
 
         void push_back(T const &value) {
-            if (_end == _front) {
+            if ((_end + 1) % _size == _front) {
                 resize(SIZE_MULTIPLIER * _size);
             }
             _data[_end] = value;
@@ -260,7 +280,7 @@ namespace swo3 {
         }
 
         void push_back(T &&value) {
-            if (_end == _front) {
+            if ((_end + 1) % _size == _front) {
                 resize(SIZE_MULTIPLIER * _size);
             }
             _data[_end] = std::move(value);
@@ -276,19 +296,25 @@ namespace swo3 {
         }
 
         void push_front(T const &value) {
+            if(_front == 0)// loop around
+                _front = _size-1;
+            else
+                _front = (_front - 1) % _size;
             if (_end == _front) {
                 resize(SIZE_MULTIPLIER * _size);
             }
             _data[_front] = value;
-            _front = (_front - 1) % _size; // loop around
         }
 
         void push_front(T &&value) {
+            if(_front == 0)// loop around
+                _front = _size-1;
+            else
+                _front = (_front - 1) % _size;
             if (_end == _front) {
                 resize(SIZE_MULTIPLIER * _size);
             }
             _data[_front] = std::move(value);
-            _front = (_front - 1) % _size; // loop around
         }
 
         void pop_front() {
@@ -300,10 +326,12 @@ namespace swo3 {
         }
 
         void resize(size_type count) {
-            pointer tData = std::make_unique<T[]>(count);
-            std::copy(_data[0], _data[_size], tData);
-            _data.reset();
-            _data = tData;
+            pointerArr tData = std::make_unique<T[]>(count);
+            std::copy(&_data[0], &_data[_end], tData.get());
+            std::copy(&_data[_front], &_data[_size], tData.get()+ count - (_size - _front));
+            _front = count - (_size - _front);
+            _size = count;
+            _data = std::move(tData);
         }
 
         void swap(deque &other) noexcept {
