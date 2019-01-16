@@ -12,25 +12,15 @@ void list<T>::add(T value) {
 
 template<typename T>
 std::unique_ptr<ml5::iterator<T>> list<T>::make_iterator() const {
-    return std::make_unique<list_iter<T>>(_head);
+    return std::unique_ptr<ml5::iterator<T>>();
 }
 
 template<typename T>
 void list<T>::remove(const T &value) noexcept {
-    if(!this->contains(value))
-        return;
-
-    list_node<T> *curr = _head;
-    list_node<T> *prev = nullptr;
-
-    while (curr != nullptr) {
-        if(curr->_value == value) {
-            if(!prev) {
-                _head = curr->_next;
-            } else if(curr == _tail) {
-                prev->_next = nullptr;
-                _tail = prev;
-            }
+    for(list_node<T>* n = _head; n != nullptr; n = n->_next) {
+        if (n->_next && n->_next->_value == value) {
+            n->_next = n->_next->_next;
+            _size--;
         }
     }
 }
@@ -51,12 +41,7 @@ std::size_t list<T>::size() const noexcept {
 
 template <typename T>
 void list<T>::clear() noexcept {
-    list_node<T>* n = _head;
-    while(n != nullptr){
-        list_node<T>* next = n->_next;
-        delete n;
-        n = next;
-    }
+
 }
 
 template<typename T>
