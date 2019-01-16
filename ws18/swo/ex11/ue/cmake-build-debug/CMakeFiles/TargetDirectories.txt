@@ -1,5 +1,0 @@
-/home/khp/git/fh-hgb/ws18/swo/ex10/ue/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/khp/git/fh-hgb/ws18/swo/ex10/ue/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/khp/git/fh-hgb/ws18/swo/ex10/ue/cmake-build-debug/CMakeFiles/simpleVector.dir
-/home/khp/git/fh-hgb/ws18/swo/ex10/ue/cmake-build-debug/CMakeFiles/vector.dir
-/home/khp/git/fh-hgb/ws18/swo/ex10/ue/cmake-build-debug/CMakeFiles/resourceManager.dir

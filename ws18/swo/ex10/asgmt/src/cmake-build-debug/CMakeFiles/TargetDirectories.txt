@@ -1,3 +1,0 @@
-/home/khp/git/fh-hgb/ws18/swo/ex10/asgmt/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/khp/git/fh-hgb/ws18/swo/ex10/asgmt/src/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/khp/git/fh-hgb/ws18/swo/ex10/asgmt/src/cmake-build-debug/CMakeFiles/deque.dir

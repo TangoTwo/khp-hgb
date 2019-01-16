@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/wmb.dir/wmb/car.cpp.o CMakeFiles/wmb.dir/wmb/engine.cpp.o CMakeFiles/wmb.dir/wmb/main.cpp.o CMakeFiles/wmb.dir/wmb/wheel.cpp.o  -o wmb 
