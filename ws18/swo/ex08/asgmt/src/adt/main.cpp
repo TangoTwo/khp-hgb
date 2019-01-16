@@ -37,12 +37,14 @@ int main() {
     // Es ist auch möglich einen Vertex öfter in einen Graphen zu geben.
     handleV2 = graph.addVertex(vertex2);
     handle_t handleV4 = graph.addVertex(vertex2);
-    graph.addEdge(handleV2, handleV4, 40);
-    graph.addEdge(handleV4, handleV2, 40);
+    //graph.addEdge(handleV2, handleV4, 40);
+    graph.addEdge(handleV1, handleV4, 20);
+    graph.addEdge(handleV4, handleV3, 34);
     std::cout << graph << std::endl;
 
     // Berechnung des kürzesten Weges
     std::cout << "Shortest connection C-A (29):" << graph.getShortestPath(handleV3, handleV1) << std::endl;
     std::cout << "Shortest connection B1-B2 (40):" << graph.getShortestPath(handleV2, handleV4) << std::endl;
     std::cout << "Shortest connection A-B (-1, NO PATH):" << graph.getShortestPath(handleV1, handleV4) << std::endl;
+	std::cout << "Shortest connection B-A (80):" << graph.getShortestPath(handleV1, handleV3) << std::endl;
 }

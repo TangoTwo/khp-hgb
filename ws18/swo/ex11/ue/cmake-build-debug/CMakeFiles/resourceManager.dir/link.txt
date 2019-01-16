@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/resourceManager.dir/resourceManager/main.cpp.o  -o resourceManager 

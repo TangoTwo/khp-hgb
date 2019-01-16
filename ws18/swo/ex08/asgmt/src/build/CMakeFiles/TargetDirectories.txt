@@ -1,0 +1,4 @@
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/build/CMakeFiles/edit_cache.dir
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/build/CMakeFiles/rebuild_cache.dir
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/build/CMakeFiles/adt.dir
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/build/CMakeFiles/wmb.dir

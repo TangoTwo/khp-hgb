@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/graphT.cpp
+algorithm
+-
+graphT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/graphT.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/graphT.h
+iostream
+-
+vector
+-
+map
+-
+handleT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/handleT.h
+vertexT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/vertexT.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/handleT.cpp
+handleT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/handleT.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/handleT.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/main.cpp
+vertexT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/vertexT.h
+graphT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/graphT.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/vertexT.cpp
+vertexT.h
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/vertexT.h
+
+/home/khp/git/fh-hgb/ws18/swo/ex08/asgmt/src/adt/vertexT.h
+string
+-
+

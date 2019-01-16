@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ml5\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="intro">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin/intro" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXGTK__"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/inc"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0"/>
+					<Add directory="/usr/include/wx-3.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 intro"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="intro/fast">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin/intro" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXGTK__"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/inc"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0"/>
+					<Add directory="/usr/include/wx-3.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 intro/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin/list" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXGTK__"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/inc"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0"/>
+					<Add directory="/usr/include/wx-3.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 list"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list/fast">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin/list" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXGTK__"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/inc"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0"/>
+					<Add directory="/usr/include/wx-3.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 list/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minilib">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/lib/libminilib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXGTK__"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/inc"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0"/>
+					<Add directory="/usr/include/wx-3.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 minilib"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="minilib/fast">
+				<Option output="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/lib/libminilib.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXGTK__"/>
+					<Add option="-DGLFW_DLL"/>
+					<Add directory="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/inc"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/wx/include/gtk2-unicode-3.0"/>
+					<Add directory="/usr/include/wx-3.0"/>
+					<Add directory="/usr/include/c++/8"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/8"/>
+					<Add directory="/usr/include/c++/8/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 minilib/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/cmake-build-debug/ml5/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/intro/src/main.cpp">
+			<Option target="intro"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/list/src/list.h">
+			<Option target="list"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/list/src/list.inl">
+			<Option target="list"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/list/src/listIter.h">
+			<Option target="list"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/list/src/listIter.inl">
+			<Option target="list"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/list/src/list_node.h">
+			<Option target="list"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/list/src/main.cpp">
+			<Option target="list"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/base/object.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/gui/application.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/gui/events.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/gui/impl/impl_application.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/gui/impl/impl_canvas.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/gui/impl/impl_frame.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/gui/window.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/metainfo/metainfo_base.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/src/metainfo/metainfo_registry.cpp">
+			<Option target="minilib"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/ml5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ml5\"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+		<Unit filename="/home/khp/git/fh-hgb/ws18/swo/ex12/ue/minilib/../../../../../../../../../usr/lib/x86_64-linux-gnu/cmake/glfw3/glfw3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\glfw3\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

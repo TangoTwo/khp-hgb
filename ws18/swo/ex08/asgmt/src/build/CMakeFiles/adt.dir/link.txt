@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/adt.dir/adt/graphT.cpp.o CMakeFiles/adt.dir/adt/handleT.cpp.o CMakeFiles/adt.dir/adt/main.cpp.o CMakeFiles/adt.dir/adt/vertexT.cpp.o  -o adt 
