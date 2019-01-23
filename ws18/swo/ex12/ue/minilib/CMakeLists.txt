@@ -21,3 +21,7 @@ target_link_libraries(intro minilib)
 file(GLOB_RECURSE DEMO "list/src/*")
 add_executable(list ${DEMO})
 target_link_libraries(list minilib)
+
+file(GLOB_RECURSE DEMO "draw/src/*")
+add_executable(draw ${DEMO})
+target_link_libraries(draw minilib)
