@@ -8,8 +8,11 @@
 
 #include <vector>
 #include <ml5/ml5.h>
-#include "shape.h"
-#include "menuBar.h"
+#include "shapes/Shape.h"
+#include "shapes/Line.h"
+#include "shapes/Ellipse.h"
+#include "shapes/Rectangle.h"
+#include "MenuBar.h"
 
 
 class DrawWindow : public ml5::window, MI5_DERIVE(DrawWindow, ml5::window) {
@@ -24,6 +27,8 @@ private:
     }
 
     void on_init() override {
+        get_frame().SetTitle("Draw");
+
         mitem_cont_t tItems = {};
 
         tItems.push_back(std::tuple<std::string, std::string>{"&Cut", "Cut"});
@@ -58,7 +63,7 @@ private:
         } else {
             _selectedShape = nullptr;
             // check if user clicked on existing object
-            for (auto &item : _Shapes) {
+            for (auto &item : _shapes) {
                 if (item->clickedOn(pos)) {
                     _selectedShape = &item;
                 }
@@ -94,13 +99,13 @@ private:
 
         if (_pShapes && !_pShapes->empty()) {
             _pShapes->setBottomRight(pos);
-            _Shapes.add(std::move(_pShapes));
+            _shapes.add(std::move(_pShapes));
             refresh();
         }
     }
 
     void on_paint(const ml5::paint_event &event) override {
-        for (const auto &item : _Shapes) {
+        for (const auto &item : _shapes) {
             item->draw(event.get_context());
             if (_selectedShape && item == (*_selectedShape)) {
                 item->drawBoundingBox(event.get_context());
@@ -115,7 +120,7 @@ private:
         if (event.get_item() == "Cut") {
             if (_selectedShape) {
                 _clipboardShape = *_selectedShape;
-                _Shapes.remove(_clipboardShape);
+                _shapes.remove(_clipboardShape);
             }
         } else if (event.get_item() == "Copy") {
             if (_selectedShape) {
@@ -123,7 +128,7 @@ private:
             }
         } else if (event.get_item() == "Paste") {
             if (_clipboardShape) {
-                _Shapes.add(_clipboardShape);
+                _shapes.add(_clipboardShape);
                 _clipboardShape = _clipboardShape->clone(); // as we added the shape to the canvas.
             }
         } else {
@@ -155,7 +160,7 @@ private:
     std::unique_ptr<Shape> _currentShape{nullptr}; // shape to draw
     std::shared_ptr<Shape> _clipboardShape{nullptr}; // current shape in the clipboard
     std::shared_ptr<Shape> *_selectedShape{nullptr}; // already existing shape selected
-    ml5::vector<std::shared_ptr<Shape>> _Shapes{}; // all shapes on the canvas
+    ml5::vector<std::shared_ptr<Shape>> _shapes{}; // all shapes on the canvas
     std::unique_ptr<MenuBar> _menuBar{nullptr};
     const std::vector<Shape *> _AVAIL_SHAPES{ // all possible shapes, will be cloned upon selection
             new Line(wxRect{wxPoint(0, 0), wxPoint(0, 0)}, getDefaultPen(), getDefaultBrush()),

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project" targetName="minilib" />
       <config projectName="Project" targetName="list" />
-      <config projectName="Project" targetName="draw" />
       <config projectName="Project" targetName="intro" />
+      <config projectName="Project" targetName="minilib" />
+      <config projectName="Project" targetName="draw" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -15,17 +15,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c982916d-e676-49d2-83f0-6f013c3af117" name="Default Changelist" comment="added draw">
-      <change afterPath="$PROJECT_DIR$/draw/src/DrawApplication.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/DrawWindow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/line.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/menuBar.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/shape.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Ellipse.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Line.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Rectangle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Shape.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/draw/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/draw/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw/src/DrawWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/draw/src/DrawWindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw/src/line.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw/src/menuBar.h" beforeDir="false" afterPath="$PROJECT_DIR$/draw/src/MenuBar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw/src/shape.h" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/ml5/cmake-build-debug/" />
@@ -38,11 +38,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="-872">
+              <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
               <folding>
                 <element signature="e#98#115#0" expanded="true" />
               </folding>
@@ -51,10 +51,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/menuBar.h">
+        <entry file="file:///usr/include/c++/8/bits/unique_ptr.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+            <state>
+              <caret line="830" column="29" selection-start-line="830" selection-start-column="29" selection-end-line="830" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/gui/window.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw/src/DrawApplication.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding>
+                <element signature="e#108#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw/src/MenuBar.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="883">
+              <caret line="107" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="e#91#111#0" expanded="true" />
               </folding>
@@ -63,21 +93,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/shape.h">
+        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Shape.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+            <state relative-caret-position="660">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/line.h">
+        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Line.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="555">
+              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
               <folding>
-                <element signature="e#86#114#0" expanded="true" />
+                <element signature="e#85#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Rectangle.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+              <folding>
+                <element signature="e#95#115#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Ellipse.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+              <folding>
+                <element signature="e#91#111#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state>
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#38#58#0" expanded="true" />
@@ -129,20 +183,27 @@
         <option value="$PROJECT_DIR$/list/src/list.inl" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/draw/src/main.cpp" />
-        <option value="$PROJECT_DIR$/draw/src/DrawApplication.h" />
         <option value="$PROJECT_DIR$/draw/src/line.h" />
         <option value="$PROJECT_DIR$/ml5/inc/ml5/gui/window.h" />
         <option value="$PROJECT_DIR$/draw/src/menuBar.h" />
+        <option value="$PROJECT_DIR$/draw/src/shapes/ellipse.h" />
+        <option value="$PROJECT_DIR$/draw/src/shapes/line.h" />
         <option value="$PROJECT_DIR$/draw/src/shape.h" />
+        <option value="$PROJECT_DIR$/draw/src/shapes/rectangle.h" />
+        <option value="$PROJECT_DIR$/draw/src/drawWindow.h" />
+        <option value="$PROJECT_DIR$/draw/src/drawApplication.h" />
+        <option value="$PROJECT_DIR$/draw/src/MenuBar.h" />
+        <option value="$PROJECT_DIR$/draw/src/DrawApplication.h" />
         <option value="$PROJECT_DIR$/draw/src/DrawWindow.h" />
+        <option value="$PROJECT_DIR$/draw/src/shapes/Ellipse.h" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="644" />
+    <option name="x" value="370" />
     <option name="y" value="23" />
-    <option name="width" value="796" />
-    <option name="height" value="877" />
+    <option name="width" value="788" />
+    <option name="height" value="872" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,6 +230,13 @@
               <item name="draw" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="minilib" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="draw" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="shapes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -181,10 +249,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/draw/src/shapes" />
       <recent name="$PROJECT_DIR$/draw/src" />
     </key>
   </component>
@@ -246,12 +315,22 @@
       <workItem from="1548069409632" duration="7920000" />
       <workItem from="1548250152325" duration="19017000" />
       <workItem from="1548274261525" duration="343000" />
-      <workItem from="1548427967811" duration="16701000" />
+      <workItem from="1548427967811" duration="18226000" />
+      <workItem from="1548601845810" duration="4382000" />
+      <workItem from="1548607432619" duration="3179000" />
     </task>
+    <task id="LOCAL-00001" summary="nearly finished with draw">
+      <created>1548530998881</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548530998882</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55051000" />
+    <option name="totallyTimeSpent" value="64137000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -266,13 +345,13 @@
     <frame x="-1" y="22" width="1602" height="879" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56496066" visible="true" weight="0.15572716" />
-      <window_info id="Structure" order="1" sideWeight="0.43503937" side_tool="true" visible="true" weight="0.15572716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5615894" visible="true" weight="0.15958816" />
+      <window_info id="Structure" order="1" sideWeight="0.4384106" side_tool="true" visible="true" weight="0.15958816" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3271523" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3271523" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917467" />
@@ -314,8 +393,13 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="added draw" />
-    <option name="LAST_COMMIT_MESSAGE" value="added draw" />
+    <MESSAGE value="nearly finished with draw" />
+    <option name="LAST_COMMIT_MESSAGE" value="nearly finished with draw" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/intro/main.cpp" />
@@ -437,16 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/DrawApplication.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#108#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/gui/impl/impl_application.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-242" />
@@ -506,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/8/bits/unique_ptr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="830" column="29" selection-start-line="830" selection-start-column="29" selection-end-line="830" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/8/ext/new_allocator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -520,9 +587,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/line.h" />
+    <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-872">
+          <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+          <folding>
+            <element signature="e#98#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/8/bits/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="830" column="29" selection-start-line="830" selection-start-column="29" selection-end-line="830" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/gui/window.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/DrawApplication.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <element signature="e#108#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/draw/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state>
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#38#58#0" expanded="true" />
@@ -530,46 +632,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/line.h">
+    <entry file="file://$PROJECT_DIR$/draw/src/MenuBar.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="e#86#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/menuBar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+        <state relative-caret-position="883">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
           <folding>
             <element signature="e#91#111#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/shape.h">
+    <entry file="file://$PROJECT_DIR$/draw/src/shapes/Shape.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        <state relative-caret-position="660">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/gui/window.h">
+    <entry file="file://$PROJECT_DIR$/draw/src/shapes/Line.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="555">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
           <folding>
-            <element signature="e#98#115#0" expanded="true" />
+            <element signature="e#85#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/shapes/Rectangle.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+          <folding>
+            <element signature="e#95#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/shapes/Ellipse.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="e#91#111#0" expanded="true" />
           </folding>
         </state>
       </provider>

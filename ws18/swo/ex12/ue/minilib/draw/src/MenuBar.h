@@ -6,14 +6,13 @@
 #define PROJECT_MENUBAR_H
 
 #include <ml5/ml5.h>
-#include "shape.h"
-
-#define LEFT_BAR_WIDTH 30
+#include "shapes/Shape.h"
 
 class MenuBar : public ml5::object, MI5_DERIVE(MenuBar, ml5::object) {
 MI5_INJECT(MenuBar)
 private:
     using context_t = ml5::paint_event::context_t;
+    static const int LEFT_BAR_WIDTH = 30;
 
     static wxPen _getDefaultPen() {
         return *wxBLACK_PEN;
@@ -95,7 +94,6 @@ private:
     std::string _activeShape{};
 public:
     const std::string SELECTOR_NAME = "Cursor";
-
     explicit MenuBar(const std::vector<Shape *> shapes) {
         int curOffset = LEFT_BAR_WIDTH; // not beautiful but make space for selector button
         for (const auto &item : shapes) {
@@ -122,11 +120,11 @@ public:
         _activeShape = shapeName;
     }
 
-    int getMenuBarWidth() {
+    int getMenuBarWidth() const {
         return LEFT_BAR_WIDTH;
     }
 
-    std::unique_ptr<Shape> getClickedShape(const wxPoint &pos) {
+    std::unique_ptr<Shape> getClickedShape(const wxPoint &pos) const {
         for (const auto &button : _buttons) {
             if (button.getOffset() < pos.y && button.getOffset() + LEFT_BAR_WIDTH > pos.y)
                 return button.getShape()->clone();
