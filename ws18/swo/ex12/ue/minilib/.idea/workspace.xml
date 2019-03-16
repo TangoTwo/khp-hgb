@@ -2,33 +2,35 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project" targetName="list" />
-      <config projectName="Project" targetName="intro" />
-      <config projectName="Project" targetName="minilib" />
-      <config projectName="Project" targetName="draw" />
+      <config projectName="ex01" targetName="minilib" />
+      <config projectName="ex01" targetName="list" />
+      <config projectName="ex01" targetName="draw" />
+      <config projectName="ex01" targetName="asteroids" />
+      <config projectName="ex01" targetName="intro" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" BUILD_OPTIONS="-j 7" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c982916d-e676-49d2-83f0-6f013c3af117" name="Default Changelist" comment="added draw">
-      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Ellipse.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Line.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Rectangle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/draw/src/shapes/Shape.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../ss19/cgb/ue/01/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../ss19/swe/190313/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asteroids/DrawApplication.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asteroids/DrawWindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asteroids/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/draw/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/draw/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw/src/DrawWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/draw/src/DrawWindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw/src/line.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw/src/menuBar.h" beforeDir="false" afterPath="$PROJECT_DIR$/draw/src/MenuBar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw/src/shape.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/ml5/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/cmake-build-release/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +41,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
+        <entry file="file://$PROJECT_DIR$/asteroids/main.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/asteroids/DrawWindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-872">
-              <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+            <state relative-caret-position="405">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
                 <element signature="e#98#115#0" expanded="true" />
               </folding>
@@ -51,102 +58,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/c++/8/bits/unique_ptr.h">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="830" column="29" selection-start-line="830" selection-start-column="29" selection-end-line="830" selection-end-column="29" />
+            <state relative-caret-position="392">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/gui/window.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/DrawApplication.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-              <folding>
-                <element signature="e#108#128#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/MenuBar.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="883">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
-              <folding>
-                <element signature="e#91#111#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Shape.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Line.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
-              <folding>
-                <element signature="e#85#105#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Rectangle.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
-              <folding>
-                <element signature="e#95#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/draw/src/shapes/Ellipse.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-              <folding>
-                <element signature="e#91#111#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw/src/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#38#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/asteroids/DrawApplication.h">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -181,7 +103,6 @@
         <option value="$PROJECT_DIR$/list/src/list_node.h" />
         <option value="$PROJECT_DIR$/list/src/main.cpp" />
         <option value="$PROJECT_DIR$/list/src/list.inl" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/draw/src/main.cpp" />
         <option value="$PROJECT_DIR$/draw/src/line.h" />
         <option value="$PROJECT_DIR$/ml5/inc/ml5/gui/window.h" />
@@ -196,6 +117,8 @@
         <option value="$PROJECT_DIR$/draw/src/DrawApplication.h" />
         <option value="$PROJECT_DIR$/draw/src/DrawWindow.h" />
         <option value="$PROJECT_DIR$/draw/src/shapes/Ellipse.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/asteroids/DrawWindow.h" />
       </list>
     </option>
   </component>
@@ -211,36 +134,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="minilib" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ex01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="minilib" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ex01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="asteroids" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ex01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="draw" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="minilib" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ex01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="draw" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
-              <item name="minilib" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ex01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="draw" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="shapes" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="list" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,9 +175,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/asteroids" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/draw/src/shapes" />
       <recent name="$PROJECT_DIR$/draw/src" />
@@ -269,28 +198,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.draw">
-    <configuration name="draw" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="draw" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="draw">
+  <component name="RunManager" selected="Application.asteroids">
+    <configuration name="asteroids" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex01" TARGET_NAME="asteroids" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ex01" RUN_TARGET_NAME="asteroids">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="intro" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="intro" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="intro">
+    <configuration name="draw" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex01" TARGET_NAME="draw" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ex01" RUN_TARGET_NAME="draw">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="list" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="list" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="list">
+    <configuration name="intro" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex01" TARGET_NAME="intro" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ex01" RUN_TARGET_NAME="intro">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="minilib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="minilib" CONFIG_NAME="Debug">
+    <configuration name="list" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex01" TARGET_NAME="list" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ex01" RUN_TARGET_NAME="list">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="minilib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex01" TARGET_NAME="minilib" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.asteroids" />
       <item itemvalue="Application.draw" />
       <item itemvalue="Application.intro" />
       <item itemvalue="Application.list" />
@@ -317,7 +252,9 @@
       <workItem from="1548274261525" duration="343000" />
       <workItem from="1548427967811" duration="18226000" />
       <workItem from="1548601845810" duration="4382000" />
-      <workItem from="1548607432619" duration="3179000" />
+      <workItem from="1548607432619" duration="5228000" />
+      <workItem from="1551257428775" duration="377000" />
+      <workItem from="1552672463576" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="nearly finished with draw">
       <created>1548530998881</created>
@@ -326,11 +263,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548530998882</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated draw">
+      <created>1548615056099</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548615056102</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64137000" />
+    <option name="totallyTimeSpent" value="68125000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,14 +287,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1602" height="879" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5615894" visible="true" weight="0.15958816" />
-      <window_info id="Structure" order="1" sideWeight="0.4384106" side_tool="true" visible="true" weight="0.15958816" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5570866" visible="true" weight="0.16344917" />
+      <window_info id="Structure" order="1" sideWeight="0.44291338" side_tool="true" visible="true" weight="0.16344917" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3271523" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3271523" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -360,7 +303,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917467" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32917467" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32917467" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32847682" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -396,7 +339,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="added draw" />
     <MESSAGE value="nearly finished with draw" />
-    <option name="LAST_COMMIT_MESSAGE" value="nearly finished with draw" />
+    <MESSAGE value="updated draw" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated draw" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -507,13 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/container/vector.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -588,33 +525,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/draw/src/line.h" />
-    <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-872">
-          <caret line="74" column="58" lean-forward="true" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
-          <folding>
-            <element signature="e#98#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/8/bits/unique_ptr.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="12450">
           <caret line="830" column="29" selection-start-line="830" selection-start-column="29" selection-end-line="830" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ml5/inc/ml5/gui/window.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="1440">
           <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/draw/src/DrawApplication.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="225">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
           <folding>
             <element signature="e#108#128#0" expanded="true" />
@@ -622,29 +549,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/MenuBar.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
-          <folding>
-            <element signature="e#91#111#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/draw/src/shapes/Shape.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="1290">
           <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
@@ -671,10 +578,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draw/src/shapes/Ellipse.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#91#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#38#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
+          <folding>
+            <element signature="e#98#115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/MenuBar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+          <folding>
+            <element signature="e#91#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asteroids/main.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asteroids/DrawApplication.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asteroids/DrawWindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+          <folding>
+            <element signature="e#98#115#0" expanded="true" />
           </folding>
         </state>
       </provider>

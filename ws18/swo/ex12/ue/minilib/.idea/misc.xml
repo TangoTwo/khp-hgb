@@ -3,6 +3,7 @@
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
     <sourceRoots>
+      <file path="$PROJECT_DIR$/asteroids" />
       <file path="$PROJECT_DIR$/draw/src" />
       <file path="$PROJECT_DIR$/intro/src" />
       <file path="$PROJECT_DIR$/list/src" />
