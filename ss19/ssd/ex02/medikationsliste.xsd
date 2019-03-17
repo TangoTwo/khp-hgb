@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ue2="http://www.fh-ooe.at/ssd4/entlassungsbrief"
+           targetNamespace="http://www.fh-ooe.at/ssd4/entlassungsbrief"
+           elementFormDefault="qualified">
+    <xs:simpleType name="CodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9][0-9][.][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:attributeGroup name="vonBisGroup">
+        <xs:attribute name="von" type="xs:date"/>
+        <xs:attribute name="bis" type="xs:date"/>
+    </xs:attributeGroup>
+    <xs:complexType name="DiagnoseType">
+        <xs:attribute name="code" type="ue2:CodeType" use="required"/>
+        <xs:attributeGroup ref="ue2:vonBisGroup"/>
+        <xs:attribute name="status" default="Offen">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Abgeschlossen"/>
+                    <xs:enumeration value="Offen"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="DiagnosenType">
+        <xs:sequence>
+            <xs:element name="Diagnose" type="ue2:DiagnoseType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="DosierungType">
+        <xs:restriction>
+            <xs:pattern value="[0-9][-][0-9][-][0-9][-][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="ArzneimittelType">
+        <xs:attribute name="einnahme"/>
+        <xs:attribute name="dosierung" type="DosierungType">
+        </xs:attribute>
+        <xs:attribute name="diagnose" type="ue2:DiagnoseType"/>
+        <xs:attributeGroup ref="ue2:vonBisGroup"/>
+        <xs:attribute name="hinweis"/>
+        <xs:attribute name="anwendung"/>
+    </xs:complexType>
+    <xs:complexType name="MedikationType">
+        <xs:sequence>
+            <xs:element name="Arzneimittel" type="ue2:ArzneimittelType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
