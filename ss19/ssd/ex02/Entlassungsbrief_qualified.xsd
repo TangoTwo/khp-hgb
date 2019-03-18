@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:ue2="http://www.fh-ooe.at/ssd4/entlassungsbrief"
+           xmlns:med="http://www.fh-ooe.at/ssd4/medikation"
            targetNamespace="http://www.fh-ooe.at/ssd4/entlassungsbrief"
            elementFormDefault="qualified">
-    <xs:include schemaLocation="medikationsliste_qualified.xsd"/>
+    <xs:import namespace="http://www.fh-ooe.at/ssd4/medikation" schemaLocation="medikationsliste_qualified.xsd"/>
     <xs:element name="Entlassungsbrief" type="EntlassungsbriefType" xmlns:ue2="Entlassungsbrief.xsd">
         <xs:key name="code">
             <xs:selector xpath="owner"/>
@@ -81,7 +82,7 @@
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
-        <xs:attributeGroup ref="ue2:vonBisGroup"/>
+        <xs:attributeGroup ref="med:vonBisGroup"/>
     </xs:complexType>
     <xs:complexType name="BefundtextType">
         <xs:sequence>
@@ -96,8 +97,8 @@
             <xs:element type="ue2:PatientType" name="Patient"/>
             <xs:element type="ue2:AufenthaltType" name="Aufenthalt"/>
             <xs:element type="ue2:BefundtextType" name="Befundtext"/>
-            <xs:element type="ue2:DiagnosenType" name="Diagnosen"/>
-            <xs:element type="ue2:MedikationType" name="Medikation" minOccurs="0"/>
+            <xs:element type="med:DiagnosenType" name="Diagnosen"/>
+            <xs:element type="med:MedikationType" name="Medikation" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="erzeugt" use="required"/>
         <xs:attribute name="version" use="required"/>
