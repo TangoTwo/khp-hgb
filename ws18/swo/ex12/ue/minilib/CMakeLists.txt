@@ -28,5 +28,5 @@ add_executable(draw ${DEMO})
 target_link_libraries(draw minilib)
 
 file(GLOB_RECURSE DEMO "asteroids/*")
-add_executable(asteroids ${DEMO})
+add_executable(asteroids ${DEMO} asteroids/drawables/drawable.h asteroids/drawables/asteroid.h)
 target_link_libraries(asteroids minilib)
