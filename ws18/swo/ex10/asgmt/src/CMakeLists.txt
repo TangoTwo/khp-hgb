@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/static)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
@@ -14,6 +14,6 @@ find_package(wxWidgets COMPONENTS gl core base REQUIRED)
 
 include(${wxWidgets_USE_FILE})
 
-file(GLOB_RECURSE DRAW "draw/*")
-add_executable(draw ${DRAW})
+file(GLOB_RECURSE DEMO "draw/*")
+add_executable(draw ${DEMO})
 target_link_libraries(draw minilib)

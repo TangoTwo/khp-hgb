@@ -10,141 +10,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37507ccd-f1b9-45d7-8fe6-bd78c68dfc4a" name="Default Changelist" comment="added docs ex09">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex07/asgmt/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex07/asgmt/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/07-PAPESH-Konstantin.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/doc/Ausarbeitung-07.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex08/asgmt/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/graphT.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/graphT.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/handleT.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/handleT.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/vertexT.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/adt/vertexT.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/car.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/car.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/engine.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/engine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/wheel.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex08/asgmt/src/wmb/wheel.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/asgmt.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/chess.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/chess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/build/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessGame.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessGame.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessboard.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessboard.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/bishop.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/bishop.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/king.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/king.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/knight.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/knight.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/pawn.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/pawn.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/queen.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/queen.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/rook.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/rook.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessfigures/symbols.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessman.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/chessman.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/exceptions.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/gamemodes.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/gamemodes.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/global.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/chess/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.12.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/chess.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/chess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/chess.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/cmake-build-debug/swo.cbp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex09/asgmt/doc/Ausarbeitung-08.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/Ausarbeitung-09.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/deque.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/deque/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/draw/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/docs/ML5 mit Eclipse CDT-JH.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/docs/class-diagram.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/docs/include-hiearchy.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/docs/interface.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/base/integer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/base/object.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/base/string.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/base/value.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/base/value.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/collection.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/container.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/container.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/iterator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/iterator_adapter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/iterator_adapter.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/vector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/vector.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/vector_iterator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/container/vector_iterator.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/application.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/events.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/impl/gl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/impl/impl_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/impl/impl_canvas.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/impl/impl_frame.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/impl/wx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/gui/window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/metainfo/metainfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/metainfo/metainfo.inl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/metainfo/metainfo_base.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/metainfo/metainfo_helper.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/metainfo/metainfo_injector.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/metainfo/metainfo_registry.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/ml5.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/constants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/detection.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/forwards.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/libraries.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/macros.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/traits.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/utility.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/inc/ml5/utility/windows.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/base/object.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/gui/application.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/gui/events.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/gui/impl/impl_application.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/gui/impl/impl_canvas.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/gui/impl/impl_frame.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/gui/window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/metainfo/metainfo_base.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml5/src/metainfo/metainfo_registry.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ex12/ue/minilib/ml5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex12/ue/minilib/ml5/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,7 +75,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor" />
@@ -199,6 +120,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,12 +132,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../OpenWcs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -303,6 +224,7 @@
       <workItem from="1547766362180" duration="266000" />
       <workItem from="1548010141819" duration="85000" />
       <workItem from="1548010424510" duration="36000" />
+      <workItem from="1549735947590" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="started ex10/deque">
       <created>1547294061848</created>
@@ -336,12 +258,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43051000" />
+    <option name="totallyTimeSpent" value="43660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="213" y="23" width="1513" height="1028" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35378322" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35904437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -355,7 +277,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32985386" />
-      <window_info anchor="bottom" id="CMake" order="11" visible="true" weight="0.3288889" />
+      <window_info active="true" anchor="bottom" id="CMake" order="11" visible="true" weight="0.32853982" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3288889" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
