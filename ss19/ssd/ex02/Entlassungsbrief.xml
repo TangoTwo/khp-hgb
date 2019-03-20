@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Entlassungsbrief erzeugt="2019-02-09T11:46:05+01:00" version="1"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                  xsi:schemaLocation="http://www.fh-ooe.at/ssd4/entlassungsbrief Entlassungsbrief_simple.xsd"
+                  xsi:schemaLocation="http://www.fh-ooe.at/ssd4/entlassungsbrief Entlassungsbrief.xsd"
                   xmlns="http://www.fh-ooe.at/ssd4/entlassungsbrief">
 <Ersteller>Kepler Universitätsklinikum Med Campus Hagenberg – Chirurgische
         Abteilung</Ersteller>

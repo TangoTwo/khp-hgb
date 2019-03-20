@@ -3,7 +3,7 @@
            xmlns:ue2="http://www.fh-ooe.at/ssd4/entlassungsbrief"
            targetNamespace="http://www.fh-ooe.at/ssd4/entlassungsbrief"
            elementFormDefault="qualified">
-    <xs:element name="Entlassungsbrief" type="EntlassungsbriefType" xmlns:ue2="Entlassungsbrief.xsd">
+    <xs:element name="Entlassungsbrief" xmlns:ue2="Entlassungsbrief.xsd" type="EntlassungsbriefType" >
         <xs:key name="code">
             <xs:selector xpath="owner"/>
             <xs:field xpath="@code"/>
@@ -46,8 +46,8 @@
         </xs:sequence>
     </xs:complexType>
     <xs:simpleType name="SVNRType">
-        <xs:restriction>
-            <xs:pattern value='^\d{10}$'/>
+        <xs:restriction base="xs:string">
+            <xs:pattern value='[0-9]{10}'/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="CodeType">
@@ -115,13 +115,13 @@
         </xs:sequence>
     </xs:complexType>
     <xs:simpleType name="DosierungType">
-        <xs:restriction>
+        <xs:restriction base="xs:string">
             <xs:pattern value="[0-9][-][0-9][-][0-9][-][0-9]"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="ArzneimittelType">
         <xs:attribute name="einnahme"/>
-        <xs:attribute name="dosierung" type="DosierungType">
+        <xs:attribute name="dosierung" type="ue2:DosierungType">
         </xs:attribute>
         <xs:attribute name="diagnose" type="ue2:DiagnoseType"/>
         <xs:attributeGroup ref="ue2:vonBisGroup"/>
