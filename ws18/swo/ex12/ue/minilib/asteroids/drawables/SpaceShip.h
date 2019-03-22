@@ -6,7 +6,8 @@
 #define EX01_SPACESHIP_H
 
 #include <ml5/ml5.h>
-#include "drawable.h"
+#include "Shape.h"
+#include "Laser.h"
 
 #define DECEL_MULTIPLIER 0.999
 #define MAX_SPEED 11
@@ -17,7 +18,7 @@ class SpaceShip : public Shape, MI5_DERIVE(SpaceShip, Shape) {
  MI5_INJECT(SpaceShip)
 public:
   enum class Rotate{left, right};
-  SpaceShip() {
+  SpaceShip(std::vector<Shape>& _gameShapes)  : _gameShapes{_gameShapes} {
     _image.LoadFile("images/ship.png", wxBITMAP_TYPE_PNG);
     _image = _image.Scale(round(_image.GetWidth()*0.1), round(_image.GetHeight()*0.1));
   }
@@ -33,21 +34,11 @@ public:
 
     _movement.x += ACCELERATION * cos(_rotation);
     _movement.y -= ACCELERATION * sin(_rotation);
-    /*
-    // Convert to polar
-    auto tPosR = sqrt(_movement.x^2 + _movement.y^2);
-    auto tPosPhi = atan2(_movement.y, _movement.x);
-    tPosR += ACCELERATION;
-    if(tPosR > MAX_SPEED)
-      tPosR = MAX_SPEED;
-
-    // Convert back to carthesian
-    _movement.x = floor(tPosR + cos(tPosPhi));
-    _movement.y = floor(tPosR + sin(tPosPhi));
-    */
   };
 
-  void fire();
+  void fire() {
+    _gameShapes.push_back(Laser(_position, _movement));
+  }
   void rotate(Rotate direction) {
     if(direction == Rotate::right) {
       _rotation -= ROTATION_ADDED;
@@ -63,6 +54,7 @@ protected:
   }
 private:
   wxImage _image;
+  std::vector<Shape>& _gameShapes;
 };
 
 #endif //EX01_SPACESHIP_H

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/simon.dir/src/main.cpp.o  -o simon -lOpenGL -lGLX -lGLU -lglut -lXmu -lXi 

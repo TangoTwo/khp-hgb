@@ -7,14 +7,15 @@
 
 #include <list>
 #include <random>
-#include "drawable.h"
+#include "Shape.h"
 
 #define INITIAL_ASTEROID_SIZE 20
 
 class Asteroid : public Shape, MI5_DERIVE(Asteroid, Shape) {
  MI5_INJECT(Asteroid)
  public:
-  Asteroid(wxPoint _position, wxPoint _movement, int size = INITIAL_ASTEROID_SIZE) {
+  Asteroid(wxPoint _position, wxPoint _movement, std::vector<Shape>& _gameShapes, int size = INITIAL_ASTEROID_SIZE)
+    : _gameShapes{_gameShapes} {
     _createAsteroid(size);
     this->_position = _position;
     this->_movement = _movement;
@@ -63,7 +64,7 @@ class Asteroid : public Shape, MI5_DERIVE(Asteroid, Shape) {
       }
     }
   }
-  std::vector<wxPoint> _shape;
+  std::vector<wxPoint> _shape{};
   std::vector<Shape>& _gameShapes;
 };
 
