@@ -1,0 +1,13 @@
+<!ELEMENT addressbook ((person | company)*)>
+<!ATTLIST addressbook owner IDREF #REQUIRED
+	  date CDATA #IMPLIED>
+<!ELEMENT person (firstname, lastname, email)>
+<!ATTLIST person id ID #REQUIRED>
+<!ELEMENT firstname (#PCDATA)> 
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email type (home | business) "business">
+<!ELEMENT company (companyname, url)>
+<!ATTLIST company id ID #REQUIRED>
+<!ELEMENT companyname (#PCDATA)>
+<!ELEMENT url (#PCDATA)>

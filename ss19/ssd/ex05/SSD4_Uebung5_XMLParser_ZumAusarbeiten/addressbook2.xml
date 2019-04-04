@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE addressbook SYSTEM "addressbook.dtd">
+<!-- this document is not valid: company element is incomplete -->
+<addressbook date="2019-04-04" owner="p1">
+<person id="p1">
+<firstname>Max</firstname>
+<lastname>Mustermann</lastname>
+<email type="home">max.mustermann@fh-hagenberg.at</email>
+</person>
+<!-- company is incomplete -->
+<company id="c1"/>
+</addressbook>
