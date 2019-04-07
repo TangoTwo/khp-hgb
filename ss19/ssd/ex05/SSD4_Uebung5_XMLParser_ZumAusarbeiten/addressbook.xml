@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE addressbook SYSTEM "addressbook.dtd">
+<addressbook owner="p1" date="2019-04-05">
+	<person id="p1">
+		<firstname>Max</firstname>
+		<lastname>Mustermann</lastname>
+		<email>max.mustermann@fh-hagenberg.at</email>
+	</person>
+	<company id="c1">
+		<companyname>FH</companyname>
+		<url>www.fh-ooe.at</url>
+	</company>
+	<person id="p2">
+		<firstname>Mina</firstname>
+		<lastname>Musterfrau</lastname>
+		<email>mina.musterfrau@fh-hagenberg.at</email>
+	</person>
+	<person id="p3">
+		<firstname>Moritz</firstname>
+		<lastname>Musterkind</lastname>
+		<email type="home">moritz.musterkind@gmail.com</email>
+	</person>
+</addressbook> 
