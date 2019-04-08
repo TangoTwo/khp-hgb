@@ -2,10 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="ex01" targetName="minilib" />
       <config projectName="ex01" targetName="list" />
-      <config projectName="ex01" targetName="draw" />
       <config projectName="ex01" targetName="asteroids" />
+      <config projectName="ex01" targetName="minilib" />
+      <config projectName="ex01" targetName="draw" />
       <config projectName="ex01" targetName="intro" />
     </generated>
   </component>
@@ -17,70 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c982916d-e676-49d2-83f0-6f013c3af117" name="Default Changelist" comment="added draw">
-      <change afterPath="$PROJECT_DIR$/asteroids/drawables/asteroid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asteroids/drawables/drawable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/draw/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ex10/asgmt/src/draw/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/docs/ML5 mit Eclipse CDT-JH.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/docs/class-diagram.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/docs/include-hiearchy.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/docs/interface.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/base/integer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/base/object.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/base/string.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/base/value.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/base/value.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/collection.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/container.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/container.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/iterator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/iterator_adapter.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/iterator_adapter.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/vector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/vector.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/vector_iterator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/container/vector_iterator.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/application.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/application.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/events.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/impl/gl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/impl/impl_application.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/impl/impl_canvas.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/impl/impl_frame.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/impl/wx.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/gui/window.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/metainfo/metainfo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/metainfo/metainfo.inl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/metainfo/metainfo_base.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/metainfo/metainfo_helper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/metainfo/metainfo_injector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/metainfo/metainfo_registry.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/ml5.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/detection.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/forwards.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/libraries.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/macros.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/traits.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/utility.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/inc/ml5/utility/windows.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/base/object.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/gui/application.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/gui/events.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/gui/impl/impl_application.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/gui/impl/impl_canvas.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/gui/impl/impl_frame.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/gui/window.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/metainfo/metainfo_base.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ex10/asgmt/src/ml5/src/metainfo/metainfo_registry.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asteroids/DrawWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/asteroids/DrawWindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asteroids/drawables/spaceShip.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asteroids/drawables/spaceShip.h" beforeDir="false" afterPath="$PROJECT_DIR$/asteroids/drawables/spaceShip.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ml5/CMakeLists.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/ml5/cmake-build-debug/" />
@@ -100,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/asteroids/drawables/asteroid.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+            <state relative-caret-position="564">
+              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
               <folding>
                 <element signature="e#87#102#0" expanded="true" />
               </folding>
@@ -121,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="990">
               <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="35" />
               <folding>
                 <element signature="e#98#115#0" expanded="true" />
@@ -342,6 +279,7 @@
       <workItem from="1552752658029" duration="3297000" />
       <workItem from="1552755976374" duration="1488000" />
       <workItem from="1552820164802" duration="10479000" />
+      <workItem from="1553199583663" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="nearly finished with draw">
       <created>1548530998881</created>
@@ -361,7 +299,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83389000" />
+    <option name="totallyTimeSpent" value="83425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -373,13 +311,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1922" height="1082" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.55503875" visible="true" weight="0.16862327" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55503875" visible="true" weight="0.17022412" />
       <window_info id="Structure" order="1" sideWeight="0.44496125" side_tool="true" weight="0.16542156" />
       <window_info id="Favorites" order="2" sideWeight="0.44496125" side_tool="true" weight="0.1670224" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32985386" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32672232" />
@@ -392,7 +328,8 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917467" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32917467" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32776618" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.32776618" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32985386" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -714,19 +651,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/shapes/Shape.h">
+    <entry file="file://$PROJECT_DIR$/asteroids/drawables/asteroid.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="35" />
+        <state relative-caret-position="564">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding>
-            <element signature="e#98#115#0" expanded="true" />
+            <element signature="e#87#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,13 +668,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asteroids/drawables/asteroid.h">
+    <entry file="file://$PROJECT_DIR$/draw/src/DrawWindow.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        <state relative-caret-position="990">
+          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="35" />
           <folding>
-            <element signature="e#87#102#0" expanded="true" />
+            <element signature="e#98#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw/src/shapes/Shape.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
         </state>
       </provider>
     </entry>

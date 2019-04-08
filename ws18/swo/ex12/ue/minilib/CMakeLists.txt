@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.10)
 project(ex01)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/static)
@@ -27,6 +27,6 @@ file(GLOB_RECURSE DEMO "draw/src/*")
 add_executable(draw ${DEMO})
 target_link_libraries(draw minilib)
 
-file(GLOB_RECURSE DEMO "asteroids/*")
-add_executable(asteroids ${DEMO} asteroids/drawables/drawable.h asteroids/drawables/asteroid.h)
-target_link_libraries(asteroids minilib)
+file(GLOB_RECURSE DEMO "miniasteroids/*")
+add_executable(miniasteroids ${DEMO})
+target_link_libraries(miniasteroids minilib)

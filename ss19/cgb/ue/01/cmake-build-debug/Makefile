@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/khp/git/fh-hgb/ss19/cgb/ue/01/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4886.39/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/khp/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named labyrinth
+
+# Build rule for target.
+labyrinth: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 labyrinth
+.PHONY : labyrinth
+
+# fast build rule for target.
+labyrinth/fast:
+	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/build
+.PHONY : labyrinth/fast
 
 #=============================================================================
 # Target rules for targets named simon
@@ -150,6 +163,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/simon.dir/build.make CMakeFiles/simon.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/main2.o: src/main2.cpp.o
+
+.PHONY : src/main2.o
+
+# target to build an object file
+src/main2.cpp.o:
+	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/src/main2.cpp.o
+.PHONY : src/main2.cpp.o
+
+src/main2.i: src/main2.cpp.i
+
+.PHONY : src/main2.i
+
+# target to preprocess a source file
+src/main2.cpp.i:
+	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/src/main2.cpp.i
+.PHONY : src/main2.cpp.i
+
+src/main2.s: src/main2.cpp.s
+
+.PHONY : src/main2.s
+
+# target to generate assembly for a file
+src/main2.cpp.s:
+	$(MAKE) -f CMakeFiles/labyrinth.dir/build.make CMakeFiles/labyrinth.dir/src/main2.cpp.s
+.PHONY : src/main2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -158,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... labyrinth"
 	@echo "... simon"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/main2.o"
+	@echo "... src/main2.i"
+	@echo "... src/main2.s"
 .PHONY : help
 
 

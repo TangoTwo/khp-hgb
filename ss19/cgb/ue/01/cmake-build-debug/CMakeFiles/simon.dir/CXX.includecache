@@ -13,4 +13,14 @@ GL/freeglut.h
 /home/khp/git/fh-hgb/ss19/cgb/ue/01/src/GL/freeglut.h
 iostream
 -
+map
+-
+vector
+-
+algorithm
+-
+cmath
+-
+random
+-
 
