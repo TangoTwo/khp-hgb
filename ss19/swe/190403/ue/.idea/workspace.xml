@@ -2,39 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfc8bd1e-060f-4d98-979b-8029c4e73431" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ssd/ex04/.idea/ex04.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ssd/ex04/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ssd/ex04/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ssd/ex04/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/queues/HeapQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/PQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/simon.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/simon.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/simon.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/CMakeFiles/simon.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/simon" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/cmake-build-debug/simon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../cgb/ue/01/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cgb/ue/01/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190320/asgmt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190320/asgmt/src/Event.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190320/asgmt/src/EventQueue.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190320/asgmt/src/EventQueueSupervisor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190320/asgmt/src/Machine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190320/asgmt/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190327/asgmt/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190327/asgmt/src/Node.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190327/asgmt/src/SkipMap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190327/asgmt/src/Types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../190327/asgmt/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ws18/swo/ex12/ue/minilib/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ws18/swo/ex12/ue/minilib/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ws18/swo/ex12/ue/minilib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ws18/swo/ex12/ue/minilib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../ws18/swo/ex12/ue/minilib/asteroids/DrawWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ws18/swo/ex12/ue/minilib/asteroids/DrawWindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ue.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ue.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/BinaryHeapQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/BinaryHeapQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/DHeapQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/DHeapQueue.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,44 +29,47 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.xml">
+        <entry file="file://$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/BinaryHeapQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="56" selection-start-line="3" selection-start-column="56" selection-end-line="3" selection-end-column="56" />
+            <state relative-caret-position="165">
+              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding>
+                <element signature="e#946#947#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/PQueueTest.java">
+        <entry file="file://$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/DHeapQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="275">
+              <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2404#2405#0" expanded="true" />
+                <element signature="e#2488#2489#0" expanded="true" />
+                <element signature="e#2973#2974#0" expanded="true" />
+                <element signature="e#3455#3456#0" expanded="true" />
+                <element signature="e#5226#5227#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/queues/HeapQueue.java">
+        <entry file="file://$PROJECT_DIR$/kulczycki/Heap/src/swe4/test/HeapTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#843#844#0" expanded="true" />
-                <element signature="e#1163#1164#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1287#1288#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,6 +84,17 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>insert</find>
+      <find>2</find>
+      <find>eapify</find>
+      <find>main</find>
+      <find>downHeap</find>
+      <find>heapi</find>
+      <find>sort</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
@@ -120,6 +106,9 @@
         <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/test/PQueueTest.java" />
         <option value="$PROJECT_DIR$/src/queues/HeapQueue.java" />
+        <option value="$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/BinaryHeapQueue.java" />
+        <option value="$PROJECT_DIR$/kulczycki/Heap/src/swe4/test/HeapTest.java" />
+        <option value="$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/DHeapQueue.java" />
       </list>
     </option>
   </component>
@@ -130,9 +119,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1600" />
-    <option name="height" value="877" />
+    <option name="y" value="24" />
+    <option name="width" value="1590" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -140,6 +129,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,7 +146,67 @@
             <path>
               <item name="ue" type="b2602c69:ProjectViewProjectNode" />
               <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="swe4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="swe4" type="462c0819:PsiDirectoryNode" />
+              <item name="queues" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="kulczycki" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="kulczycki" type="462c0819:PsiDirectoryNode" />
+              <item name="Heap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="kulczycki" type="462c0819:PsiDirectoryNode" />
+              <item name="Heap" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="kulczycki" type="462c0819:PsiDirectoryNode" />
+              <item name="Heap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="swe4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ue" type="462c0819:PsiDirectoryNode" />
+              <item name="kulczycki" type="462c0819:PsiDirectoryNode" />
+              <item name="Heap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="swe4" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ue" type="b2602c69:ProjectViewProjectNode" />
@@ -165,11 +216,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554286013748" />
@@ -196,13 +246,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HeapTest">
     <configuration name="33Hello" type="AntRunConfiguration">
       <antsettings antfile="file://$PROJECT_DIR$/build.xml" target="run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HeapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="swe4.test.HeapTest" />
+      <module name="ue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="swe4.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HeapTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -219,11 +287,12 @@
       <workItem from="1554286089894" duration="2971000" />
       <workItem from="1554292669031" duration="58000" />
       <workItem from="1554304441553" duration="24000" />
+      <workItem from="1554805709286" duration="4789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5385000" />
+    <option name="totallyTimeSpent" value="10174000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -235,10 +304,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="22" width="1602" height="879" extended-state="6" />
+    <frame x="0" y="23" width="1600" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1975547" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2001287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -247,11 +316,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32980132" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32980132" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Messages" order="6" visible="true" weight="0.32980132" />
+      <window_info anchor="bottom" id="Messages" order="6" weight="0.32980132" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32980132" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32980132" />
@@ -259,7 +328,7 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32980132" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.24967825" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24967825" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
@@ -275,17 +344,6 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-    <buildFile url="file://$PROJECT_DIR$/build.xml">
-      <targetFilters>
-        <filter targetName="all" isVisible="true" />
-        <filter targetName="compile" isVisible="true" />
-        <filter targetName="run" isVisible="true" />
-        <filter targetName="jar" isVisible="true" />
-        <filter targetName="runjar" isVisible="true" />
-        <filter targetName="clean" isVisible="true" />
-      </targetFilters>
-      <expanded value="true" />
-    </buildFile>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hello.java" />
@@ -307,9 +365,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/queues/HeapQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="163">
           <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding>
             <element signature="e#818#819#0" expanded="true" />
@@ -322,12 +390,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PQueueTest.java">
+    <entry file="file://$PROJECT_DIR$/bin/production/ue/swe4/queues/BinaryHeapQueue.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state>
+          <folding>
+            <element signature="e#0#5823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kulczycki/Heap/Heap.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/production/ue/swe4/test/HeapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/BinaryHeapQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kulczycki/Heap/src/swe4/test/HeapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kulczycki/Heap/src/swe4/queues/DHeapQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="188" column="55" selection-start-line="188" selection-start-column="55" selection-end-line="188" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2488#2489#0" expanded="true" />
+            <element signature="e#2973#2974#0" expanded="true" />
+            <element signature="e#3455#3456#0" expanded="true" />
+            <element signature="e#5226#5227#0" expanded="true" />
           </folding>
         </state>
       </provider>

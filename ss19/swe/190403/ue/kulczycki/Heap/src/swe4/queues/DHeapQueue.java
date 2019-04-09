@@ -19,7 +19,7 @@ public class DHeapQueue {
     private int [] buffer   = null;   // the buffer where the heap lives
     private int    capacity = 0;      // the capacity of the buffer
     private int    size     = 0;      // the size of the heap
-    private int    amountKids     = 0;
+    private static int    amountKids     = 0;
 
     public DHeapQueue (int d) {
         this (d, 128);   // delegate to other constructor
@@ -33,7 +33,7 @@ public class DHeapQueue {
     }
 
     private void heapify (int p) {
-        int m = indexOfMaximum (p, left (p), right (p));
+        int m = indexOfMaximum (p);
 
         if (m != p) {
             downHeap(p);
@@ -55,7 +55,12 @@ public class DHeapQueue {
         int e = buffer[k];
 
         while(k <= parent(size-1)) {
-            int j = left(k);
+            int j = first(k);
+            for (int n = j; n < j + amountKids; n++) {
+                if(n < size && buffer[j] < buffer[n]) {
+                    j = n;
+                }
+            }
             if(j < size - 1 && buffer[j] < buffer[j + 1]) ++j;
             if(e >= buffer[j]) break;
             buffer[k] = buffer[j];
@@ -74,20 +79,16 @@ public class DHeapQueue {
     }
 
     private static int first (int p) {
-        return 2 * p + 1;
+        return amountKids * p + 1;
     }
 
     private static int parent (int i) {
-        return (i - 1) / 2;
-    }
-
-    private static int right (int p) {
-        return left (p) + 1;
+        return (i - 1) / amountKids;
     }
 
     public void buildHeap () {
         if (!isHeap ()) {
-            for (int i = size / 2 - 1; i >= 0; --i) {
+            for (int i = size / amountKids - 1; i >= 0; --i) {
                 heapify (i);
             }
         }
@@ -174,7 +175,9 @@ public class DHeapQueue {
         if(n > size || !isHeap())
             throw new IllegalStateException();
         int [] tBuffer = new int[n];
-        //TODO
+        sort();
+        System.arraycopy(buffer, size-n, tBuffer,0, n);
+        buildHeap();
         return tBuffer;
     }
 
@@ -182,17 +185,18 @@ public class DHeapQueue {
         if(n > size|| !isHeap())
             throw new IllegalStateException();
         int [] tBuffer = new int[n];
-        //TODO
+        sort();
+        System.arraycopy(buffer, size-n, tBuffer,0, n);
         size -= n;
         buildHeap();
         return tBuffer;
     }
 
     public void merge(BinaryHeapQueue queue) {
-        //TODO: FIND BETTER THING TO DO THE THING
         for(int i = 0; i < queue.size(); i++) {
-            insert(queue.removeMax());
+            insertUnordered(queue.removeMax());
         }
+        buildHeap();
     }
 
     private void resize() {
