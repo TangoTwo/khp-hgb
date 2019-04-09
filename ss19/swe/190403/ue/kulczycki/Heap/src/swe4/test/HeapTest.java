@@ -1,29 +1,91 @@
-//       $Id: HeapTest.java 37024 2018-04-09 20:22:56Z p20068 $
-//      $URL: https://svn01.fh-hagenberg.at/bin/cepheiden/vocational/teaching/SE/SWO4/2018-SS/Ue/src/04/Heap/src/swe4/test/HeapTest.java $
-// $Revision: 37024 $
-//     $Date: 2018-04-09 22:22:56 +0200 (Mo., 09 Apr 2018) $
-//   Creator: johann.heinzelreiter<AT>fh-hagenberg.at
-//            peter.kulczycki<AT>fh-hagenberg.at
-//   $Author: p20068 $
-
 package swe4.test;
 
-import swe4.queues.BinaryHeapQueue;
+import java.io.*;
+import java.util.Random;
+
 import swe4.queues.DHeapQueue;
 
 public class HeapTest {
    public static void main (String [] argv) {
-      BinaryHeapQueue heap = new BinaryHeapQueue ();
+       try {
+           String outFile = "out.csv";
+           OutputStream os = new FileOutputStream(new File(outFile));
+           PrintWriter writer = new PrintWriter(os);
+           for (int childs = 2; childs <= 10; childs++) {
+               StringBuilder header = new StringBuilder();
+               StringBuilder buildHeapLine = new StringBuilder();
+               buildHeapLine.append("buildHeap");
 
-      heap.fillRandom (10); System.out.println (heap);
-      heap.buildHeap ();    System.out.println (heap);
-      heap.sort ();         System.out.println (heap);
+               StringBuilder insertLine = new StringBuilder();
+               insertLine.append("insert");
+
+               StringBuilder maxLine = new StringBuilder();
+               maxLine.append("max");
+
+               StringBuilder removeMaxLine = new StringBuilder();
+               removeMaxLine.append("removeMax");
+
+               StringBuilder nLargestLine = new StringBuilder();
+               nLargestLine.append("nLargest");
+
+               StringBuilder removeNLargestLine = new StringBuilder();
+               removeNLargestLine.append("removeNLargest");
+
+               writer.println(childs + ", children");
+               for (int i = 10; i < 100000000; i *= 10) {
+                   header.append(", " + i);
+                   DHeapQueue heap = new DHeapQueue(2, i + 2);
+
+                   heap.fillRandom(i);
+                   long start = System.nanoTime();
+                   heap.buildHeap();
+                   long time = System.nanoTime() - start;
+                   buildHeapLine.append(", ").append(time);
+
+                   Random rand = new Random ();
+                   start = System.nanoTime();
+                   heap.insert(rand.nextInt (900));
+                   time = System.nanoTime() - start;
+                   insertLine.append(", ").append(time);
+
+                   start = System.nanoTime();
+                   heap.max();
+                   time = System.nanoTime() - start;
+                   maxLine.append(", ").append(time);
+
+                   start = System.nanoTime();
+                   heap.removeMax();
+                   time = System.nanoTime() - start;
+                   removeMaxLine.append(", ").append(time);
+
+                   start = System.nanoTime();
+                   heap.nLargest(childs);
+                   time = System.nanoTime() - start;
+                   nLargestLine.append(", ").append(time);
+
+                   start = System.nanoTime();
+                   heap.removeNLargest(childs);
+                   time = System.nanoTime() - start;
+                   removeNLargestLine.append(", ").append(time);
+
+               }
+               writer.println(header);
+               writer.println(buildHeapLine);
+               writer.println(insertLine);
+               writer.println(maxLine);
+               writer.println(removeMaxLine);
+               writer.println(nLargestLine);
+               writer.println(removeNLargestLine);
+               writer.println();
+           }
+
+           //END OF TESTS
+           writer.flush();
+           writer.close();
+       } catch (FileNotFoundException e) {
+           e.printStackTrace();
+       }
    }
+
 }
 
-
-/*
-heap = {429,812,254,462,198,705,302,584,436,564} -> not a heap
-heap = {812,584,705,462,564,254,302,429,436,198} -> a heap
-heap = {198,254,302,429,436,462,564,584,705,812} -> not a heap
-*/
