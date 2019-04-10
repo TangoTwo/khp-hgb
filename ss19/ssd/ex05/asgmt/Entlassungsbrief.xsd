@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ue2="http://www.fh-ooe.at/ssd4/entlassungsbrief" targetNamespace="http://www.fh-ooe.at/ssd4/entlassungsbrief" elementFormDefault="qualified">
+	<xs:element name="Entlassungsbrief" type="ue2:dokumentType">
+		<xs:key name="diagnoseKey">
+			<xs:selector xpath="ue2:Diagnosen/ue2:Diagnose"/>
+			<xs:field xpath="@code"/>
+		</xs:key>
+		<xs:keyref name="diagnoseRef" refer="ue2:diagnoseKey">
+			<xs:selector xpath="ue2:Medikation/ue2:Arzneimittel"/>
+			<xs:field xpath="@diagnose"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:complexType name="dokumentType">
+		<xs:sequence>
+			<xs:element name="Ersteller" type="xs:string"/>
+			<xs:element name="Empfänger" type="xs:string"/>
+			<xs:element name="Patient" type="ue2:patientType"/>
+			<xs:element name="Aufenthalt" type="ue2:aufenthaltType"/>
+			<xs:element name="Befundtext" type="ue2:befundInhaltType"/>
+			<xs:element name="Diagnosen" type="ue2:diagnosenType" minOccurs="0"/>
+			<xs:element name="Medikation" type="ue2:medikationType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="erzeugt" type="xs:dateTime" use="required"/>
+		<xs:attribute name="version" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="patientType">
+		<xs:complexContent>
+			<xs:extension base="ue2:personType">
+				<xs:sequence>
+					<xs:element name="Geschlecht" type="ue2:genderType"/>
+					<xs:element name="Geburtsdatum" type="xs:date"/>
+					<xs:element name="SVN" type="ue2:IDType"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="personType">
+		<xs:sequence>
+			<xs:element name="Vorname" type="ue2:nameType" maxOccurs="2"/>
+			<xs:element name="Nachname" type="ue2:nameType"/>
+			<xs:element name="Titel" type="ue2:titleType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="nameType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="titleType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="position">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="vor"/>
+							<xs:enumeration value="nach"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="diagnosenType">
+		<xs:sequence>
+			<xs:element name="Diagnose" type="ue2:diagnoseType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="medikationType">
+		<xs:sequence>
+			<xs:element name="Arzneimittel" type="ue2:arzneimittelType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="IDType">
+		<xs:restriction base="xs:long">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="genderType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="männlich"/>
+			<xs:enumeration value="weiblich"/>
+			<xs:enumeration value="andere"/>
+			<xs:enumeration value="unbekannt"/>
+		</xs:restriction>
+		<!--Gender einschränken-->
+	</xs:simpleType>
+	<xs:complexType name="diagnoseType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="code" type="ue2:codeType" use="required"/>
+				<xs:attributeGroup ref="ue2:zeitraumVonBis"/>
+				<xs:attribute name="status" type="ue2:statusType" default="Offen"/>
+			</xs:extension>
+			<!--VonBis als Attributgruppe auslagern-->
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="statusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Abgeschlossen"/>
+			<xs:enumeration value="Offen"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="codeType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z][0-9]{2}\.[0-9]{1,2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="aufenthaltType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="art" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="ambulant"/>
+							<xs:enumeration value="stationär"/>
+							<xs:enumeration value="tagesklinisch"/>
+							<xs:enumeration value="andere"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attributeGroup ref="ue2:zeitraumVonBis"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="befundInhaltType">
+		<xs:sequence>
+			<xs:element name="Anrede" type="xs:string"/>
+			<xs:element name="Text" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="arzneimittelType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="einnahme" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="täglich"/>
+							<xs:enumeration value="bei Bedarf"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="dosierung" type="ue2:dosierungType"/>
+				<xs:attribute name="diagnose" type="xs:string"/>
+				<xs:attributeGroup ref="ue2:zeitraumVonBis"/>
+				<xs:attribute name="anwendung" type="xs:string" use="required"/>
+				<xs:attribute name="hinweis" type="xs:string"/>
+			</xs:extension>
+			<!--tbd keyref-->
+			<!--vonBis als Attributgruppe auslagern-->
+			<!--evtl. Hinweis auf Länge einschränken?-->
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="dosierungType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]-[0-9]-[0-9]-[0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="zeitraumVonBis">
+		<xs:attribute name="von" type="xs:date" use="optional"/>
+		<xs:attribute name="bis" type="xs:date" use="optional"/>
+	</xs:attributeGroup>
+</xs:schema>

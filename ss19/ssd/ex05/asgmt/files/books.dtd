@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Rechnungen (Rechnung+)>
+<!ELEMENT Rechnung (Rechnungsposten+)>
+<!ELEMENT Rechnungsposten (Posten+)>
+<!ELEMENT Posten (Buch)>
+<!ELEMENT Buch (Titel, Autor+, Verlag?, Erscheinungsdatum?, Preis?, Seiten?, ISBN?, Empfehlung?)>
+<!ELEMENT Titel (#PCDATA)>
+<!ELEMENT Autor (#PCDATA)>
+<!ELEMENT Verlag (#PCDATA)>
+<!ELEMENT Erscheinungsdatum (#PCDATA)>
+<!ELEMENT Preis (#PCDATA)>
+<!ELEMENT Seiten (#PCDATA)>
+<!ELEMENT ISBN (#PCDATA)>
+<!ELEMENT Empfehlung (#PCDATA)>
+<!ATTLIST Posten
+	nr CDATA #REQUIRED
+	>
+<!ATTLIST Preis
+	waehrung CDATA #REQUIRED
+	>

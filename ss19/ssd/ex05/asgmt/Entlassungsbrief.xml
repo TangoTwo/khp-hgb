@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entlassungsbrief erzeugt="2019-02-09T11:46:05+01:00" version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.fh-ooe.at/ssd4/entlassungsbrief entlassungsbrief.xsd" xmlns="http://www.fh-ooe.at/ssd4/entlassungsbrief" xmlns:entl="http://www.fh-ooe.at/ssd4/entlassungsbrief">
+	<Ersteller>Kepler Universitätsklinikum Med Campus Hagenberg - Chirurgische Abteilung</Ersteller>
+	<Empfänger>Ordination Dr. Nixisfix</Empfänger>
+	<Patient>
+		<Vorname>Konrad</Vorname>
+		<Nachname>Tneitap</Nachname>
+		<Geschlecht>unbekannt</Geschlecht>
+		<Geburtsdatum>1956-02-29</Geburtsdatum>
+		<SVN>7892290256</SVN>
+	</Patient>
+	<Aufenthalt art="stationär" von="2019-02-02" bis="2019-02-09">
+		Kepler Universitätsklinikum Med Campus Hagenberg - Chirurgische Abteilung
+	</Aufenthalt>
+	<Befundtext>
+		<Anrede>Sehr geehrte Herr/Frau Kollege(in),</Anrede>
+		<Text>Wir danken für die Überweisung Ihres Patienten Herr Tneitap Bei den Inhalten dieses Entlassungsbriefes handelt es sich um synthetische Mustertexte und keinesfalls um personenbezogene Echtdaten oder realistische Befunde. Das Beispiel veranschaulicht die technischen Möglichkeiten unter Verwendung eines Maximums der erlaubten Optionen.</Text>
+	</Befundtext>
+	<Diagnosen>
+		<Diagnose code="M25.46" von="2019-01-11" bis="2019-02-09" status="Abgeschlossen">
+			Meniskus: Empyema gen. sin. post corpus alienum ligneum operat.
+		</Diagnose>
+		<Diagnose code="M54.9" von="2009-07-11" status="Offen">
+			bekannt rezidivierende Rückenschmerzen
+		</Diagnose>
+	</Diagnosen>
+
+</Entlassungsbrief>
